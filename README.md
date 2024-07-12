@@ -133,6 +133,7 @@ Finally, make sure that the LD_LIBRARY_PATH environment variable is defined and 
 
 ```
 $HOME/.bashrc file:
+nano ~/.bash_profile
    export LD_LIBRARY_PATH=/usr/local/lib
 ```
 
