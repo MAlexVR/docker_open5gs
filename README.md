@@ -136,7 +136,7 @@ $HOME/.bashrc file:
    export LD_LIBRARY_PATH=/usr/local/lib
 ```
 
-# Configuring USB
+## Configuring USB
 
 On Linux, udev handles USB plug and unplug events. The following commands install a udev rule so that non-root users may access the device. This step is only necessary for devices that use USB to connect to the host computer, such as the B200, B210, and B200mini. This setting should take effect immediately and does not require a reboot or logout/login. Be sure that no USRP device is connected via USB when running these commands.
 
@@ -146,7 +146,7 @@ sudo udevadm control --reload-rules
 sudo udevadm trigger
 ```
 
-# Connect the USRP
+## Connect the USRP
 
 The installation of UHD and GNU Radio should now be complete. At this point, connect the USRP to the host computer.
 
