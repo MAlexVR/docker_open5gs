@@ -2,6 +2,8 @@ version: '3'
 services:
   srsenb:
     image: docker_srslte
+    hostname: srsenb
+    restart: unless-stopped
     container_name: srsenb
     stdin_open: true
     tty: true

@@ -1,0 +1,24 @@
+#EXTM3U
+#EXTINF:-1 tvg-name="001" tvg-id="Big Buck Bunny" tvg-logo="" group-title="Peliculas VoD", CANAL 1 - VoD
+rtsp://172.22.0.50:1935/vod/sample.mp4
+
+#EXTINF:-1 tvg-name="002" tvg-id="Cafe Quijano" tvg-logo="" group-title="Musica VoD", CANAL 2 - VoD
+rtsp://172.22.0.50:1935/vod/CafeQuijano-Meenamorascontodo.mp4
+
+#EXTINF:-1 tvg-name="003" tvg-id="The Weeknd" tvg-logo="" group-title="Musica VoD", CANAL 3 - VoD
+rtsp://172.22.0.50:1935/vod/TheWeeknd-BlindingLights.mp4
+
+#EXTINF:-1 tvg-name="004" tvg-id="The Weeknd" tvg-logo="" group-title="Musica VoD", CANAL 4 - VoD
+rtsp://172.22.0.50:1935/vod/TheWeeknd-SaveYourTears.mp4
+
+#EXTINF:-1 tvg-name="005" tvg-id="Big Buck Bunny" tvg-logo="" group-title="Peliculas Live", CANAL 5 - Live
+http://172.22.0.50:1935/live/001.stream/playlist.m3u8
+
+#EXTINF:-1 tvg-name="006" tvg-id="Cafe Quijano" tvg-logo="" group-title="Musica Live", CANAL 6 - Live
+http://172.22.0.50:1935/live/002.stream/playlist.m3u8
+ 
+#EXTINF:-1 tvg-name="007" tvg-id="The Weeknd" tvg-logo="" group-title="Musica Live", CANAL 7 - Live
+http://172.22.0.50:1935/live/003.stream/playlist.m3u8
+
+#EXTINF:-1 tvg-name="008" tvg-id="The Weeknd" tvg-logo="" group-title="Musica Live", CANAL 8 - Live
+http://172.22.0.50:1935/live/004.stream/playlist.m3u8

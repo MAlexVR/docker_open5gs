@@ -2,6 +2,8 @@ version: '3'
 services:
   mongo:
     image: mongo:6.0
+    hostname: mongo
+    restart: unless-stopped
     container_name: mongo
     command: --bind_ip 0.0.0.0
     env_file:
@@ -19,6 +21,8 @@ services:
         ipv4_address: ${MONGO_IP}
   webui:
     image: docker_open5gs
+    hostname: webui
+    restart: unless-stopped
     container_name: webui
     depends_on:
       - mongo
@@ -39,6 +43,8 @@ services:
         ipv4_address: ${WEBUI_IP}
   hss:
     image: docker_open5gs
+    hostname: hss
+    restart: unless-stopped
     container_name: hss
     env_file:
       - .env
@@ -63,6 +69,8 @@ services:
         ipv4_address: ${HSS_IP}
   sgwc:
     image: docker_open5gs
+    hostname: sgwc
+    restart: unless-stopped
     depends_on:
       - smf
       - upf
@@ -84,6 +92,8 @@ services:
         ipv4_address: ${SGWC_IP}
   sgwu:
     image: docker_open5gs
+    hostname: sgwu
+    restart: unless-stopped
     depends_on:
       - smf
       - upf
@@ -107,6 +117,8 @@ services:
         ipv4_address: ${SGWU_IP}
   smf:
     image: docker_open5gs
+    hostname: smf
+    restart: unless-stopped
     container_name: smf
     env_file:
       - .env
@@ -134,6 +146,8 @@ services:
         ipv4_address: ${SMF_IP}
   upf:
     image: docker_open5gs
+    hostname: upf
+    restart: unless-stopped
     depends_on:
       - smf
     container_name: upf
@@ -160,6 +174,8 @@ services:
         ipv4_address: ${UPF_IP}
   mme:
     image: docker_open5gs
+    hostname: mme
+    restart: unless-stopped
     depends_on:
       - hss
       - sgwc
@@ -194,6 +210,8 @@ services:
         ipv4_address: ${MME_IP}
   pcrf:
     image: docker_open5gs
+    hostname: pcrf
+    restart: unless-stopped
     container_name: pcrf
     env_file:
       - .env
@@ -219,6 +237,8 @@ services:
   dns:
     build: ./dns
     image: docker_dns
+    hostname: dns
+    restart: unless-stopped
     container_name: dns
     env_file:
       - .env
@@ -234,6 +254,8 @@ services:
   rtpengine:
     build: ./rtpengine
     image: docker_rtpengine
+    hostname: rtpengine
+    restart: unless-stopped
     container_name: rtpengine
     privileged: true
     env_file:
@@ -262,6 +284,8 @@ services:
   mysql:
     build: ./mysql
     image: docker_mysql
+    hostname: mysql
+    restart: unless-stopped
     container_name: mysql
     env_file:
       - .env
@@ -277,6 +301,8 @@ services:
   pyhss:
     build: ./pyhss
     image: docker_pyhss
+    hostname: pyhss
+    restart: unless-stopped
     container_name: pyhss
     dns: ${DNS_IP}
     volumes:
@@ -300,6 +326,8 @@ services:
         ipv4_address: ${PYHSS_IP}
   icscf:
     image: docker_kamailio
+    hostname: icscf
+    restart: unless-stopped
     container_name: icscf
     dns: ${DNS_IP}
     volumes:
@@ -324,6 +352,8 @@ services:
         ipv4_address: ${ICSCF_IP}
   scscf:
     image: docker_kamailio
+    hostname: scscf
+    restart: unless-stopped
     container_name: scscf
     dns: ${DNS_IP}
     volumes:
@@ -348,6 +378,8 @@ services:
         ipv4_address: ${SCSCF_IP}
   pcscf:
     image: docker_kamailio
+    hostname: pcscf
+    restart: unless-stopped
     container_name: pcscf
     dns: ${DNS_IP}
     privileged: true
@@ -382,6 +414,8 @@ services:
         ipv4_address: ${PCSCF_IP}
   smsc:
     image: docker_kamailio
+    hostname: smsc
+    restart: unless-stopped
     container_name: smsc
     dns: ${DNS_IP}
     volumes:
@@ -404,6 +438,8 @@ services:
   osmomsc:
     build: ./osmomsc
     image: docker_osmomsc
+    hostname: osmomsc
+    restart: unless-stopped
     container_name: osmomsc
     volumes:
       - ./osmomsc:/mnt/osmomsc
@@ -424,6 +460,8 @@ services:
   osmohlr:
     build: ./osmohlr
     image: docker_osmohlr
+    hostname: osmohlr
+    restart: unless-stopped
     container_name: osmohlr
     volumes:
       - ./osmohlr:/mnt/osmohlr
@@ -441,6 +479,8 @@ services:
   metrics:
     build: ./metrics
     image: docker_metrics
+    hostname: metrics
+    restart: unless-stopped
     container_name: metrics
     env_file:
       - .env
@@ -455,23 +495,23 @@ services:
     networks:
       default:
         ipv4_address: ${METRICS_IP}
-  grafana:
-    build: ./grafana
-    image: docker_grafana
-    container_name: grafana
-    env_file:
-      - .env
+  portainer:
+    image: portainer/portainer-ce:latest
+    hostname: portainer
+    container_name: portainer
+    restart: always
+    security_opt:
+      - no-new-privileges:true
     volumes:
-      - ./grafana:/mnt/grafana
-      - /etc/timezone:/etc/timezone:ro
       - /etc/localtime:/etc/localtime:ro
-    expose:
-      - "3000/tcp"
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - ./portainer-data:/data
     ports:
-      - "3000:3000/tcp"
+      - 8000:8000
+      - 9443:9443
     networks:
       default:
-        ipv4_address: ${GRAFANA_IP}
+        ipv4_address: ${PORTAINER_IP}
 networks:
   default:
     ipam:

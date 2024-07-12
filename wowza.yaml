@@ -1,0 +1,39 @@
+version: '3'
+
+volumes:
+  docker_wowza_data_conf: {}
+  docker_wowza_data_applications: {}
+  docker_wowza_data_logs: {}
+  docker_wowza_data_content: {}
+
+services:
+  wowza:
+    build: ./wowza
+    image: docker_wowza
+    restart: unless-stopped
+    container_name: wowza
+    hostname: wowza
+    environment:
+      - WSE_LIC= ${WOWZA_KEY}
+    ports:
+      - "1935:1935"
+      - "8086:8086"
+      - "8087:8087"
+      - "8088:8088"
+    cap_add:
+      - NET_ADMIN
+    privileged: true
+    sysctls:
+      - net.ipv4.ip_forward=1
+    volumes:
+      - docker_wowza_data_conf:/usr/local/WowzaStreamingEngine/conf
+      - docker_wowza_data_applications:/usr/local/WowzaStreamingEngine/applications
+      - docker_wowza_data_logs:/usr/local/WowzaStreamingEngine/logs
+      - docker_wowza_data_content:/usr/local/WowzaStreamingEngine/content      
+    networks:
+      default:
+        ipv4_address: ${WOWZA_IP}
+networks:
+  default:
+    external:
+      name: docker_open5gs_default

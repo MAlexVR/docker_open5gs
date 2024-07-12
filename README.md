@@ -1,42 +1,207 @@
-# docker_open5gs
-Quite contrary to the name of the repository, this repository contains docker files to deploy an Over-The-Air (OTA) or RF simulated 4G/5G network using following projects:
-- Core Network (4G/5G) - open5gs - https://github.com/open5gs/open5gs
-- IMS (Only 4G supported i.e. VoLTE) - kamailio
-- IMS HSS - https://github.com/nickvsnetworking/pyhss
-- Osmocom HLR - https://github.com/osmocom/osmo-hlr
-- Osmocom MSC - https://github.com/osmocom/osmo-msc
-- srsRAN (4G/5G) - https://github.com/srsran/srsRAN
-- UERANSIM (5G) - https://github.com/aligungr/UERANSIM
+# Internet, VoLTE, SMS and IPTV environment with docker Open5GS
+
+Docker files to build and run open5gs in a docker, this is a fork version of https://github.com/herlesupreeth/docker_open5gs and https://github.com/s5uishida/docker_open5gs_volte_sms_config
+
+# Docker Open5GS
+
+![image](https://user-images.githubusercontent.com/6804880/162587777-c0363a18-8296-474e-bc32-a69b87d9bae1.png)
+
+# 4G/5G NSA Core
+
+The Open5GS 4G/ 5G NSA Core contains the following components:
+
+- MME - Mobility Management Entity
+- HSS - Home Subscriber Server
+- PCRF - Policy and Charging Rules Function
+- SGWC - Serving Gateway Control Plane
+- SGWU - Serving Gateway User Plane
+- PGWC/SMF - Packet Gateway Control Plane / (component contained in Open5GS SMF)
+- PGWU/UPF - Packet Gateway User Plane / (component contained in Open5GS UPF)
+
+The core has two main planes: the control plane and the user plane. These are physically separated in Open5GS as CUPS (control/ user plane separation) is implemented.
+
+The MME is the main control plane hub of the core. It primarily manages sessions, mobility, paging and bearers. It links to the HSS, which generates SIM authentication vectors and holds the subscriber profile; and also to the SGWC and PGWC/SMF, which are the control planes of the gateway servers. All the eNBs in the mobile network (4G basestations) connect to the MME. The final element of the control plane is the PCRF, which sits in-between the PGWC/SMF and the HSS, and handles charging and enforces subscriber policies.
+
+The user plane carries user data packets between the eNB/ NSA gNB (5G NSA basestations) and the external WAN. The two user plane core components are the SGWU and PGWU/UPF. Each of these connect back to their control plane counterparts. eNBs/ NSA gNBs connect to the SGWU, which connects to the PGWU/UPF, and on to the WAN. By having the control and user planes physically separated like this, it means you can deploy multiple user plane servers in the field (eg somewhere with a high speed Internet connection), whilst keeping control functionality centralised. This enables support of MEC use cases, for example.
+
+All of these Open5GS components have config files. Each config file contains the component’s IP bind addresses/ local Interface names and the IP addresses/ DNS names of the other components it needs to connect to.
+
+# 5G SA Core
+
+The Open5GS 5G SA Core contains the following functions:
+
+- AMF - Access and Mobility Management Function
+- SMF - Session Management Function
+- UPF - User Plane Function
+- AUSF - Authentication Server Function
+- NRF - NF Repository Function
+- UDM - Unified Data Management
+- UDR - Unified Data Repository
+- PCF - Policy and Charging Function
+- NSSF - Network Slice Selection Function
+- BSF - Binding Support Function
+
+The 5G SA core works in a different way to the 4G core - it uses a Service Based Architecture (SBI). Control plane functions are configured to register with the NRF, and the NRF then helps them discover the other core functions. Running through the other functions: The AMF handles connection and mobility management; a subset of what the 4G MME is tasked with. gNBs (5G basestations) connect to the AMF. The UDM, AUSF and UDR carry out similar operations as the 4G HSS, generating SIM authentication vectors and holding the subscriber profile. Session management is all handled by the SMF (previously the responsibility of the 4G MME/ SGWC/ PGWC). The NSSF provides a way to select the network slice. Finally there is the PCF, used for charging and enforcing subscriber policies.
+
+The 5G SA core user plane is much simpler, as it only contains a single function. The UPF carries user data packets between the gNB and the external WAN. It connects back to the SMF too.
+
+With the exception of the SMF and UPF, all config files for the 5G SA core functions only contain the function’s IP bind addresses/ local Interface names and the IP address/DNS name of the NRF.
 
 ## Tested Setup
 
 Docker host machine
 
-- Ubuntu 20.04 or 22.04
+- Ubuntu 24.04 LTS
 
-Over-The-Air setups: 
+SDRs tested with srsLTE eNB
 
-- srsRAN (eNB/gNB) using Ettus USRP B210
-- srsRAN eNB using LimeSDR Mini v1.3
-- srsRAN eNB using LimeSDR-USB
+- Ettus USRP B210
 
-RF simulated setups:
+UE
 
- - srsRAN (gNB + UE) simulation over ZMQ
- - UERANSIM (gNB + UE) simulator
+- Samsung Galaxy S21+ 5G LTE band 5
 
-## Building docker images
+<h2 id="overview">Overview of Network Configuration</h2>
 
-* Mandatory requirements:
-	* [docker-ce](https://docs.docker.com/install/linux/docker-ce/ubuntu) - Version 22.0.5 or above
-	* [docker compose](https://docs.docker.com/compose) - Version 2.14 or above
+The figure describes the following setting example.
+![image](https://user-images.githubusercontent.com/6804880/163012397-5707e107-2d4f-4c22-8fc3-dd20d4596f0d.png)
 
+For reference, the Docker host VM on VMWare I have tried is as follows:
+| CPU Cores | Memory | SSD | OS |
+| --- | --- | --- | --- |
+| 4 | 8GB | 50GB | Ubuntu 20.04 |
 
-#### Clone repository and build base docker image of open5gs, kamailio, srsRAN_4G, srsRAN_Project, ueransim
+To connect UE from Docker host add the following route:
+
+```
+# ip route add 192.168.100.0/24 via 172.22.0.8
+```
+
+<h3 id="change_config">Changes in configuration files of docker_open5gs</h3>
+
+**.env)**
+
+| Item           | Value         |
+| -------------- | ------------- |
+| MCC            | 001           |
+| MNC            | 01            |
+| DOCKER_HOST_IP | 192.168.0.100 |
+
+# USRP B210 Installation
+
+Copy and paste these commands into your terminal. This will install UHD software as well as allow you to receive package updates.
+
+```
+sudo add-apt-repository ppa:ettusresearch/uhd
+sudo apt-get update
+sudo apt-get install libuhd-dev uhd-host
+```
+
+After installing, you need to download the FPGA images packages by running uhd images downloader on the command line (the actual path may differ based on your installation):
+
+```
+sudo /usr/lib/uhd/utils/uhd_images_downloader.py
+```
+
+Open the current user’s profile into a text editor
+
+```
+nano ~/.bash_profile
+```
+
+Add the export command for every environment variable you want to persist.
+
+```
+export UHD_IMAGES_DIR=/usr/share/uhd/images/
+```
+
+Save your changes.
+
+Adding the environment variable to a user’s bash profile alone will not export it automatically. However, the variable will be exported the next time the user logs in to immediately apply all changes to bash_profile, use the source command.
+
+```
+source ~/.bash_profile
+```
+
+Next, update the system's shared library cache.
+
+```
+sudo ldconfig
+```
+
+Finally, make sure that the LD_LIBRARY_PATH environment variable is defined and includes the folder under which UHD was installed. Most commonly, you can add the line below to the end of your
+
+```
+$HOME/.bashrc file:
+   export LD_LIBRARY_PATH=/usr/local/lib
+```
+
+# Configuring USB
+
+On Linux, udev handles USB plug and unplug events. The following commands install a udev rule so that non-root users may access the device. This step is only necessary for devices that use USB to connect to the host computer, such as the B200, B210, and B200mini. This setting should take effect immediately and does not require a reboot or logout/login. Be sure that no USRP device is connected via USB when running these commands.
+
+```
+sudo cp /usr/lib/uhd/utils/uhd-usrp.rules /etc/udev/rules.d/
+sudo udevadm control --reload-rules
+sudo udevadm trigger
+```
+
+# Connect the USRP
+
+The installation of UHD and GNU Radio should now be complete. At this point, connect the USRP to the host computer.
+
+```
+uhd_find_devices
+
+uhd_usrp_probe
+```
+
+# Build and Execution Instructions
+
+- Mandatory requirements:
+  - [docker-ce](https://docs.docker.com/install/linux/docker-ce/ubuntu)
+  - [docker-compose](https://docs.docker.com/compose)
+
+# Docker 25.0.5 Installation
+
+```
+sudo apt update
+sudo apt install apt-transport-https ca-certificates curl software-properties-common -y
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu focal stable" -y
+sudo apt update
+VERSION_STRING=5:25.0.5-1~ubuntu.22.04~jammy
+sudo apt-get install docker-ce=$VERSION_STRING docker-ce-cli=$VERSION_STRING containerd.io docker-buildx-plugin docker-compose-plugin
+sudo systemctl status docker
+sudo usermod -aG docker $(whoami)
+docker --version
+```
+
+# Docker Compose Installation
+
+```
+sudo curl -L "https://github.com/docker/compose/releases/download/1.26.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
+docker-compose --version
+```
+
+# Wireshark Installation
+
+```
+apt update
+apt upgrade
+apt install net-tools mlocate traceroute git python3 python3-pip wireshark xterm -y
+sudo usermod -aG wireshark $(whoami)
+xauth add $(xauth -f ~root/.Xauthority list|tail -1)
+```
+
+## Open5GS
+
+Clone repository and build base docker image of open5gs, kamailio, ueransim
 
 ```
 # Build docker images for open5gs EPC/5GC components
-git clone https://github.com/herlesupreeth/docker_open5gs
+git clone https://github.com/MauricioV/docker_open5gs
 cd docker_open5gs/base
 docker build --no-cache --force-rm -t docker_open5gs .
 
@@ -47,17 +212,9 @@ docker build --no-cache --force-rm -t docker_kamailio .
 # Build docker images for srsRAN_4G eNB + srsUE (4G+5G)
 cd ../srslte
 docker build --no-cache --force-rm -t docker_srslte .
-
-# Build docker images for srsRAN_Project gNB
-cd ../srsran
-docker build --no-cache --force-rm -t docker_srsran .
-
-# Build docker images for UERANSIM (gNB + UE)
-cd ../ueransim
-docker build --no-cache --force-rm -t docker_ueransim .
 ```
 
-#### Build docker images for additional components
+### Build and Run using docker-compose
 
 ```
 cd ..
@@ -65,50 +222,40 @@ set -a
 source .env
 sudo ufw disable
 sudo sysctl -w net.ipv4.ip_forward=1
-sudo cpupower frequency-set -g performance
 
-# For 4G deployment only
-docker compose -f 4g-volte-deploy.yaml build
+# 4G Core Network + IMS + SMS over SGs
+docker compose -f 4g-volte-deploy.yaml up -d
 
-# For 5G deployment only
-docker compose -f sa-deploy.yaml build
+# srsLTE - eNB
+docker-compose -f srslte.yaml build --no-cache
+docker-compose -f srslte.yaml up -d
+
+# Wowza Streaming Engine
+docker-compose -f wowza.yaml build --no-cache
+docker-compose -f wowza.yaml up -d
+
+# Monitoring system: Grafana, Loki and Promtail
+docker-compose -f monitor.yaml pull
+docker-compose -f monitor.yaml up -d
 ```
 
-## Network and deployment configuration
+## Configuration
 
-The setup can be mainly deployed in two ways:
-
-1. Single host setup where eNB/gNB and (EPC+IMS)/5GC are deployed on a single host machine
-2. Multi host setup where eNB/gNB is deployed on a separate host machine than (EPC+IMS)/5GC
-
-### Single Host setup configuration
-Edit only the following parameters in **.env** as per your setup
+For the quick run (eNB/gNB, CN in same docker network), edit only the following parameters in .env as per your setup
 
 ```
 MCC
 MNC
+TEST_NETWORK --> Change this only if it clashes with the internal network at your home/office
 DOCKER_HOST_IP --> This is the IP address of the host running your docker setup
-UE_IPV4_INTERNET --> Change this to your desired (Not conflicted) UE network ip range for internet APN
-UE_IPV4_IMS --> Change this to your desired (Not conflicted) UE network ip range for ims APN
+SGWU_ADVERTISE_IP --> Change this to value of DOCKER_HOST_IP set above only if eNB is not running the same docker network/host
+UPF_ADVERTISE_IP --> Change this to value of DOCKER_HOST_IP set above only if gNB is not running the same docker network/host
 ```
 
-### Multihost setup configuration
+If eNB/gNB is NOT running in the same docker network/host as the host running the dockerized Core/IMS then follow the below additional steps
 
-#### 4G deployment
+Under mme section in docker compose file (docker-compose.yaml, nsa-deploy.yaml), uncomment the following part
 
-###### On the host running the (EPC+IMS)
-
-Edit only the following parameters in **.env** as per your setup
-```
-MCC
-MNC
-DOCKER_HOST_IP --> This is the IP address of the host running (EPC+IMS)
-SGWU_ADVERTISE_IP --> Change this to value of DOCKER_HOST_IP
-UE_IPV4_INTERNET --> Change this to your desired (Not conflicted) UE network ip range for internet APN
-UE_IPV4_IMS --> Change this to your desired (Not conflicted) UE network ip range for ims APN
-```
-
-Under **mme** section in docker compose file (**4g-volte-deploy.yaml**), uncomment the following part
 ```
 ...
     # ports:
@@ -116,55 +263,8 @@ Under **mme** section in docker compose file (**4g-volte-deploy.yaml**), uncomme
 ...
 ```
 
-Then, uncomment the following part under **sgwu** section
-```
-...
-    # ports:
-    #   - "2152:2152/udp"
-...
-```
+Under amf section in docker compose file (docker-compose.yaml, nsa-deploy.yaml, sa-deploy.yaml), uncomment the following part
 
-###### On the host running the eNB
-
-Edit only the following parameters in **.env** as per your setup
-```
-MCC
-MNC
-DOCKER_HOST_IP --> This is the IP address of the host running eNB
-MME_IP --> Change this to IP address of host running (EPC+IMS)
-SRS_ENB_IP --> Change this to the IP address of the host running eNB
-```
-
-Replace the following part in the docker compose file (**srsenb.yaml**)
-```
-    networks:
-      default:
-        ipv4_address: ${SRS_ENB_IP}
-networks:
-  default:
-    external:
-      name: docker_open5gs_default
-```
-with 
-```
-	network_mode: host
-```
-
-#### 5G SA deployment
-
-###### On the host running the 5GC
-
-Edit only the following parameters in **.env** as per your setup
-```
-MCC
-MNC
-DOCKER_HOST_IP --> This is the IP address of the host running 5GC
-UPF_ADVERTISE_IP --> Change this to value of DOCKER_HOST_IP
-UE_IPV4_INTERNET --> Change this to your desired (Not conflicted) UE network ip range for internet APN
-UE_IPV4_IMS --> Change this to your desired (Not conflicted) UE network ip range for ims APN
-```
-
-Under **amf** section in docker compose file (**sa-deploy.yaml**), uncomment the following part
 ```
 ...
     # ports:
@@ -172,7 +272,8 @@ Under **amf** section in docker compose file (**sa-deploy.yaml**), uncomment the
 ...
 ```
 
-Then, uncomment the following part under **upf** section
+If deploying in SA mode only (sa-deploy.yaml), then uncomment the following part under upf section
+
 ```
 ...
     # ports:
@@ -180,77 +281,25 @@ Then, uncomment the following part under **upf** section
 ...
 ```
 
-###### On the host running the gNB
-
-Edit only the following parameters in **.env** as per your setup
-```
-MCC
-MNC
-DOCKER_HOST_IP --> This is the IP address of the host running gNB
-AMF_IP --> Change this to IP address of host running 5GC
-SRS_GNB_IP --> Change this to the IP address of the host running gNB
-```
-
-Replace the following part in the docker compose file (**srsgnb.yaml**)
-```
-    networks:
-      default:
-        ipv4_address: ${SRS_GNB_IP}
-networks:
-  default:
-    external:
-      name: docker_open5gs_default
-```
-with 
-```
-	network_mode: host
-```
-
-## Network Deployment
-
-###### 4G deployment
+If deploying in NSA mode only (nsa-deploy.yaml, docker-compose.yaml), then uncomment the following part under sgwu section
 
 ```
-# 4G Core Network + IMS + SMS over SGs
-docker compose -f 4g-volte-deploy.yaml up
-
-# srsRAN eNB using SDR (OTA)
-docker compose -f srsenb.yaml up -d && docker container attach srsenb
-
-# srsRAN ZMQ eNB (RF simulated)
-docker compose -f srsenb_zmq.yaml up -d && docker container attach srsenb_zmq
-
-# srsRAN ZMQ 4G UE (RF simulated)
-docker compose -f srsue_zmq.yaml up -d && docker container attach srsue_zmq
+...
+    # ports:
+    #   - "2152:2152/udp"
+...
 ```
 
-###### 5G SA deployment
+For eNodeB, set static routing to eNodeB for packets going from eNodeB to the Docker host network (`172.22.0.0/24`).
 
 ```
-# 5G Core Network
-docker compose -f sa-deploy.yaml up
-
-# srsRAN gNB using SDR (OTA)
-docker compose -f srsgnb.yaml up -d && docker container attach srsgnb
-
-# srsRAN ZMQ gNB (RF simulated)
-docker compose -f srsgnb_zmq.yaml up -d && docker container attach srsgnb_zmq
-
-# srsRAN ZMQ 5G UE (RF simulated)
-docker compose -f srsue_5g_zmq.yaml up -d && docker container attach srsue_5g_zmq
-
-# UERANSIM gNB (RF simulated)
-docker compose -f nr-gnb.yaml up -d && docker container attach nr_gnb
-
-# UERANSIM NR-UE (RF simulated)
-docker compose -f nr-ue.yaml up -d && docker container attach nr_ue
+# ip route add 172.22.0.0/24 via 192.168.0.130
 ```
 
-## Provisioning of SIM information
+## Register a UE information
 
-### Provisioning of SIM information in open5gs HSS as follows:
+Open (http://<DOCKER_HOST_IP>:3000) in a web browser, where <DOCKER_HOST_IP> is the IP of the machine/VM running the open5gs containers. Login with following credentials
 
-Open (http://<DOCKER_HOST_IP>:9999) in a web browser, where <DOCKER_HOST_IP> is the IP of the machine/VM running the open5gs containers. Login with following credentials
 ```
 Username : admin
 Password : 1423
@@ -258,39 +307,251 @@ Password : 1423
 
 Using Web UI, add a subscriber
 
-#### or using cli 
+## Connect the USRP
+
+Try running "uhd_find_devices" and "uhd_usrp_probe".
+
+## srsLTE eNB settings
+
+If SGWU_ADVERTISE_IP is properly set to the host running the SGWU container in NSA deployment, then the following static route is not required.
+On the eNB, make sure to have the static route to SGWU container (since internal IP of the SGWU container is advertised in S1AP messages and UE wont find the core in Uplink)
 
 ```
-sudo docker exec -it hss misc/db/open5gs-dbctl add 001010123456790 8baf473f2f8fd09487cccbd7097c6862 8E27B6AF0E692E750F32667A3B14605D
+# NSA - 4G5G Hybrid deployment
+ip r add <SGWU_CONTAINER_IP> via <SGWU_ADVERTISE_IP>
 ```
 
+## Not supported
 
-### Provisioning of IMSI and MSISDN with OsmoHLR as follows:
+- IPv6 usage in Docker
 
-1. First, login to the osmohlr container
+## Portainer
 
-```
-docker exec -it osmohlr /bin/bash
-```
-
-2. Then, telnet to localhost
+Go to your favorite browser and open https://<ip_address>:9443
 
 ```
-$ telnet localhost 4258
+$ https://<ip_address>:9443
+```
 
+![image](https://user-images.githubusercontent.com/6804880/170558954-5d8090fb-e6c4-48c6-80ea-f2005ef478bc.png)
+![image](https://user-images.githubusercontent.com/6804880/170559207-65ce6556-2b98-4172-86fe-5304236cbf4c.png)
+
+## Prepare the SIMCards
+
+|   **VALUE**    |                                                  **SIM 1**                                                  |                                                  **SIM 2**                                                  |
+| :------------: | :---------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------: |
+|    **IMSI**    |                                               001010000010001                                               |                                               001010000010002                                               |
+|   **MSISDN**   |                                                    10001                                                    |                                                    10002                                                    |
+|    **MCC**     |                                                     001                                                     |                                                     001                                                     |
+|    **MNC**     |                                                     01                                                      |                                                     01                                                      |
+|    **ADM1**    |                                                  87025588                                                   |                                                  45314232                                                   |
+|   **ICCID**    |                                             8988211000000543515                                             |                                             8988211000000543523                                             |
+|     **Ki**     |                                      5BAD8598D1F631E3ED76F9333B8AA26F                                       |                                      DA4EDB6503743D404DA2F91A4446C26F                                       |
+|    **OPc**     |                                      BA5205DDC6FCA1DF6B83A1CC69859514                                       |                                      1CFA68FDE88DCA322C1BF33D0F2709A0                                       |
+|   **ICCID**    |                                             8988211000000543515                                             |                                             8988211000000543523                                             |
+| **IMS DOMAIN** |                                      ims.mnc001.mcc001.3gppnetwork.org                                      |                                      ims.mnc001.mcc001.3gppnetwork.org                                      |
+|    **IMPI**    |                              001010000010001@ims.mnc001.mcc001.3gppnetwork.org                              |                              001010000010002@ims.mnc001.mcc001.3gppnetwork.org                              |
+|    **IMPU**    | sip:001010000010001@ims.mnc001.mcc001.3gppnetwork.org tel:10001 sip:10001@ims.mnc001.mcc001.3gppnetwork.org | sip:001010000010002@ims.mnc001.mcc001.3gppnetwork.org tel:10002 sip:10002@ims.mnc001.mcc001.3gppnetwork.org |
+|   **PCSCF**    |                                   pcscf.ims.mnc001.mcc001.3gppnetwork.org                                   |                                   pcscf.ims.mnc001.mcc001.3gppnetwork.org                                   |
+|    **KIC1**    |                                      CD9DB47453E5691B48971F86DFB408CE                                       |                                      056C8B738C1BCECA4F3A9C722E65562B                                       |
+|    **KID1**    |                                      35132A622B39BFCCA25B84FE61C088BF                                       |                                      3F1D9A5FCEBB175644FDFDCBDE6B0E7C                                       |
+|    **KIK1**    |                                      3381C956F30710A607061D5414F5F040                                       |                                      4054195F4984B8DA0ABF5B62393F0435                                       |
+
+# ISIM Setup
+
+Basically, you can learn how to use it in the sysmoUSIM manual or on the official homepage of pysim project. Let’s take a quickstart guide for this experiment.
+Install dependencies:
+
+```
+$ sudo apt-get install pcscd pcsc-tools libccid libpcsclite-dev python3-pyscard -y
+```
+
+Connect SIM card reader to your computer and insert programmable SIM card to the reader.
+
+Check the status of connection by entering the following command:
+
+```
+$ pcsc_scan
+PC/SC device scanner
+V 1.5.2 (c) 2001-2017, Ludovic Rousseau <ludovic.rousseau@free.fr>
+Using reader plug'n play mechanism
+Scanning present readers...
+0: HID Global OMNIKEY 3x21 Smart Card Reader [OMNIKEY 3x21 Smart Card Reader] 00
+
+Sun May 26 14:26:12 2019
+ Reader 0: HID Global OMNIKEY 3x21 Smart Card Reader [OMNIKEY 3x21 Smart Card Re
+  Card state: Card inserted,
+  ATR: 3B 9F 96 80 1F C7 80 31 A0 73 BE 21 13 67 43 20 07 18 00 00 01 A5
+...
+```
+
+Get the code of PySIM with installing dependency:
+
+```
+$ sudo apt-get install python3-pyscard python3-serial python3-pip
+$ pip install pytlv
+$ git clone git://git.osmocom.org/pysim
+$ cd pysim
+$ pip3 install -r requirements.txt
+```
+
+Read your SIM card:
+
+```
+$ ./pySim-read.py -p0
+Using PC/SC reader (dev=0) interface
+Reading ...
+ICCID: 8988211000000213010
+IMSI: 310789012345301
+SMSP: ffffffffffffffffffffffffffffffffffffffffffffffffe1ffffffffffffffffffffffff
+...
+```
+
+Program your SIM card:
+
+```
+python3 pySim-prog.py --pcsc-device=0 --type="sysmoISIM-SJA2" --name=Open5GS --pin-adm=87025588 --acc=0002 --iccid=8988211000000543515 --imsi=001010000010001 --mcc=001 --mnc=01 --ki=5BAD8598D1F631E3ED76F9333B8AA26F --opc=BA5205DDC6FCA1DF6B83A1CC69859514 --msisdn=10001 --ims-hdomain=ims.mnc001.mcc001.3gppnetwork.org --impi=001010000010001@ims.mnc001.mcc001.3gppnetwork.org --impu=sip:001010000010001@ims.mnc001.mcc001.3gppnetwork.org --pcscf=pcscf.ims.mnc001.mcc001.3gppnetwork.org
+```
+
+Unlock your SIM card:
+Wrong KIC / KID / KIK bricks your SIM card.
+Use MCC = 001, MNC = 01 for a test network, unless you know your MCC/MNC is supported by Android Carrier Privileges.
+Refer to: https://github.com/herlesupreeth/CoIMS_Wiki/blob/master/README.md
+
+```
+$ git clone https://github.com/herlesupreeth/CoIMS_Wiki
+$ cd CoIMS_Wiki
+$ alias gp="java -jar $PWD/gp.jar"
+
+$ gp --key-enc <KIC1> --key-mac <KID1> --key-dek <KIK1> -lvi
+gp --key-enc A823883D5AD224BC52C28507AA1662B5 --key-mac 34A2175B766F22EF0531B5C4410AAD0F --key-dek 85729388DE30CB46934C99D3016787EA -lvi
+
+$ gp --key-enc <KIC1> --key-mac <KID1> --key-dek <KIK1> --unlock
+gp --key-enc A823883D5AD224BC52C28507AA1662B5 --key-mac 34A2175B766F22EF0531B5C4410AAD0F --key-dek 85729388DE30CB46934C99D3016787EA --unlock
+
+gp --install applet.cap # sysmoISIM-SJA2 don't need this
+
+gp -a 00A4040009A00000015141434C0000 -a 80E2900033F031E22FE11E4F06FFFFFFFFFFFFC114E46872F28B350B7E1F140DE535C2A8D5804F0BE3E30DD00101DB080000000000000001
+
+gp -acr-list-aram
+```
+
+<h3 id="register_open5gs">Register subscribers information with Open5GS</h3>
+
+![image](https://user-images.githubusercontent.com/6804880/162985419-06ccee86-5a6a-4151-beeb-7d538fad9c5c.png)
+
+Please also register MSISDN. At that time, set the APN setting information as follows.
+| APN | Type | QCI | ARP | Capability | Vulnerablility | MBR DL/UL(Kbps) | GBR DL/UL(Kbps) |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| internet | IPv4 | 9 | 8 | Disabled | Disabled | unlimited/unlimited | |
+| ims | IPv4 | 5 | 1 | Disabled | Disabled | 3850/1530 | |
+| | | 1 | 2 | Enabled | Enabled | 128/128 | 128/128 |
+| | | 2 | 4 | Enabled | Enabled | 812/812 | 812/812 |
+
+See below for details.
+
+`18. Install Open5GS in the same machine as Kamailio IMS - Install Open5GS from source`  
+https://open5gs.org/open5gs/docs/tutorial/02-VoLTE-setup/
+
+<h3 id="register_osmocom">Register the IMSI and MSISDN with OsmoHLR</h3>
+
+Please login to the `osmohlr` container and register by referring to the following.
+
+`6.1 Example: Add/Update/Delete Subscriber via VTY`  
+https://downloads.osmocom.org/docs/latest/osmohlr-usermanual.pdf
+
+The following is an example of registering subscriber information for IMSI=001010000001001 and MSISDN=1001.
+
+First, login to the `osmohlr` container.
+
+```
+# docker exec -it osmohlr /bin/bash
+```
+
+Then telnet to localhost.
+
+```
+# telnet localhost 4258
+...
 OsmoHLR> enable
 OsmoHLR#
 ```
 
-3. Finally, register the subscriber information as in following example:
+Next, register the subscriber information for IMSI=001010000001001 and MSISDN=1001.
 
 ```
-OsmoHLR# subscriber imsi 001010123456790 create
-OsmoHLR# subscriber imsi 001010123456790 update msisdn 9076543210
+OsmoHLR# subscriber imsi 001010000010001 create
+% Created subscriber 001010000010001
+    ID: 1
+    IMSI: 001010000010001
+    MSISDN: none
+OsmoHLR# subscriber imsi 001010000010001 update msisdn 10001
+% Updated subscriber IMSI='001010000010001' to MSISDN='10001'
+OsmoHLR#
 ```
 
-**Replace IMSI and MSISDN as per your programmed SIM**
+Make sure this subscriber information is registered.
 
+```
+OsmoHLR# show subscribers all
+ID     MSISDN        IMSI              IMEI              NAM
+-----  ------------  ----------------  ----------------  -----
+1      10001         001010000010001    -------------    CSPS
+ Subscribers Shown: 1
+OsmoHLR#
+```
+
+This setting is required to function as **SMS over SGs**.
+
+<h3 id="try">Try VoLTE and SMS</h3>
+
+Make sure that you can make a VoLTE call and SMS to the MSISDN. If your device does not support **SMS over IMS**, you can send SMS with **SMS over SGs** depending on your device.
+
+**Note. Kamailio's SMS (SMS over IMS) seems to have a bug in handling multibyte messages, which causes garbled characters in SMS.
+On the other hand, OsmoMSC (SMS over SGs) seems to handle multibyte messages properly without garbled characters.**
+
+<h4 id="osmomsc_send_command">Send SMS from OsmoMSC VTY terminal (SMS over SGs)</h4>
+
+You can send SMS to the destination terminal by command operation on the OsmoMSC VTY terminal (SMS over SGs).
+Please login to the `osmomsc` container and send SMS from the command line as following.
+
+`14 Configuring the Core Network`  
+`11.3.3 The list command`  
+https://downloads.osmocom.org/docs/latest/osmomsc-usermanual.pdf
+
+**For example, if the following IMSI and MSISDN are registered in OsmoHLR)**
+| IMSI | MSISDN | SIM |
+| --- | --- | --- |
+| 001010000010000 | 10000 | x |
+| 001010000010001 | 10001 | o |
+| 001010000010002 | 10002 | o |
+
+First, login to the `osmomsc` container.
+
+```
+# docker exec -it osmomsc /bin/bash
+```
+
+Then telnet to localhost.
+
+```
+# telnet localhost 4254
+...
+OsmoMSC> enable
+OsmoMSC#
+```
+
+- Command line to send SMS from MSISDN=10001 to MSISDN=10002 where the corresponding SIM exists
+
+```
+OsmoMSC# subscriber msisdn 10002 sms sender msisdn 10001 send TEST MESSAGE
+```
+
+- Command line to send SMS from MSISDN=10000 to MSISDN=10002 for which there is no corresponding SIM
+
+```
+OsmoMSC# subscriber msisdn 10002 sms sender msisdn 10000 send TEST MESSAGE
+```
 
 ### Provisioning of SIM information in pyHSS is as follows:
 
@@ -378,4 +639,37 @@ Take note of **auc_id** specified in **Response body** under **Server response**
 **Replace scscf_peer, scscf and scscf_realm as per your deployment**
 
 ## Not supported
+
 - IPv6 usage in Docker
+
+## Wowza Streaming Engine
+
+Go to your favorite browser and open http://<ip_address>:8088, User: admin - Password: admin
+
+```
+$ http://<ip_address>:8088
+```
+
+![image](https://user-images.githubusercontent.com/6804880/162839701-e59437e1-b888-42a0-9edc-629c9e8b7a3b.png)
+
+## Grafana
+
+Go to your favorite browser and open http://<ip_address>:3010, User: admin - Password: admin
+
+```
+$ http://<ip_address>:3010
+```
+
+![image](https://user-images.githubusercontent.com/6804880/163682654-5cb27c37-22a2-493c-ab60-32a680fb6684.png)
+
+Add the Loki datasource with http://loki:3100
+![image](https://user-images.githubusercontent.com/6804880/163682735-80b10d96-cd52-4d68-bb6e-341c345a41a8.png)
+
+Explore Open5GS logs
+![image](https://user-images.githubusercontent.com/6804880/163682753-25259708-b528-47d9-bf32-c98f43f61af6.png)
+
+![image](https://user-images.githubusercontent.com/6804880/163682773-40d5d9df-76e9-46e8-825c-0b9b47ae3f76.png)
+
+---
+
+[docker_open5gs](https://github.com/herlesupreeth/docker_open5gs) is a excellent software to try **VoLTE** and **SMS** easily. I would like to thank all the software developers and contributors related especially to Herle Supreeth and Shigeru Ishida.

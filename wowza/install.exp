@@ -1,0 +1,36 @@
+#!/usr/bin/expect
+
+# https://github.com/simplycycling/ansible-wowza/blob/f6ed47147d6ab318230f978be99322b9fe58d8eb/templates/script.exp.j2
+
+set timeout -1
+spawn /root/wowza-installer.run
+
+expect {
+  -gl "*Press *Enter* to continue*" { send -- "\r"; exp_continue }
+  -gl "*Do you accept this agreement*"
+}
+send -- "\ry\r"
+
+# Developer license for install only
+expect -gl "*License Key*" {
+  exec cp /root/exitzero.sh /usr/local/WowzaStreamingEngine-4.8.23+2/scripts/validatelicense-linux.sh
+  exec cp /root/exitzero.sh /usr/local/WowzaStreamingEngine-4.8.23+2/scripts/validateInstall-linux.sh
+  send -- "ET1A4-KxrGd-Eaj9T-dTbcf-rZNza-9xaJd\r"
+}
+
+expect -gl "*User Name*"
+send -- "admin\r"
+
+expect -gl "*Password*"
+send -- "admin\r"
+
+expect -gl "*Confirm Password*"
+send -- "admin\r"
+
+expect -gl "*Start Wowza Streaming Engine automatically*"
+send -- "n\r"
+
+expect -gl "*Do you want to continue*"
+send -- "y\r"
+
+expect eof

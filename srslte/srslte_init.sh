@@ -77,7 +77,7 @@ sed -i 's|SRS_ENB_IP|'$SRS_ENB_IP'|g' /etc/srsran/ue.conf
 sed -i 's|SRS_GNB_IP|'$SRS_GNB_IP'|g' /etc/srsran/ue.conf
 
 # For dbus not started issue when host machine is running Ubuntu 22.04
-service dbus start && service avahi-daemon start
+#service dbus start && service avahi-daemon start
 
 if [[ -z "$COMPONENT_NAME" ]]; then
 	echo "Error: COMPONENT_NAME environment variable not set"; exit 1;
@@ -93,3 +93,4 @@ fi
 
 # Sync docker time
 #ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+exec /usr/bin/supervisord -n -c /etc/supervisor/supervisord.conf
