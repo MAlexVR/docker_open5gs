@@ -191,7 +191,7 @@ docker-compose --version
 ```
 apt update
 apt upgrade
-apt install net-tools mlocate traceroute git python3 python3-pip wireshark xterm -y
+apt install net-tools plocate traceroute git python3 python3-pip wireshark xterm -y
 sudo usermod -aG wireshark $(whoami)
 xauth add $(xauth -f ~root/.Xauthority list|tail -1)
 ```
