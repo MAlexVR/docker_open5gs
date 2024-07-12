@@ -69,7 +69,7 @@ The figure describes the following setting example.
 For reference, the Docker host VM on VMWare I have tried is as follows:
 | CPU Cores | Memory | SSD | OS |
 | --- | --- | --- | --- |
-| 4 | 8GB | 50GB | Ubuntu 20.04 |
+| 4 | 8GB | 50GB | Ubuntu 24.04 |
 
 To connect UE from Docker host add the following route:
 
