@@ -201,7 +201,7 @@ Clone repository and build base docker image of open5gs, kamailio, ueransim
 
 ```
 # Build docker images for open5gs EPC/5GC components
-git clone https://github.com/MauricioV/docker_open5gs
+git clone https://github.com/MAlexVR/docker_open5gs.git
 cd docker_open5gs/base
 docker build --no-cache --force-rm -t docker_open5gs .
 
