@@ -437,6 +437,14 @@ gp -acr-list-aram
 
 <h3 id="register_open5gs">Register subscribers information with Open5GS</h3>
 
+### Provisioning of SIM information in open5gs HSS as follows:
+
+Open (http://<DOCKER_HOST_IP>:9999) in a web browser, where <DOCKER_HOST_IP> is the IP of the machine/VM running the open5gs containers. Login with following credentials
+```
+Username : admin
+Password : 1423
+```
+
 ![image](https://user-images.githubusercontent.com/6804880/162985419-06ccee86-5a6a-4151-beeb-7d538fad9c5c.png)
 
 Please also register MSISDN. At that time, set the APN setting information as follows.
