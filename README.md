@@ -227,8 +227,7 @@ sudo sysctl -w net.ipv4.ip_forward=1
 docker compose -f 4g-volte-deploy.yaml up -d
 
 # srsLTE - eNB
-docker-compose -f srslte.yaml build --no-cache
-docker-compose -f srslte.yaml up -d
+docker-compose -f srsenb.yaml up -d
 
 # Wowza Streaming Engine
 docker-compose -f wowza.yaml build --no-cache
