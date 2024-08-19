@@ -658,7 +658,9 @@ Take note of **apn_id** specified in **Response body** under **Server response**
   "des": "string",
   "amf": "8000",
   "adm1": "87025588"
-},
+}
+```
+```
 {
   "sqn": 0,
   "pin1": "string",
@@ -714,7 +716,9 @@ Take note of **auc_id** specified in **Response body** under **Server response**
   "ue_ambr_ul": 0,
   "serving_mme_peer": null,
   "nam": 0
-},
+}
+```
+```
 {
   "enabled": true,
   "roaming_enabled": true,
@@ -766,7 +770,9 @@ Take note of **auc_id** specified in **Response body** under **Server response**
   "imsi": "001010000010001",
   "sh_profile": "string",
   "ifc_path": "default_ifc.xml"
-},
+}
+```
+```
 {
   "pcscf": null,
   "scscf": "sip:scscf.ims.mnc001.mcc001.3gppnetwork.org:6060",
