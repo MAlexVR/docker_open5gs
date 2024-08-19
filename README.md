@@ -568,8 +568,25 @@ OsmoMSC# subscriber msisdn 10002 sms sender msisdn 10000 send TEST MESSAGE
 ```
 {
   "apn": "internet",
+  "arp_priority": 0,
+  "nidd_mechanism": 0,
+  "ip_version": 0,
+  "arp_preemption_capability": true,
+  "nidd_rds": 0,
+  "pgw_address": "string",
+  "arp_preemption_vulnerability": true,
+  "nidd_preferred_data_mode": 0,
+  "sgw_address": "string",
+  "charging_rule_list": "string",
+  "last_modified": "2024-08-19T20:42:13Z",
+  "charging_characteristics": "stri",
+  "nbiot": true,
   "apn_ambr_dl": 0,
-  "apn_ambr_ul": 0
+  "nidd_scef_id": "string",
+  "apn_id": 1,
+  "apn_ambr_ul": 0,
+  "nidd_scef_realm": "string",
+  "qci": 0
 }
 ```
 
@@ -580,8 +597,25 @@ Repeat creation step for following payload
 ```
 {
   "apn": "ims",
+  "arp_priority": 0,
+  "nidd_mechanism": 0,
+  "ip_version": 0,
+  "arp_preemption_capability": true,
+  "nidd_rds": 0,
+  "pgw_address": "string",
+  "arp_preemption_vulnerability": true,
+  "nidd_preferred_data_mode": 0,
+  "sgw_address": "string",
+  "charging_rule_list": "string",
+  "last_modified": "2024-08-19T20:44:06Z",
+  "charging_characteristics": "stri",
+  "nbiot": true,
   "apn_ambr_dl": 0,
-  "apn_ambr_ul": 0
+  "nidd_scef_id": "string",
+  "apn_id": 2,
+  "apn_ambr_ul": 0,
+  "nidd_scef_realm": "string",
+  "qci": 0
 }
 ```
 
@@ -593,11 +627,56 @@ Take note of **apn_id** specified in **Response body** under **Server response**
 
 ```
 {
-  "ki": "8baf473f2f8fd09487cccbd7097c6862",
-  "opc": "8E27B6AF0E692E750F32667A3B14605D",
-  "amf": "8000",
   "sqn": 0,
-  "imsi": "001010123456790"
+  "pin1": "string",
+  "misc1": "string",
+  "iccid": "8988211000000543515",
+  "pin2": "string",
+  "misc2": "string",
+  "imsi": "001010000010001",
+  "puk1": "string",
+  "misc3": "string",
+  "batch_name": "string",
+  "puk2": "string",
+  "misc4": "string",
+  "auc_id": 1,
+  "sim_vendor": "string",
+  "kid": "string",
+  "last_modified": "2024-08-19T20:46:55Z",
+  "ki": "5BAD8598D1F631E3ED76F9333B8AA26F",
+  "esim": true,
+  "psk": "string",
+  "opc": "BA5205DDC6FCA1DF6B83A1CC69859514",
+  "lpa": "string",
+  "des": "string",
+  "amf": "8000",
+  "adm1": "87025588"
+},
+{
+  "sqn": 0,
+  "pin1": "string",
+  "misc1": "string",
+  "iccid": "8988211000000543523",
+  "pin2": "string",
+  "misc2": "string",
+  "imsi": "001010000010002",
+  "puk1": "string",
+  "misc3": "string",
+  "batch_name": "string",
+  "puk2": "string",
+  "misc4": "string",
+  "auc_id": 2,
+  "sim_vendor": "string",
+  "kid": "string",
+  "last_modified": "2024-08-19T20:49:09Z",
+  "ki": "DA4EDB6503743D404DA2F91A4446C26F",
+  "esim": true,
+  "psk": "string",
+  "opc": "1CFA68FDE88DCA322C1BF33D0F2709A0",
+  "lpa": "string",
+  "des": "string",
+  "amf": "8000",
+  "adm1": "45314232"
 }
 ```
 
@@ -609,14 +688,44 @@ Take note of **auc_id** specified in **Response body** under **Server response**
 
 ```
 {
-  "imsi": "001010123456790",
   "enabled": true,
+  "roaming_enabled": true,
+  "last_modified": "2024-08-19T21:02:45Z",
   "auc_id": 1,
+  "roaming_rule_list": null,
   "default_apn": 1,
+  "subscribed_rau_tau_timer": 300,
   "apn_list": "1,2",
-  "msisdn": "9076543210",
+  "serving_mme": null,
+  "msisdn": "10001",
+  "serving_mme_timestamp": null,
+  "subscriber_id": 1,
   "ue_ambr_dl": 0,
-  "ue_ambr_ul": 0
+  "serving_mme_realm": null,
+  "imsi": "001010000010001",
+  "ue_ambr_ul": 0,
+  "serving_mme_peer": null,
+  "nam": 0
+},
+{
+  "enabled": true,
+  "roaming_enabled": true,
+  "last_modified": "2024-08-19T21:08:29Z",
+  "auc_id": 2,
+  "roaming_rule_list": null,
+  "default_apn": 1,
+  "subscribed_rau_tau_timer": 300,
+  "apn_list": "1,2",
+  "serving_mme": null,
+  "msisdn": "10002",
+  "serving_mme_timestamp": null,
+  "subscriber_id": 2,
+  "ue_ambr_dl": 0,
+  "serving_mme_realm": null,
+  "imsi": "001010000010002",
+  "ue_ambr_ul": 0,
+  "serving_mme_peer": null,
+  "nam": 0
 }
 ```
 
@@ -630,14 +739,44 @@ Take note of **auc_id** specified in **Response body** under **Server response**
 
 ```
 {
-    "imsi": "001010123456790",
-    "msisdn": "9076543210",
-    "sh_profile": "string",
-    "scscf_peer": "scscf.ims.mnc001.mcc001.3gppnetwork.org",
-    "msisdn_list": "[9076543210]",
-    "ifc_path": "default_ifc.xml",
-    "scscf": "sip:scscf.ims.mnc001.mcc001.3gppnetwork.org:6060",
-    "scscf_realm": "ims.mnc001.mcc001.3gppnetwork.org"
+  "pcscf": null,
+  "scscf": "sip:scscf.ims.mnc001.mcc001.3gppnetwork.org:6060",
+  "pcscf_realm": null,
+  "scscf_timestamp": "2024-08-15T20:47:28Z",
+  "pcscf_active_session": null,
+  "scscf_realm": "ims.mnc001.mcc001.3gppnetwork.org",
+  "ims_subscriber_id": 1,
+  "pcscf_timestamp": null,
+  "scscf_peer": "scscf.ims.mnc001.mcc001.3gppnetwork.org;hss.ims.mnc001.mcc001.3gppnetwork.org",
+  "msisdn": "10001",
+  "pcscf_peer": null,
+  "sh_template_path": null,
+  "msisdn_list": "[10001]",
+  "xcap_profile": null,
+  "last_modified": "2024-08-19T21:14:31Z",
+  "imsi": "001010000010001",
+  "sh_profile": "string",
+  "ifc_path": "default_ifc.xml"
+},
+{
+  "pcscf": null,
+  "scscf": "sip:scscf.ims.mnc001.mcc001.3gppnetwork.org:6060",
+  "pcscf_realm": null,
+  "scscf_timestamp": "2024-08-15T20:43:53Z",
+  "pcscf_active_session": null,
+  "scscf_realm": "ims.mnc001.mcc001.3gppnetwork.org",
+  "ims_subscriber_id": 2,
+  "pcscf_timestamp": null,
+  "scscf_peer": "scscf.ims.mnc001.mcc001.3gppnetwork.org;hss.ims.mnc001.mcc001.3gppnetwork.org",
+  "msisdn": "10002",
+  "pcscf_peer": null,
+  "sh_template_path": null,
+  "msisdn_list": "[10002]",
+  "xcap_profile": null,
+  "last_modified": "2024-08-19T21:15:22Z",
+  "imsi": "001010000010002",
+  "sh_profile": "string",
+  "ifc_path": "default_ifc.xml"
 }
 ```
 
