@@ -444,9 +444,9 @@ Open (http://<DOCKER_HOST_IP>:9999) in a web browser, where <DOCKER_HOST_IP> is 
 Username : admin
 Password : 1423
 ```
-
-![image](https://github.com/user-attachments/assets/e4054b6e-3374-486c-9392-8e546438339c)
-
+![image](https://github.com/user-attachments/assets/af09b885-e343-4c81-8cb0-f6a0071bff17)
+![image](https://github.com/user-attachments/assets/cf32780b-662a-44bc-ab95-ab9cb5957fde)
+![image](https://github.com/user-attachments/assets/e52a31ef-6743-458d-8f51-10a3d32c45ad)
 
 Please also register MSISDN. At that time, set the APN setting information as follows.
 | APN | Type | QCI | ARP | Capability | Vulnerablility | MBR DL/UL(Kbps) | GBR DL/UL(Kbps) |
