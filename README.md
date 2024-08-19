@@ -297,7 +297,7 @@ For eNodeB, set static routing to eNodeB for packets going from eNodeB to the Do
 
 ## Register a UE information
 
-Open (http://<DOCKER_HOST_IP>:3000) in a web browser, where <DOCKER_HOST_IP> is the IP of the machine/VM running the open5gs containers. Login with following credentials
+Open (http://<DOCKER_HOST_IP>:9999) in a web browser, where <DOCKER_HOST_IP> is the IP of the machine/VM running the open5gs containers. Login with following credentials
 
 ```
 Username : admin
@@ -332,8 +332,8 @@ Go to your favorite browser and open https://<ip_address>:9443
 $ https://<ip_address>:9443
 ```
 
-![image](https://user-images.githubusercontent.com/6804880/170558954-5d8090fb-e6c4-48c6-80ea-f2005ef478bc.png)
-![image](https://user-images.githubusercontent.com/6804880/170559207-65ce6556-2b98-4172-86fe-5304236cbf4c.png)
+![image](https://github.com/user-attachments/assets/bd950544-b925-4494-ba4d-8f601495b6ea)
+![image](https://github.com/user-attachments/assets/af8037a1-6ab4-4836-adda-299842844af7)
 
 ## Prepare the SIMCards
 
