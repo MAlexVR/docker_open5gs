@@ -1,0 +1,86 @@
+Open5GS daemon v2.7.2
+
+08/19 15:22:29.855: [app] INFO: Configuration: '/open5gs/install/etc/open5gs/mme.yaml' (../lib/app/ogs-init.c:133)
+08/19 15:22:29.855: [app] INFO: File Logging: '/open5gs/install/var/log/open5gs/mme.log' (../lib/app/ogs-init.c:136)
+08/19 15:22:29.887: [metrics] INFO: metrics_server() [http://172.22.0.9]:9091 (../lib/metrics/prometheus/context.c:299)
+08/19 15:22:30.030: [diam] INFO: CONNECTED TO 'hss.epc.mnc001.mcc001.3gppnetwork.org' (SCTP,soc#15): (../lib/diameter/common/logger.c:108)
+08/19 15:22:30.040: [gtp] INFO: gtp_server() [172.22.0.9]:2123 (../lib/gtp/path.c:30)
+08/19 15:22:30.040: [gtp] INFO: gtp_connect() [172.22.0.5]:2123 (../lib/gtp/path.c:60)
+08/19 15:22:30.040: [mme] INFO: sgsap client() [172.22.0.31]:29118 (../src/mme/sgsap-sctp.c:55)
+08/19 15:22:30.040: [mme] INFO: s1ap_server() [172.22.0.9]:36412 (../src/mme/s1ap-sctp.c:62)
+08/19 15:22:30.040: [sctp] INFO: MME initialize...done (../src/mme/app-init.c:33)
+Open5GS daemon v2.7.2
+
+08/19 15:39:35.469: [app] INFO: Configuration: '/open5gs/install/etc/open5gs/mme.yaml' (../lib/app/ogs-init.c:133)
+08/19 15:39:35.469: [app] INFO: File Logging: '/open5gs/install/var/log/open5gs/mme.log' (../lib/app/ogs-init.c:136)
+08/19 15:39:35.471: [metrics] INFO: metrics_server() [http://172.22.0.9]:9091 (../lib/metrics/prometheus/context.c:299)
+08/19 15:39:35.538: [gtp] INFO: gtp_server() [172.22.0.9]:2123 (../lib/gtp/path.c:30)
+08/19 15:39:35.538: [gtp] INFO: gtp_connect() [172.22.0.5]:2123 (../lib/gtp/path.c:60)
+08/19 15:39:35.538: [mme] INFO: sgsap client() [172.22.0.31]:29118 (../src/mme/sgsap-sctp.c:55)
+08/19 15:39:35.538: [mme] INFO: s1ap_server() [172.22.0.9]:36412 (../src/mme/s1ap-sctp.c:62)
+08/19 15:39:35.538: [sctp] INFO: MME initialize...done (../src/mme/app-init.c:33)
+08/19 15:39:35.540: [diam] INFO: CONNECTED TO 'hss.epc.mnc001.mcc001.3gppnetwork.org' (SCTP,soc#8): (../lib/diameter/common/logger.c:108)
+08/19 15:39:35.540: [diam] ERROR: pid:PSM/hss.epc.mnc001.mcc001.3gppnetwork.org in md_hook_cb_tree@dbg_msg_dumps.c:116: DROPPED 'Received while peer state machine was in state STATE_OPEN.'
+ ((null):0)
+08/19 15:39:35.540: [diam] ERROR: pid:PSM/hss.epc.mnc001.mcc001.3gppnetwork.org in md_hook_cb_tree@dbg_msg_dumps.c:117:      'Capabilities-Exchange-Answer'
+ ((null):0)
+08/19 15:39:35.540: [diam] ERROR: pid:PSM/hss.epc.mnc001.mcc001.3gppnetwork.org in md_hook_cb_tree@dbg_msg_dumps.c:117:        Version: 0x01
+ ((null):0)
+08/19 15:39:35.540: [diam] ERROR: pid:PSM/hss.epc.mnc001.mcc001.3gppnetwork.org in md_hook_cb_tree@dbg_msg_dumps.c:117:        Length: 400
+ ((null):0)
+08/19 15:39:35.540: [diam] ERROR: pid:PSM/hss.epc.mnc001.mcc001.3gppnetwork.org in md_hook_cb_tree@dbg_msg_dumps.c:117:        Flags: 0x00 (----)
+ ((null):0)
+08/19 15:39:35.540: [diam] ERROR: pid:PSM/hss.epc.mnc001.mcc001.3gppnetwork.org in md_hook_cb_tree@dbg_msg_dumps.c:117:        Command Code: 257
+ ((null):0)
+08/19 15:39:35.540: [diam] ERROR: pid:PSM/hss.epc.mnc001.mcc001.3gppnetwork.org in md_hook_cb_tree@dbg_msg_dumps.c:117:        ApplicationId: 0
+ ((null):0)
+08/19 15:39:35.540: [diam] ERROR: pid:PSM/hss.epc.mnc001.mcc001.3gppnetwork.org in md_hook_cb_tree@dbg_msg_dumps.c:117:        Hop-by-Hop Identifier: 0x44D182F0
+ ((null):0)
+08/19 15:39:35.540: [diam] ERROR: pid:PSM/hss.epc.mnc001.mcc001.3gppnetwork.org in md_hook_cb_tree@dbg_msg_dumps.c:117:        End-to-End Identifier: 0xD873C7AB
+ ((null):0)
+08/19 15:39:35.540: [diam] ERROR: pid:PSM/hss.epc.mnc001.mcc001.3gppnetwork.org in md_hook_cb_tree@dbg_msg_dumps.c:117:         {internal data}: src:hss.epc.mnc001.mcc001.3gppnetwork.org(37) rwb:(nil) rt:2 cb:(nil),(nil)((nil)) qry:0x708054000ce0 asso:0 sess:(nil)
+ ((null):0)
+08/19 15:39:35.540: [diam] ERROR: pid:PSM/hss.epc.mnc001.mcc001.3gppnetwork.org in md_hook_cb_tree@dbg_msg_dumps.c:117:         AVP: 'Result-Code'(268) l=12 f=-M val='ELECTION_LOST' (4003 (0xfa3))
+ ((null):0)
+08/19 15:39:35.540: [diam] ERROR: pid:PSM/hss.epc.mnc001.mcc001.3gppnetwork.org in md_hook_cb_tree@dbg_msg_dumps.c:117:         AVP: 'Error-Message'(281) l=59 f=-- val="Please answer my CER instead, you won the election."
+ ((null):0)
+08/19 15:39:35.540: [diam] ERROR: pid:PSM/hss.epc.mnc001.mcc001.3gppnetwork.org in md_hook_cb_tree@dbg_msg_dumps.c:117:         AVP: 'Origin-Host'(264) l=45 f=-M val="hss.epc.mnc001.mcc001.3gppnetwork.org"
+ ((null):0)
+08/19 15:39:35.540: [diam] ERROR: pid:PSM/hss.epc.mnc001.mcc001.3gppnetwork.org in md_hook_cb_tree@dbg_msg_dumps.c:117:         AVP: 'Origin-Realm'(296) l=41 f=-M val="epc.mnc001.mcc001.3gppnetwork.org"
+ ((null):0)
+08/19 15:39:35.540: [diam] ERROR: pid:PSM/hss.epc.mnc001.mcc001.3gppnetwork.org in md_hook_cb_tree@dbg_msg_dumps.c:117:         AVP: 'Origin-State-Id'(278) l=12 f=-M val=1724099974 (0x66c3ad86)
+ ((null):0)
+08/19 15:39:35.540: [diam] ERROR: pid:PSM/hss.epc.mnc001.mcc001.3gppnetwork.org in md_hook_cb_tree@dbg_msg_dumps.c:117:         AVP: 'Host-IP-Address'(257) l=14 f=-M val=172.22.0.3
+ ((null):0)
+08/19 15:39:35.540: [diam] ERROR: pid:PSM/hss.epc.mnc001.mcc001.3gppnetwork.org in md_hook_cb_tree@dbg_msg_dumps.c:117:         AVP: 'Vendor-Id'(266) l=12 f=-M val=0 (0x0)
+ ((null):0)
+08/19 15:39:35.540: [diam] ERROR: pid:PSM/hss.epc.mnc001.mcc001.3gppnetwork.org in md_hook_cb_tree@dbg_msg_dumps.c:117:         AVP: 'Product-Name'(269) l=20 f=-- val="freediameter"
+ ((null):0)
+08/19 15:39:35.540: [diam] ERROR: pid:PSM/hss.epc.mnc001.mcc001.3gppnetwork.org in md_hook_cb_tree@dbg_msg_dumps.c:117:         AVP: 'Firmware-Revision'(267) l=12 f=-- val=10500 (0x2904)
+ ((null):0)
+08/19 15:39:35.540: [diam] ERROR: pid:PSM/hss.epc.mnc001.mcc001.3gppnetwork.org in md_hook_cb_tree@dbg_msg_dumps.c:117:         AVP: 'Vendor-Specific-Application-Id'(260) l=32 f=-M val=(grouped)
+ ((null):0)
+08/19 15:39:35.540: [diam] ERROR: pid:PSM/hss.epc.mnc001.mcc001.3gppnetwork.org in md_hook_cb_tree@dbg_msg_dumps.c:117:            AVP: 'Auth-Application-Id'(258) l=12 f=-M val=16777216 (0x1000000)
+ ((null):0)
+08/19 15:39:35.540: [diam] ERROR: pid:PSM/hss.epc.mnc001.mcc001.3gppnetwork.org in md_hook_cb_tree@dbg_msg_dumps.c:117:            AVP: 'Vendor-Id'(266) l=12 f=-M val=10415 (0x28af)
+ ((null):0)
+08/19 15:39:35.540: [diam] ERROR: pid:PSM/hss.epc.mnc001.mcc001.3gppnetwork.org in md_hook_cb_tree@dbg_msg_dumps.c:117:         AVP: 'Vendor-Specific-Application-Id'(260) l=32 f=-M val=(grouped)
+ ((null):0)
+08/19 15:39:35.540: [diam] ERROR: pid:PSM/hss.epc.mnc001.mcc001.3gppnetwork.org in md_hook_cb_tree@dbg_msg_dumps.c:117:            AVP: 'Auth-Application-Id'(258) l=12 f=-M val=16777251 (0x1000023)
+ ((null):0)
+08/19 15:39:35.540: [diam] ERROR: pid:PSM/hss.epc.mnc001.mcc001.3gppnetwork.org in md_hook_cb_tree@dbg_msg_dumps.c:117:            AVP: 'Vendor-Id'(266) l=12 f=-M val=10415 (0x28af)
+ ((null):0)
+08/19 15:39:35.540: [diam] ERROR: pid:PSM/hss.epc.mnc001.mcc001.3gppnetwork.org in md_hook_cb_tree@dbg_msg_dumps.c:117:         AVP: 'Vendor-Specific-Application-Id'(260) l=32 f=-M val=(grouped)
+ ((null):0)
+08/19 15:39:35.540: [diam] ERROR: pid:PSM/hss.epc.mnc001.mcc001.3gppnetwork.org in md_hook_cb_tree@dbg_msg_dumps.c:117:            AVP: 'Auth-Application-Id'(258) l=12 f=-M val=16777265 (0x1000031)
+ ((null):0)
+08/19 15:39:35.540: [diam] ERROR: pid:PSM/hss.epc.mnc001.mcc001.3gppnetwork.org in md_hook_cb_tree@dbg_msg_dumps.c:117:            AVP: 'Vendor-Id'(266) l=12 f=-M val=10415 (0x28af)
+ ((null):0)
+08/19 15:39:35.540: [diam] ERROR: pid:PSM/hss.epc.mnc001.mcc001.3gppnetwork.org in md_hook_cb_tree@dbg_msg_dumps.c:117:         AVP: 'Auth-Application-Id'(258) l=12 f=-M val=4294967295 (0xffffffff)
+ ((null):0)
+08/19 15:39:35.540: [diam] ERROR: pid:PSM/hss.epc.mnc001.mcc001.3gppnetwork.org in md_hook_cb_tree@dbg_msg_dumps.c:117:         AVP: 'Supported-Vendor-Id'(265) l=12 f=-M val=5535 (0x159f)
+ ((null):0)
+08/19 15:39:35.540: [diam] ERROR: pid:PSM/hss.epc.mnc001.mcc001.3gppnetwork.org in md_hook_cb_tree@dbg_msg_dumps.c:117:         AVP: 'Supported-Vendor-Id'(265) l=12 f=-M val=10415 (0x28af)
+ ((null):0)
+08/19 15:39:35.540: [diam] ERROR: pid:PSM/hss.epc.mnc001.mcc001.3gppnetwork.org in md_hook_cb_tree@dbg_msg_dumps.c:117:         AVP: 'Supported-Vendor-Id'(265) l=12 f=-M val=13019 (0x32db)
+ ((null):0)

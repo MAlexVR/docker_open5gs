@@ -1,4 +1,3 @@
-version: '3'
 services:
   mongo:
     image: mongo:6.0
@@ -69,11 +68,11 @@ services:
         ipv4_address: ${HSS_IP}
   sgwc:
     image: docker_open5gs
-    hostname: sgwc
-    restart: unless-stopped
     depends_on:
       - smf
       - upf
+    hostname: sgwc
+    restart: unless-stopped
     container_name: sgwc
     env_file:
       - .env
@@ -92,11 +91,11 @@ services:
         ipv4_address: ${SGWC_IP}
   sgwu:
     image: docker_open5gs
-    hostname: sgwu
-    restart: unless-stopped
     depends_on:
       - smf
       - upf
+    hostname: sgwu
+    restart: unless-stopped
     container_name: sgwu
     env_file:
       - .env
@@ -110,8 +109,8 @@ services:
     expose:
       - "8805/udp"
       - "2152/udp"
-    # ports:
-    #   - "2152:2152/udp"
+    ports:
+      - "2152:2152/udp"
     networks:
       default:
         ipv4_address: ${SGWU_IP}
@@ -146,10 +145,10 @@ services:
         ipv4_address: ${SMF_IP}
   upf:
     image: docker_open5gs
-    hostname: upf
-    restart: unless-stopped
     depends_on:
       - smf
+    hostname: upf
+    restart: unless-stopped
     container_name: upf
     env_file:
       - .env
@@ -174,8 +173,6 @@ services:
         ipv4_address: ${UPF_IP}
   mme:
     image: docker_open5gs
-    hostname: mme
-    restart: unless-stopped
     depends_on:
       - hss
       - sgwc
@@ -183,6 +180,8 @@ services:
       - smf
       - upf
       - osmomsc
+    hostname: mme
+    restart: unless-stopped
     container_name: mme
     env_file:
       - .env
@@ -203,8 +202,8 @@ services:
       - "36412/sctp"
       - "2123/udp"
       - "9091/tcp"
-    # ports:
-    #   - "36412:36412/sctp"
+    ports:
+      - "36412:36412/sctp"
     networks:
       default:
         ipv4_address: ${MME_IP}
@@ -236,9 +235,9 @@ services:
         ipv4_address: ${PCRF_IP}
   dns:
     build: ./dns
-    image: docker_dns
     hostname: dns
     restart: unless-stopped
+    image: docker_dns
     container_name: dns
     env_file:
       - .env
@@ -284,8 +283,6 @@ services:
   mysql:
     build: ./mysql
     image: docker_mysql
-    hostname: mysql
-    restart: unless-stopped
     container_name: mysql
     env_file:
       - .env
@@ -495,6 +492,25 @@ services:
     networks:
       default:
         ipv4_address: ${METRICS_IP}
+  grafana:
+    build: ./grafana
+    image: docker_grafana
+    hostname: grafana
+    restart: unless-stopped
+    container_name: grafana
+    env_file:
+      - .env
+    volumes:
+      - ./grafana:/mnt/grafana
+      - /etc/timezone:/etc/timezone:ro
+      - /etc/localtime:/etc/localtime:ro
+    expose:
+      - "3000/tcp"
+    ports:
+      - "3000:3000/tcp"
+    networks:
+      default:
+        ipv4_address: ${GRAFANA_IP}
   portainer:
     image: portainer/portainer-ce:2.20.1
     hostname: portainer

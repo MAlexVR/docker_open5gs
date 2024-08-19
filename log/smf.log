@@ -1,0 +1,146 @@
+Open5GS daemon v2.7.2
+
+08/19 15:22:20.382: [app] INFO: Configuration: '/open5gs/install/etc/open5gs/smf.yaml' (../lib/app/ogs-init.c:133)
+08/19 15:22:20.382: [app] INFO: File Logging: '/open5gs/install/var/log/open5gs/smf.log' (../lib/app/ogs-init.c:136)
+08/19 15:22:20.716: [pfcp] WARNING: Please change the configuration files of smf.yaml and upf.yaml as below. (../lib/pfcp/context.c:2194)
+
+<OLD Format>
+smf:
+  session:
+    - subnet: 192.168.100.1/24
+
+<NEW Format>
+smf:
+  session:
+    - subnet: 192.168.100.0/24
+      gateway: 192.168.100.1
+
+
+08/19 15:22:20.716: [pfcp] WARNING: Please change the configuration files of smf.yaml and upf.yaml as below. (../lib/pfcp/context.c:2194)
+
+<OLD Format>
+smf:
+  session:
+    - subnet: 2001:230:cafe::1/48
+
+<NEW Format>
+smf:
+  session:
+    - subnet: 2001:230:cafe::/48
+      gateway: 2001:230:cafe::1
+
+
+08/19 15:22:20.716: [pfcp] WARNING: Please change the configuration files of smf.yaml and upf.yaml as below. (../lib/pfcp/context.c:2194)
+
+<OLD Format>
+smf:
+  session:
+    - subnet: 192.168.101.1/24
+
+<NEW Format>
+smf:
+  session:
+    - subnet: 192.168.101.0/24
+      gateway: 192.168.101.1
+
+
+08/19 15:22:20.716: [pfcp] WARNING: Please change the configuration files of smf.yaml and upf.yaml as below. (../lib/pfcp/context.c:2194)
+
+<OLD Format>
+smf:
+  session:
+    - subnet: 2001:230:babe::1/48
+
+<NEW Format>
+smf:
+  session:
+    - subnet: 2001:230:babe::/48
+      gateway: 2001:230:babe::1
+
+
+08/19 15:22:20.716: [metrics] INFO: metrics_server() [http://172.22.0.7]:9091 (../lib/metrics/prometheus/context.c:299)
+08/19 15:22:20.956: [gtp] INFO: gtp_server() [172.22.0.7]:2123 (../lib/gtp/path.c:30)
+08/19 15:22:20.956: [gtp] INFO: gtp_server() [172.22.0.7]:2152 (../lib/gtp/path.c:30)
+08/19 15:22:20.956: [pfcp] INFO: pfcp_server() [172.22.0.7]:8805 (../lib/pfcp/path.c:30)
+08/19 15:22:20.956: [pfcp] INFO: ogs_pfcp_connect() [172.22.0.8]:8805 (../lib/pfcp/path.c:61)
+08/19 15:22:20.956: [app] INFO: SMF initialize...done (../src/smf/app.c:31)
+08/19 15:22:20.956: [smf] INFO: PFCP associated [172.22.0.8]:8805 (../src/smf/pfcp-sm.c:203)
+08/19 15:22:21.106: [diam] INFO: CONNECTED TO 'pcrf.epc.mnc001.mcc001.3gppnetwork.org' (SCTP,soc#18): (../lib/diameter/common/logger.c:108)
+08/19 15:22:21.523: [smf] WARNING: PFCP[REQ] has already been associated [172.22.0.8]:8805 (../src/smf/pfcp-sm.c:299)
+08/19 15:36:47.030: [diam] ERROR: pid:PSM/pcrf.epc.mnc001.mcc001.3gppnetwork.org in fd_psm_change_state@p_psm.c:284: 'STATE_OPEN'	-> 'STATE_CLOSED'	'pcrf.epc.mnc001.mcc001.3gppnetwork.org'
+ ((null):0)
+08/19 15:37:30.638: [pfcp] WARNING: [84] LOCAL  No Reponse. Give up! for step 1 type 1 peer [172.22.0.8]:8805 (../lib/pfcp/xact.c:619)
+08/19 15:37:30.638: [smf] WARNING: No Heartbeat from UPF [172.22.0.8]:8805 (../src/smf/pfcp-sm.c:424)
+08/19 15:37:30.638: [smf] ERROR: No UPF available (../src/smf/pfcp-sm.c:526)
+08/19 15:37:30.638: [smf] INFO: PFCP de-associated [172.22.0.8]:8805 (../src/smf/pfcp-sm.c:218)
+Open5GS daemon v2.7.2
+
+08/19 15:39:05.488: [app] INFO: Configuration: '/open5gs/install/etc/open5gs/smf.yaml' (../lib/app/ogs-init.c:133)
+08/19 15:39:05.488: [app] INFO: File Logging: '/open5gs/install/var/log/open5gs/smf.log' (../lib/app/ogs-init.c:136)
+08/19 15:39:05.522: [pfcp] WARNING: Please change the configuration files of smf.yaml and upf.yaml as below. (../lib/pfcp/context.c:2194)
+
+<OLD Format>
+smf:
+  session:
+    - subnet: 192.168.100.1/24
+
+<NEW Format>
+smf:
+  session:
+    - subnet: 192.168.100.0/24
+      gateway: 192.168.100.1
+
+
+08/19 15:39:05.522: [pfcp] WARNING: Please change the configuration files of smf.yaml and upf.yaml as below. (../lib/pfcp/context.c:2194)
+
+<OLD Format>
+smf:
+  session:
+    - subnet: 2001:230:cafe::1/48
+
+<NEW Format>
+smf:
+  session:
+    - subnet: 2001:230:cafe::/48
+      gateway: 2001:230:cafe::1
+
+
+08/19 15:39:05.523: [pfcp] WARNING: Please change the configuration files of smf.yaml and upf.yaml as below. (../lib/pfcp/context.c:2194)
+
+<OLD Format>
+smf:
+  session:
+    - subnet: 192.168.101.1/24
+
+<NEW Format>
+smf:
+  session:
+    - subnet: 192.168.101.0/24
+      gateway: 192.168.101.1
+
+
+08/19 15:39:05.523: [pfcp] WARNING: Please change the configuration files of smf.yaml and upf.yaml as below. (../lib/pfcp/context.c:2194)
+
+<OLD Format>
+smf:
+  session:
+    - subnet: 2001:230:babe::1/48
+
+<NEW Format>
+smf:
+  session:
+    - subnet: 2001:230:babe::/48
+      gateway: 2001:230:babe::1
+
+
+08/19 15:39:05.523: [metrics] INFO: metrics_server() [http://172.22.0.7]:9091 (../lib/metrics/prometheus/context.c:299)
+08/19 15:39:05.547: [gtp] INFO: gtp_server() [172.22.0.7]:2123 (../lib/gtp/path.c:30)
+08/19 15:39:05.547: [gtp] INFO: gtp_server() [172.22.0.7]:2152 (../lib/gtp/path.c:30)
+08/19 15:39:05.547: [pfcp] INFO: pfcp_server() [172.22.0.7]:8805 (../lib/pfcp/path.c:30)
+08/19 15:39:05.547: [pfcp] INFO: ogs_pfcp_connect() [172.22.0.8]:8805 (../lib/pfcp/path.c:61)
+08/19 15:39:05.547: [app] INFO: SMF initialize...done (../src/smf/app.c:31)
+08/19 15:39:13.053: [pfcp] WARNING: [1] LOCAL  No Reponse. Give up! for step 1 type 5 peer [172.22.0.8]:8805 (../lib/pfcp/xact.c:619)
+08/19 15:39:16.551: [smf] WARNING: Retry association with peer [172.22.0.8]:8805 failed (../src/smf/pfcp-sm.c:110)
+08/19 15:39:17.781: [smf] INFO: PFCP associated [172.22.0.8]:8805 (../src/smf/pfcp-sm.c:203)
+08/19 15:39:19.052: [smf] WARNING: PFCP[RSP] has already been associated [172.22.0.8]:8805 (../src/smf/pfcp-sm.c:306)
+08/19 15:39:35.654: [diam] INFO: CONNECTED TO 'pcrf.epc.mnc001.mcc001.3gppnetwork.org' (SCTP,soc#8): (../lib/diameter/common/logger.c:108)

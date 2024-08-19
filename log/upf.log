@@ -1,0 +1,134 @@
+Open5GS daemon v2.7.2
+
+08/19 15:22:16.407: [app] INFO: Configuration: '/open5gs/install/etc/open5gs/upf.yaml' (../lib/app/ogs-init.c:133)
+08/19 15:22:16.407: [app] INFO: File Logging: '/open5gs/install/var/log/open5gs/upf.log' (../lib/app/ogs-init.c:136)
+08/19 15:22:16.433: [pfcp] WARNING: Please change the configuration files of smf.yaml and upf.yaml as below. (../lib/pfcp/context.c:2194)
+
+<OLD Format>
+smf:
+  session:
+    - subnet: 192.168.100.1/24
+
+<NEW Format>
+smf:
+  session:
+    - subnet: 192.168.100.0/24
+      gateway: 192.168.100.1
+
+
+08/19 15:22:16.519: [pfcp] WARNING: Please change the configuration files of smf.yaml and upf.yaml as below. (../lib/pfcp/context.c:2194)
+
+<OLD Format>
+smf:
+  session:
+    - subnet: 2001:230:cafe::1/48
+
+<NEW Format>
+smf:
+  session:
+    - subnet: 2001:230:cafe::/48
+      gateway: 2001:230:cafe::1
+
+
+08/19 15:22:16.519: [pfcp] WARNING: Please change the configuration files of smf.yaml and upf.yaml as below. (../lib/pfcp/context.c:2194)
+
+<OLD Format>
+smf:
+  session:
+    - subnet: 192.168.101.1/24
+
+<NEW Format>
+smf:
+  session:
+    - subnet: 192.168.101.0/24
+      gateway: 192.168.101.1
+
+
+08/19 15:22:16.519: [pfcp] WARNING: Please change the configuration files of smf.yaml and upf.yaml as below. (../lib/pfcp/context.c:2194)
+
+<OLD Format>
+smf:
+  session:
+    - subnet: 2001:230:babe::1/48
+
+<NEW Format>
+smf:
+  session:
+    - subnet: 2001:230:babe::/48
+      gateway: 2001:230:babe::1
+
+
+08/19 15:22:16.519: [metrics] INFO: metrics_server() [http://172.22.0.8]:9091 (../lib/metrics/prometheus/context.c:299)
+08/19 15:22:16.519: [pfcp] INFO: pfcp_server() [172.22.0.8]:8805 (../lib/pfcp/path.c:30)
+08/19 15:22:16.519: [pfcp] INFO: ogs_pfcp_connect() [172.22.0.7]:8805 (../lib/pfcp/path.c:61)
+08/19 15:22:16.520: [gtp] INFO: gtp_server() [172.22.0.8]:2152 (../lib/gtp/path.c:30)
+08/19 15:22:16.520: [app] INFO: UPF initialize...done (../src/upf/app.c:31)
+08/19 15:22:20.956: [upf] INFO: PFCP associated [172.22.0.7]:8805 (../src/upf/pfcp-sm.c:184)
+08/19 15:22:21.524: [upf] WARNING: PFCP[RSP] has already been associated [172.22.0.7]:8805 (../src/upf/pfcp-sm.c:277)
+Open5GS daemon v2.7.2
+
+08/19 15:39:17.750: [app] INFO: Configuration: '/open5gs/install/etc/open5gs/upf.yaml' (../lib/app/ogs-init.c:133)
+08/19 15:39:17.750: [app] INFO: File Logging: '/open5gs/install/var/log/open5gs/upf.log' (../lib/app/ogs-init.c:136)
+08/19 15:39:17.780: [pfcp] WARNING: Please change the configuration files of smf.yaml and upf.yaml as below. (../lib/pfcp/context.c:2194)
+
+<OLD Format>
+smf:
+  session:
+    - subnet: 192.168.100.1/24
+
+<NEW Format>
+smf:
+  session:
+    - subnet: 192.168.100.0/24
+      gateway: 192.168.100.1
+
+
+08/19 15:39:17.780: [pfcp] WARNING: Please change the configuration files of smf.yaml and upf.yaml as below. (../lib/pfcp/context.c:2194)
+
+<OLD Format>
+smf:
+  session:
+    - subnet: 2001:230:cafe::1/48
+
+<NEW Format>
+smf:
+  session:
+    - subnet: 2001:230:cafe::/48
+      gateway: 2001:230:cafe::1
+
+
+08/19 15:39:17.780: [pfcp] WARNING: Please change the configuration files of smf.yaml and upf.yaml as below. (../lib/pfcp/context.c:2194)
+
+<OLD Format>
+smf:
+  session:
+    - subnet: 192.168.101.1/24
+
+<NEW Format>
+smf:
+  session:
+    - subnet: 192.168.101.0/24
+      gateway: 192.168.101.1
+
+
+08/19 15:39:17.780: [pfcp] WARNING: Please change the configuration files of smf.yaml and upf.yaml as below. (../lib/pfcp/context.c:2194)
+
+<OLD Format>
+smf:
+  session:
+    - subnet: 2001:230:babe::1/48
+
+<NEW Format>
+smf:
+  session:
+    - subnet: 2001:230:babe::/48
+      gateway: 2001:230:babe::1
+
+
+08/19 15:39:17.780: [metrics] INFO: metrics_server() [http://172.22.0.8]:9091 (../lib/metrics/prometheus/context.c:299)
+08/19 15:39:17.780: [pfcp] INFO: pfcp_server() [172.22.0.8]:8805 (../lib/pfcp/path.c:30)
+08/19 15:39:17.780: [pfcp] INFO: ogs_pfcp_connect() [172.22.0.7]:8805 (../lib/pfcp/path.c:61)
+08/19 15:39:17.780: [gtp] INFO: gtp_server() [172.22.0.8]:2152 (../lib/gtp/path.c:30)
+08/19 15:39:17.781: [app] INFO: UPF initialize...done (../src/upf/app.c:31)
+08/19 15:39:17.781: [upf] INFO: PFCP associated [172.22.0.7]:8805 (../src/upf/pfcp-sm.c:184)
+08/19 15:39:19.052: [upf] WARNING: PFCP[REQ] has already been associated [172.22.0.7]:8805 (../src/upf/pfcp-sm.c:270)

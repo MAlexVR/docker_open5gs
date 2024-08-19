@@ -1,0 +1,777 @@
+2024-08-19T20:38:38.008996 [ENB    ] [I] Using binary /usr/local/bin/srsenb with arguments: 
+2024-08-19T20:38:38.058475 [ENB    ] [I] Built in Release mode using commit ec29b0c1f on branch HEAD.
+2024-08-19T20:38:38.095640 [COMN   ] [D] [    0] Successfully bound to address 172.22.0.22:2152
+2024-08-19T20:38:38.095646 [COMN   ] [D] [    0] RxSockets: socket fd=6 has been registered.
+2024-08-19T20:38:38.095648 [COMN   ] [D] [    0] Opened SCTP socket=7
+2024-08-19T20:38:38.095652 [COMN   ] [D] [    0] Setting RTO_INFO options on SCTP socket. Association 0, Initial RTO 3000, Minimum RTO 1000, Maximum RTO 6000
+2024-08-19T20:38:38.095654 [COMN   ] [D] [    0] Setting SCTP_INITMSG options on SCTP socket. Max attempts 3, Max init attempts timeout 5000
+2024-08-19T20:38:38.095673 [COMN   ] [D] [    0] Successfully bound to address 172.22.0.22:0
+2024-08-19T20:38:56.484153 [COMN   ] [I] [    0] Failed to establish socket connection to 172.22.0.9
+2024-08-19T20:38:56.484264 [COMN   ] [W] [    0] RxSockets: The socket fd=7 to be removed does not exist
+2024-08-19T20:38:56.484277 [COMN   ] [D] [    0] Socket=7 was closed.
+2024-08-19T20:39:06.483594 [COMN   ] [D] [    0] Opened SCTP socket=7
+2024-08-19T20:39:06.483599 [COMN   ] [D] [    0] Setting RTO_INFO options on SCTP socket. Association 0, Initial RTO 3000, Minimum RTO 1000, Maximum RTO 6000
+2024-08-19T20:39:06.483601 [COMN   ] [D] [    0] Setting SCTP_INITMSG options on SCTP socket. Max attempts 3, Max init attempts timeout 5000
+2024-08-19T20:39:06.483610 [COMN   ] [D] [    0] Successfully bound to address 172.22.0.22:0
+2024-08-19T20:39:25.156147 [COMN   ] [I] [    0] Failed to establish socket connection to 172.22.0.9
+2024-08-19T20:39:25.156245 [COMN   ] [W] [    0] RxSockets: The socket fd=7 to be removed does not exist
+2024-08-19T20:39:25.156281 [COMN   ] [D] [    0] Socket=7 was closed.
+2024-08-19T20:39:35.156183 [COMN   ] [D] [    0] Opened SCTP socket=7
+2024-08-19T20:39:35.156190 [COMN   ] [D] [    0] Setting RTO_INFO options on SCTP socket. Association 0, Initial RTO 3000, Minimum RTO 1000, Maximum RTO 6000
+2024-08-19T20:39:35.156192 [COMN   ] [D] [    0] Setting SCTP_INITMSG options on SCTP socket. Max attempts 3, Max init attempts timeout 5000
+2024-08-19T20:39:35.156205 [COMN   ] [D] [    0] Successfully bound to address 172.22.0.22:0
+2024-08-19T20:39:53.828148 [COMN   ] [I] [    0] Failed to establish socket connection to 172.22.0.9
+2024-08-19T20:39:53.828240 [COMN   ] [W] [    0] RxSockets: The socket fd=7 to be removed does not exist
+2024-08-19T20:39:53.828255 [COMN   ] [D] [    0] Socket=7 was closed.
+2024-08-19T20:40:03.828175 [COMN   ] [D] [    0] Opened SCTP socket=7
+2024-08-19T20:40:03.828184 [COMN   ] [D] [    0] Setting RTO_INFO options on SCTP socket. Association 0, Initial RTO 3000, Minimum RTO 1000, Maximum RTO 6000
+2024-08-19T20:40:03.828188 [COMN   ] [D] [    0] Setting SCTP_INITMSG options on SCTP socket. Max attempts 3, Max init attempts timeout 5000
+2024-08-19T20:40:03.828216 [COMN   ] [D] [    0] Successfully bound to address 172.22.0.22:0
+2024-08-19T20:40:22.501141 [COMN   ] [I] [    0] Failed to establish socket connection to 172.22.0.9
+2024-08-19T20:40:22.501237 [COMN   ] [W] [    0] RxSockets: The socket fd=7 to be removed does not exist
+2024-08-19T20:40:22.501250 [COMN   ] [D] [    0] Socket=7 was closed.
+2024-08-19T20:40:32.500463 [COMN   ] [D] [    0] Opened SCTP socket=7
+2024-08-19T20:40:32.500467 [COMN   ] [D] [    0] Setting RTO_INFO options on SCTP socket. Association 0, Initial RTO 3000, Minimum RTO 1000, Maximum RTO 6000
+2024-08-19T20:40:32.500468 [COMN   ] [D] [    0] Setting SCTP_INITMSG options on SCTP socket. Max attempts 3, Max init attempts timeout 5000
+2024-08-19T20:40:32.500477 [COMN   ] [D] [    0] Successfully bound to address 172.22.0.22:0
+2024-08-19T20:40:51.172189 [COMN   ] [I] [    0] Failed to establish socket connection to 172.22.0.9
+2024-08-19T20:40:51.172292 [COMN   ] [W] [    0] RxSockets: The socket fd=7 to be removed does not exist
+2024-08-19T20:40:51.172303 [COMN   ] [D] [    0] Socket=7 was closed.
+2024-08-19T20:41:01.172088 [COMN   ] [D] [    0] Opened SCTP socket=7
+2024-08-19T20:41:01.172094 [COMN   ] [D] [    0] Setting RTO_INFO options on SCTP socket. Association 0, Initial RTO 3000, Minimum RTO 1000, Maximum RTO 6000
+2024-08-19T20:41:01.172096 [COMN   ] [D] [    0] Setting SCTP_INITMSG options on SCTP socket. Max attempts 3, Max init attempts timeout 5000
+2024-08-19T20:41:01.172133 [COMN   ] [D] [    0] Successfully bound to address 172.22.0.22:0
+2024-08-19T20:41:19.845136 [COMN   ] [I] [    0] Failed to establish socket connection to 172.22.0.9
+2024-08-19T20:41:19.845194 [COMN   ] [W] [    0] RxSockets: The socket fd=7 to be removed does not exist
+2024-08-19T20:41:19.845220 [COMN   ] [D] [    0] Socket=7 was closed.
+2024-08-19T20:41:29.844485 [COMN   ] [D] [    0] Opened SCTP socket=7
+2024-08-19T20:41:29.844490 [COMN   ] [D] [    0] Setting RTO_INFO options on SCTP socket. Association 0, Initial RTO 3000, Minimum RTO 1000, Maximum RTO 6000
+2024-08-19T20:41:29.844491 [COMN   ] [D] [    0] Setting SCTP_INITMSG options on SCTP socket. Max attempts 3, Max init attempts timeout 5000
+2024-08-19T20:41:29.844501 [COMN   ] [D] [    0] Successfully bound to address 172.22.0.22:0
+2024-08-19T20:41:48.516134 [COMN   ] [I] [    0] Failed to establish socket connection to 172.22.0.9
+2024-08-19T20:41:48.516219 [COMN   ] [W] [    0] RxSockets: The socket fd=7 to be removed does not exist
+2024-08-19T20:41:48.516227 [COMN   ] [D] [    0] Socket=7 was closed.
+2024-08-19T20:41:58.516043 [COMN   ] [D] [    0] Opened SCTP socket=7
+2024-08-19T20:41:58.516047 [COMN   ] [D] [    0] Setting RTO_INFO options on SCTP socket. Association 0, Initial RTO 3000, Minimum RTO 1000, Maximum RTO 6000
+2024-08-19T20:41:58.516049 [COMN   ] [D] [    0] Setting SCTP_INITMSG options on SCTP socket. Max attempts 3, Max init attempts timeout 5000
+2024-08-19T20:41:58.516060 [COMN   ] [D] [    0] Successfully bound to address 172.22.0.22:0
+2024-08-19T20:42:17.188133 [COMN   ] [I] [    0] Failed to establish socket connection to 172.22.0.9
+2024-08-19T20:42:17.188214 [COMN   ] [W] [    0] RxSockets: The socket fd=7 to be removed does not exist
+2024-08-19T20:42:17.188229 [COMN   ] [D] [    0] Socket=7 was closed.
+2024-08-19T20:42:27.188180 [COMN   ] [D] [    0] Opened SCTP socket=7
+2024-08-19T20:42:27.188185 [COMN   ] [D] [    0] Setting RTO_INFO options on SCTP socket. Association 0, Initial RTO 3000, Minimum RTO 1000, Maximum RTO 6000
+2024-08-19T20:42:27.188186 [COMN   ] [D] [    0] Setting SCTP_INITMSG options on SCTP socket. Max attempts 3, Max init attempts timeout 5000
+2024-08-19T20:42:27.188196 [COMN   ] [D] [    0] Successfully bound to address 172.22.0.22:0
+2024-08-19T20:42:45.860140 [COMN   ] [I] [    0] Failed to establish socket connection to 172.22.0.9
+2024-08-19T20:42:45.860274 [COMN   ] [W] [    0] RxSockets: The socket fd=7 to be removed does not exist
+2024-08-19T20:42:45.860288 [COMN   ] [D] [    0] Socket=7 was closed.
+2024-08-19T20:42:55.860199 [COMN   ] [D] [    0] Opened SCTP socket=7
+2024-08-19T20:42:55.860203 [COMN   ] [D] [    0] Setting RTO_INFO options on SCTP socket. Association 0, Initial RTO 3000, Minimum RTO 1000, Maximum RTO 6000
+2024-08-19T20:42:55.860204 [COMN   ] [D] [    0] Setting SCTP_INITMSG options on SCTP socket. Max attempts 3, Max init attempts timeout 5000
+2024-08-19T20:42:55.860217 [COMN   ] [D] [    0] Successfully bound to address 172.22.0.22:0
+2024-08-19T20:43:14.533133 [COMN   ] [I] [    0] Failed to establish socket connection to 172.22.0.9
+2024-08-19T20:43:14.533255 [COMN   ] [W] [    0] RxSockets: The socket fd=7 to be removed does not exist
+2024-08-19T20:43:14.533267 [COMN   ] [D] [    0] Socket=7 was closed.
+2024-08-19T20:43:24.533280 [COMN   ] [D] [    0] Opened SCTP socket=7
+2024-08-19T20:43:24.533284 [COMN   ] [D] [    0] Setting RTO_INFO options on SCTP socket. Association 0, Initial RTO 3000, Minimum RTO 1000, Maximum RTO 6000
+2024-08-19T20:43:24.533286 [COMN   ] [D] [    0] Setting SCTP_INITMSG options on SCTP socket. Max attempts 3, Max init attempts timeout 5000
+2024-08-19T20:43:24.533299 [COMN   ] [D] [    0] Successfully bound to address 172.22.0.22:0
+2024-08-19T20:43:43.204154 [COMN   ] [I] [    0] Failed to establish socket connection to 172.22.0.9
+2024-08-19T20:43:43.204292 [COMN   ] [W] [    0] RxSockets: The socket fd=7 to be removed does not exist
+2024-08-19T20:43:43.204333 [COMN   ] [D] [    0] Socket=7 was closed.
+2024-08-19T20:43:53.203210 [COMN   ] [D] [    0] Opened SCTP socket=7
+2024-08-19T20:43:53.203215 [COMN   ] [D] [    0] Setting RTO_INFO options on SCTP socket. Association 0, Initial RTO 3000, Minimum RTO 1000, Maximum RTO 6000
+2024-08-19T20:43:53.203216 [COMN   ] [D] [    0] Setting SCTP_INITMSG options on SCTP socket. Max attempts 3, Max init attempts timeout 5000
+2024-08-19T20:43:53.203228 [COMN   ] [D] [    0] Successfully bound to address 172.22.0.22:0
+2024-08-19T20:44:11.876155 [COMN   ] [I] [    0] Failed to establish socket connection to 172.22.0.9
+2024-08-19T20:44:11.876207 [COMN   ] [W] [    0] RxSockets: The socket fd=7 to be removed does not exist
+2024-08-19T20:44:11.876222 [COMN   ] [D] [    0] Socket=7 was closed.
+2024-08-19T20:44:21.877821 [COMN   ] [D] [    0] Opened SCTP socket=7
+2024-08-19T20:44:21.877825 [COMN   ] [D] [    0] Setting RTO_INFO options on SCTP socket. Association 0, Initial RTO 3000, Minimum RTO 1000, Maximum RTO 6000
+2024-08-19T20:44:21.877826 [COMN   ] [D] [    0] Setting SCTP_INITMSG options on SCTP socket. Max attempts 3, Max init attempts timeout 5000
+2024-08-19T20:44:21.877835 [COMN   ] [D] [    0] Successfully bound to address 172.22.0.22:0
+2024-08-19T20:44:40.549143 [COMN   ] [I] [    0] Failed to establish socket connection to 172.22.0.9
+2024-08-19T20:44:40.549238 [COMN   ] [W] [    0] RxSockets: The socket fd=7 to be removed does not exist
+2024-08-19T20:44:40.549263 [COMN   ] [D] [    0] Socket=7 was closed.
+2024-08-19T20:44:50.550818 [COMN   ] [D] [    0] Opened SCTP socket=7
+2024-08-19T20:44:50.550823 [COMN   ] [D] [    0] Setting RTO_INFO options on SCTP socket. Association 0, Initial RTO 3000, Minimum RTO 1000, Maximum RTO 6000
+2024-08-19T20:44:50.550824 [COMN   ] [D] [    0] Setting SCTP_INITMSG options on SCTP socket. Max attempts 3, Max init attempts timeout 5000
+2024-08-19T20:44:50.550833 [COMN   ] [D] [    0] Successfully bound to address 172.22.0.22:0
+2024-08-19T20:45:09.221152 [COMN   ] [I] [    0] Failed to establish socket connection to 172.22.0.9
+2024-08-19T20:45:09.221238 [COMN   ] [W] [    0] RxSockets: The socket fd=7 to be removed does not exist
+2024-08-19T20:45:09.221250 [COMN   ] [D] [    0] Socket=7 was closed.
+2024-08-19T20:45:19.220921 [COMN   ] [D] [    0] Opened SCTP socket=7
+2024-08-19T20:45:19.220925 [COMN   ] [D] [    0] Setting RTO_INFO options on SCTP socket. Association 0, Initial RTO 3000, Minimum RTO 1000, Maximum RTO 6000
+2024-08-19T20:45:19.220926 [COMN   ] [D] [    0] Setting SCTP_INITMSG options on SCTP socket. Max attempts 3, Max init attempts timeout 5000
+2024-08-19T20:45:19.220935 [COMN   ] [D] [    0] Successfully bound to address 172.22.0.22:0
+2024-08-19T20:45:37.893179 [COMN   ] [I] [    0] Failed to establish socket connection to 172.22.0.9
+2024-08-19T20:45:37.893282 [COMN   ] [W] [    0] RxSockets: The socket fd=7 to be removed does not exist
+2024-08-19T20:45:37.893296 [COMN   ] [D] [    0] Socket=7 was closed.
+2024-08-19T20:45:47.893130 [COMN   ] [D] [    0] Opened SCTP socket=7
+2024-08-19T20:45:47.893135 [COMN   ] [D] [    0] Setting RTO_INFO options on SCTP socket. Association 0, Initial RTO 3000, Minimum RTO 1000, Maximum RTO 6000
+2024-08-19T20:45:47.893136 [COMN   ] [D] [    0] Setting SCTP_INITMSG options on SCTP socket. Max attempts 3, Max init attempts timeout 5000
+2024-08-19T20:45:47.893146 [COMN   ] [D] [    0] Successfully bound to address 172.22.0.22:0
+2024-08-19T20:46:06.564135 [COMN   ] [I] [    0] Failed to establish socket connection to 172.22.0.9
+2024-08-19T20:46:06.564205 [COMN   ] [W] [    0] RxSockets: The socket fd=7 to be removed does not exist
+2024-08-19T20:46:06.564217 [COMN   ] [D] [    0] Socket=7 was closed.
+2024-08-19T20:46:16.563213 [COMN   ] [D] [    0] Opened SCTP socket=7
+2024-08-19T20:46:16.563219 [COMN   ] [D] [    0] Setting RTO_INFO options on SCTP socket. Association 0, Initial RTO 3000, Minimum RTO 1000, Maximum RTO 6000
+2024-08-19T20:46:16.563221 [COMN   ] [D] [    0] Setting SCTP_INITMSG options on SCTP socket. Max attempts 3, Max init attempts timeout 5000
+2024-08-19T20:46:16.563233 [COMN   ] [D] [    0] Successfully bound to address 172.22.0.22:0
+2024-08-19T20:46:35.236134 [COMN   ] [I] [    0] Failed to establish socket connection to 172.22.0.9
+2024-08-19T20:46:35.236230 [COMN   ] [W] [    0] RxSockets: The socket fd=7 to be removed does not exist
+2024-08-19T20:46:35.236240 [COMN   ] [D] [    0] Socket=7 was closed.
+2024-08-19T20:46:45.235613 [COMN   ] [D] [    0] Opened SCTP socket=7
+2024-08-19T20:46:45.235617 [COMN   ] [D] [    0] Setting RTO_INFO options on SCTP socket. Association 0, Initial RTO 3000, Minimum RTO 1000, Maximum RTO 6000
+2024-08-19T20:46:45.235619 [COMN   ] [D] [    0] Setting SCTP_INITMSG options on SCTP socket. Max attempts 3, Max init attempts timeout 5000
+2024-08-19T20:46:45.235629 [COMN   ] [D] [    0] Successfully bound to address 172.22.0.22:0
+2024-08-19T20:47:03.909131 [COMN   ] [I] [    0] Failed to establish socket connection to 172.22.0.9
+2024-08-19T20:47:03.909173 [COMN   ] [W] [    0] RxSockets: The socket fd=7 to be removed does not exist
+2024-08-19T20:47:03.909182 [COMN   ] [D] [    0] Socket=7 was closed.
+2024-08-19T20:47:13.909059 [COMN   ] [D] [    0] Opened SCTP socket=7
+2024-08-19T20:47:13.909064 [COMN   ] [D] [    0] Setting RTO_INFO options on SCTP socket. Association 0, Initial RTO 3000, Minimum RTO 1000, Maximum RTO 6000
+2024-08-19T20:47:13.909070 [COMN   ] [D] [    0] Setting SCTP_INITMSG options on SCTP socket. Max attempts 3, Max init attempts timeout 5000
+2024-08-19T20:47:13.909081 [COMN   ] [D] [    0] Successfully bound to address 172.22.0.22:0
+2024-08-19T20:47:32.580140 [COMN   ] [I] [    0] Failed to establish socket connection to 172.22.0.9
+2024-08-19T20:47:32.580197 [COMN   ] [W] [    0] RxSockets: The socket fd=7 to be removed does not exist
+2024-08-19T20:47:32.580209 [COMN   ] [D] [    0] Socket=7 was closed.
+2024-08-19T20:47:42.579849 [COMN   ] [D] [    0] Opened SCTP socket=7
+2024-08-19T20:47:42.579853 [COMN   ] [D] [    0] Setting RTO_INFO options on SCTP socket. Association 0, Initial RTO 3000, Minimum RTO 1000, Maximum RTO 6000
+2024-08-19T20:47:42.579854 [COMN   ] [D] [    0] Setting SCTP_INITMSG options on SCTP socket. Max attempts 3, Max init attempts timeout 5000
+2024-08-19T20:47:42.579863 [COMN   ] [D] [    0] Successfully bound to address 172.22.0.22:0
+2024-08-19T20:48:01.253131 [COMN   ] [I] [    0] Failed to establish socket connection to 172.22.0.9
+2024-08-19T20:48:01.253249 [COMN   ] [W] [    0] RxSockets: The socket fd=7 to be removed does not exist
+2024-08-19T20:48:01.253261 [COMN   ] [D] [    0] Socket=7 was closed.
+2024-08-19T20:48:11.252947 [COMN   ] [D] [    0] Opened SCTP socket=7
+2024-08-19T20:48:11.252951 [COMN   ] [D] [    0] Setting RTO_INFO options on SCTP socket. Association 0, Initial RTO 3000, Minimum RTO 1000, Maximum RTO 6000
+2024-08-19T20:48:11.252952 [COMN   ] [D] [    0] Setting SCTP_INITMSG options on SCTP socket. Max attempts 3, Max init attempts timeout 5000
+2024-08-19T20:48:11.252961 [COMN   ] [D] [    0] Successfully bound to address 172.22.0.22:0
+2024-08-19T20:48:29.925131 [COMN   ] [I] [    0] Failed to establish socket connection to 172.22.0.9
+2024-08-19T20:48:29.925200 [COMN   ] [W] [    0] RxSockets: The socket fd=7 to be removed does not exist
+2024-08-19T20:48:29.925213 [COMN   ] [D] [    0] Socket=7 was closed.
+2024-08-19T20:48:39.924967 [COMN   ] [D] [    0] Opened SCTP socket=7
+2024-08-19T20:48:39.924971 [COMN   ] [D] [    0] Setting RTO_INFO options on SCTP socket. Association 0, Initial RTO 3000, Minimum RTO 1000, Maximum RTO 6000
+2024-08-19T20:48:39.924973 [COMN   ] [D] [    0] Setting SCTP_INITMSG options on SCTP socket. Max attempts 3, Max init attempts timeout 5000
+2024-08-19T20:48:39.924982 [COMN   ] [D] [    0] Successfully bound to address 172.22.0.22:0
+2024-08-19T20:48:58.597141 [COMN   ] [I] [    0] Failed to establish socket connection to 172.22.0.9
+2024-08-19T20:48:58.597172 [COMN   ] [W] [    0] RxSockets: The socket fd=7 to be removed does not exist
+2024-08-19T20:48:58.597186 [COMN   ] [D] [    0] Socket=7 was closed.
+2024-08-19T20:49:08.596213 [COMN   ] [D] [    0] Opened SCTP socket=7
+2024-08-19T20:49:08.596219 [COMN   ] [D] [    0] Setting RTO_INFO options on SCTP socket. Association 0, Initial RTO 3000, Minimum RTO 1000, Maximum RTO 6000
+2024-08-19T20:49:08.596220 [COMN   ] [D] [    0] Setting SCTP_INITMSG options on SCTP socket. Max attempts 3, Max init attempts timeout 5000
+2024-08-19T20:49:08.596232 [COMN   ] [D] [    0] Successfully bound to address 172.22.0.22:0
+2024-08-19T20:49:27.268176 [COMN   ] [I] [    0] Failed to establish socket connection to 172.22.0.9
+2024-08-19T20:49:27.268275 [COMN   ] [W] [    0] RxSockets: The socket fd=7 to be removed does not exist
+2024-08-19T20:49:27.268307 [COMN   ] [D] [    0] Socket=7 was closed.
+2024-08-19T20:49:37.268039 [COMN   ] [D] [    0] Opened SCTP socket=7
+2024-08-19T20:49:37.268044 [COMN   ] [D] [    0] Setting RTO_INFO options on SCTP socket. Association 0, Initial RTO 3000, Minimum RTO 1000, Maximum RTO 6000
+2024-08-19T20:49:37.268045 [COMN   ] [D] [    0] Setting SCTP_INITMSG options on SCTP socket. Max attempts 3, Max init attempts timeout 5000
+2024-08-19T20:49:37.268058 [COMN   ] [D] [    0] Successfully bound to address 172.22.0.22:0
+2024-08-19T20:49:55.940150 [COMN   ] [I] [    0] Failed to establish socket connection to 172.22.0.9
+2024-08-19T20:49:55.940192 [COMN   ] [W] [    0] RxSockets: The socket fd=7 to be removed does not exist
+2024-08-19T20:49:55.940211 [COMN   ] [D] [    0] Socket=7 was closed.
+2024-08-19T20:50:05.939682 [COMN   ] [D] [    0] Opened SCTP socket=7
+2024-08-19T20:50:05.939686 [COMN   ] [D] [    0] Setting RTO_INFO options on SCTP socket. Association 0, Initial RTO 3000, Minimum RTO 1000, Maximum RTO 6000
+2024-08-19T20:50:05.939687 [COMN   ] [D] [    0] Setting SCTP_INITMSG options on SCTP socket. Max attempts 3, Max init attempts timeout 5000
+2024-08-19T20:50:05.939698 [COMN   ] [D] [    0] Successfully bound to address 172.22.0.22:0
+2024-08-19T20:50:24.612153 [COMN   ] [I] [    0] Failed to establish socket connection to 172.22.0.9
+2024-08-19T20:50:24.612271 [COMN   ] [W] [    0] RxSockets: The socket fd=7 to be removed does not exist
+2024-08-19T20:50:24.612284 [COMN   ] [D] [    0] Socket=7 was closed.
+2024-08-19T20:50:34.611711 [COMN   ] [D] [    0] Opened SCTP socket=7
+2024-08-19T20:50:34.611715 [COMN   ] [D] [    0] Setting RTO_INFO options on SCTP socket. Association 0, Initial RTO 3000, Minimum RTO 1000, Maximum RTO 6000
+2024-08-19T20:50:34.611716 [COMN   ] [D] [    0] Setting SCTP_INITMSG options on SCTP socket. Max attempts 3, Max init attempts timeout 5000
+2024-08-19T20:50:34.611729 [COMN   ] [D] [    0] Successfully bound to address 172.22.0.22:0
+2024-08-19T20:50:53.284138 [COMN   ] [I] [    0] Failed to establish socket connection to 172.22.0.9
+2024-08-19T20:50:53.284222 [COMN   ] [W] [    0] RxSockets: The socket fd=7 to be removed does not exist
+2024-08-19T20:50:53.284235 [COMN   ] [D] [    0] Socket=7 was closed.
+2024-08-19T20:51:03.286808 [COMN   ] [D] [    0] Opened SCTP socket=7
+2024-08-19T20:51:03.286812 [COMN   ] [D] [    0] Setting RTO_INFO options on SCTP socket. Association 0, Initial RTO 3000, Minimum RTO 1000, Maximum RTO 6000
+2024-08-19T20:51:03.286814 [COMN   ] [D] [    0] Setting SCTP_INITMSG options on SCTP socket. Max attempts 3, Max init attempts timeout 5000
+2024-08-19T20:51:03.286823 [COMN   ] [D] [    0] Successfully bound to address 172.22.0.22:0
+2024-08-19T20:51:21.956150 [COMN   ] [I] [    0] Failed to establish socket connection to 172.22.0.9
+2024-08-19T20:51:21.956223 [COMN   ] [W] [    0] RxSockets: The socket fd=7 to be removed does not exist
+2024-08-19T20:51:21.956237 [COMN   ] [D] [    0] Socket=7 was closed.
+2024-08-19T20:51:31.955644 [COMN   ] [D] [    0] Opened SCTP socket=7
+2024-08-19T20:51:31.955648 [COMN   ] [D] [    0] Setting RTO_INFO options on SCTP socket. Association 0, Initial RTO 3000, Minimum RTO 1000, Maximum RTO 6000
+2024-08-19T20:51:31.955650 [COMN   ] [D] [    0] Setting SCTP_INITMSG options on SCTP socket. Max attempts 3, Max init attempts timeout 5000
+2024-08-19T20:51:31.955659 [COMN   ] [D] [    0] Successfully bound to address 172.22.0.22:0
+2024-08-19T20:51:50.628145 [COMN   ] [I] [    0] Failed to establish socket connection to 172.22.0.9
+2024-08-19T20:51:50.628188 [COMN   ] [W] [    0] RxSockets: The socket fd=7 to be removed does not exist
+2024-08-19T20:51:50.628208 [COMN   ] [D] [    0] Socket=7 was closed.
+2024-08-19T20:52:00.629961 [COMN   ] [D] [    0] Opened SCTP socket=7
+2024-08-19T20:52:00.629966 [COMN   ] [D] [    0] Setting RTO_INFO options on SCTP socket. Association 0, Initial RTO 3000, Minimum RTO 1000, Maximum RTO 6000
+2024-08-19T20:52:00.629967 [COMN   ] [D] [    0] Setting SCTP_INITMSG options on SCTP socket. Max attempts 3, Max init attempts timeout 5000
+2024-08-19T20:52:00.629976 [COMN   ] [D] [    0] Successfully bound to address 172.22.0.22:0
+2024-08-19T20:52:19.300138 [COMN   ] [I] [    0] Failed to establish socket connection to 172.22.0.9
+2024-08-19T20:52:19.300177 [COMN   ] [W] [    0] RxSockets: The socket fd=7 to be removed does not exist
+2024-08-19T20:52:19.300195 [COMN   ] [D] [    0] Socket=7 was closed.
+2024-08-19T20:52:29.300099 [COMN   ] [D] [    0] Opened SCTP socket=7
+2024-08-19T20:52:29.300103 [COMN   ] [D] [    0] Setting RTO_INFO options on SCTP socket. Association 0, Initial RTO 3000, Minimum RTO 1000, Maximum RTO 6000
+2024-08-19T20:52:29.300104 [COMN   ] [D] [    0] Setting SCTP_INITMSG options on SCTP socket. Max attempts 3, Max init attempts timeout 5000
+2024-08-19T20:52:29.300119 [COMN   ] [D] [    0] Successfully bound to address 172.22.0.22:0
+2024-08-19T20:52:47.973136 [COMN   ] [I] [    0] Failed to establish socket connection to 172.22.0.9
+2024-08-19T20:52:47.973254 [COMN   ] [W] [    0] RxSockets: The socket fd=7 to be removed does not exist
+2024-08-19T20:52:47.973271 [COMN   ] [D] [    0] Socket=7 was closed.
+2024-08-19T20:52:57.972252 [COMN   ] [D] [    0] Opened SCTP socket=7
+2024-08-19T20:52:57.972257 [COMN   ] [D] [    0] Setting RTO_INFO options on SCTP socket. Association 0, Initial RTO 3000, Minimum RTO 1000, Maximum RTO 6000
+2024-08-19T20:52:57.972258 [COMN   ] [D] [    0] Setting SCTP_INITMSG options on SCTP socket. Max attempts 3, Max init attempts timeout 5000
+2024-08-19T20:52:57.972270 [COMN   ] [D] [    0] Successfully bound to address 172.22.0.22:0
+2024-08-19T20:53:16.644218 [COMN   ] [I] [    0] Failed to establish socket connection to 172.22.0.9
+2024-08-19T20:53:16.644316 [COMN   ] [W] [    0] RxSockets: The socket fd=7 to be removed does not exist
+2024-08-19T20:53:16.644327 [COMN   ] [D] [    0] Socket=7 was closed.
+2024-08-19T20:53:26.644309 [COMN   ] [D] [    0] Opened SCTP socket=7
+2024-08-19T20:53:26.644313 [COMN   ] [D] [    0] Setting RTO_INFO options on SCTP socket. Association 0, Initial RTO 3000, Minimum RTO 1000, Maximum RTO 6000
+2024-08-19T20:53:26.644315 [COMN   ] [D] [    0] Setting SCTP_INITMSG options on SCTP socket. Max attempts 3, Max init attempts timeout 5000
+2024-08-19T20:53:26.644325 [COMN   ] [D] [    0] Successfully bound to address 172.22.0.22:0
+2024-08-19T20:53:45.316144 [COMN   ] [I] [    0] Failed to establish socket connection to 172.22.0.9
+2024-08-19T20:53:45.316239 [COMN   ] [W] [    0] RxSockets: The socket fd=7 to be removed does not exist
+2024-08-19T20:53:45.316251 [COMN   ] [D] [    0] Socket=7 was closed.
+2024-08-19T20:53:55.315712 [COMN   ] [D] [    0] Opened SCTP socket=7
+2024-08-19T20:53:55.315715 [COMN   ] [D] [    0] Setting RTO_INFO options on SCTP socket. Association 0, Initial RTO 3000, Minimum RTO 1000, Maximum RTO 6000
+2024-08-19T20:53:55.315717 [COMN   ] [D] [    0] Setting SCTP_INITMSG options on SCTP socket. Max attempts 3, Max init attempts timeout 5000
+2024-08-19T20:53:55.315725 [COMN   ] [D] [    0] Successfully bound to address 172.22.0.22:0
+2024-08-19T20:54:13.989133 [COMN   ] [I] [    0] Failed to establish socket connection to 172.22.0.9
+2024-08-19T20:54:13.989249 [COMN   ] [W] [    0] RxSockets: The socket fd=7 to be removed does not exist
+2024-08-19T20:54:13.989258 [COMN   ] [D] [    0] Socket=7 was closed.
+2024-08-19T20:54:23.988761 [COMN   ] [D] [    0] Opened SCTP socket=7
+2024-08-19T20:54:23.988767 [COMN   ] [D] [    0] Setting RTO_INFO options on SCTP socket. Association 0, Initial RTO 3000, Minimum RTO 1000, Maximum RTO 6000
+2024-08-19T20:54:23.988768 [COMN   ] [D] [    0] Setting SCTP_INITMSG options on SCTP socket. Max attempts 3, Max init attempts timeout 5000
+2024-08-19T20:54:23.988778 [COMN   ] [D] [    0] Successfully bound to address 172.22.0.22:0
+2024-08-19T20:54:42.661133 [COMN   ] [I] [    0] Failed to establish socket connection to 172.22.0.9
+2024-08-19T20:54:42.661255 [COMN   ] [W] [    0] RxSockets: The socket fd=7 to be removed does not exist
+2024-08-19T20:54:42.661265 [COMN   ] [D] [    0] Socket=7 was closed.
+2024-08-19T20:54:52.660625 [COMN   ] [D] [    0] Opened SCTP socket=7
+2024-08-19T20:54:52.660629 [COMN   ] [D] [    0] Setting RTO_INFO options on SCTP socket. Association 0, Initial RTO 3000, Minimum RTO 1000, Maximum RTO 6000
+2024-08-19T20:54:52.660631 [COMN   ] [D] [    0] Setting SCTP_INITMSG options on SCTP socket. Max attempts 3, Max init attempts timeout 5000
+2024-08-19T20:54:52.660639 [COMN   ] [D] [    0] Successfully bound to address 172.22.0.22:0
+2024-08-19T20:55:11.333132 [COMN   ] [I] [    0] Failed to establish socket connection to 172.22.0.9
+2024-08-19T20:55:11.333242 [COMN   ] [W] [    0] RxSockets: The socket fd=7 to be removed does not exist
+2024-08-19T20:55:11.333252 [COMN   ] [D] [    0] Socket=7 was closed.
+2024-08-19T20:55:21.332800 [COMN   ] [D] [    0] Opened SCTP socket=7
+2024-08-19T20:55:21.332808 [COMN   ] [D] [    0] Setting RTO_INFO options on SCTP socket. Association 0, Initial RTO 3000, Minimum RTO 1000, Maximum RTO 6000
+2024-08-19T20:55:21.332810 [COMN   ] [D] [    0] Setting SCTP_INITMSG options on SCTP socket. Max attempts 3, Max init attempts timeout 5000
+2024-08-19T20:55:21.332829 [COMN   ] [D] [    0] Successfully bound to address 172.22.0.22:0
+2024-08-19T20:55:40.004144 [COMN   ] [I] [    0] Failed to establish socket connection to 172.22.0.9
+2024-08-19T20:55:40.004236 [COMN   ] [W] [    0] RxSockets: The socket fd=7 to be removed does not exist
+2024-08-19T20:55:40.004251 [COMN   ] [D] [    0] Socket=7 was closed.
+2024-08-19T20:55:50.003660 [COMN   ] [D] [    0] Opened SCTP socket=7
+2024-08-19T20:55:50.003664 [COMN   ] [D] [    0] Setting RTO_INFO options on SCTP socket. Association 0, Initial RTO 3000, Minimum RTO 1000, Maximum RTO 6000
+2024-08-19T20:55:50.003666 [COMN   ] [D] [    0] Setting SCTP_INITMSG options on SCTP socket. Max attempts 3, Max init attempts timeout 5000
+2024-08-19T20:55:50.003677 [COMN   ] [D] [    0] Successfully bound to address 172.22.0.22:0
+2024-08-19T20:56:08.676144 [COMN   ] [I] [    0] Failed to establish socket connection to 172.22.0.9
+2024-08-19T20:56:08.676253 [COMN   ] [W] [    0] RxSockets: The socket fd=7 to be removed does not exist
+2024-08-19T20:56:08.676284 [COMN   ] [D] [    0] Socket=7 was closed.
+2024-08-19T20:56:18.675951 [COMN   ] [D] [    0] Opened SCTP socket=7
+2024-08-19T20:56:18.675955 [COMN   ] [D] [    0] Setting RTO_INFO options on SCTP socket. Association 0, Initial RTO 3000, Minimum RTO 1000, Maximum RTO 6000
+2024-08-19T20:56:18.675958 [COMN   ] [D] [    0] Setting SCTP_INITMSG options on SCTP socket. Max attempts 3, Max init attempts timeout 5000
+2024-08-19T20:56:18.675972 [COMN   ] [D] [    0] Successfully bound to address 172.22.0.22:0
+2024-08-19T20:56:37.348133 [COMN   ] [I] [    0] Failed to establish socket connection to 172.22.0.9
+2024-08-19T20:56:37.348183 [COMN   ] [W] [    0] RxSockets: The socket fd=7 to be removed does not exist
+2024-08-19T20:56:37.348194 [COMN   ] [D] [    0] Socket=7 was closed.
+2024-08-19T20:56:47.347763 [COMN   ] [D] [    0] Opened SCTP socket=7
+2024-08-19T20:56:47.347767 [COMN   ] [D] [    0] Setting RTO_INFO options on SCTP socket. Association 0, Initial RTO 3000, Minimum RTO 1000, Maximum RTO 6000
+2024-08-19T20:56:47.347768 [COMN   ] [D] [    0] Setting SCTP_INITMSG options on SCTP socket. Max attempts 3, Max init attempts timeout 5000
+2024-08-19T20:56:47.347777 [COMN   ] [D] [    0] Successfully bound to address 172.22.0.22:0
+2024-08-19T20:57:06.020137 [COMN   ] [I] [    0] Failed to establish socket connection to 172.22.0.9
+2024-08-19T20:57:06.020203 [COMN   ] [W] [    0] RxSockets: The socket fd=7 to be removed does not exist
+2024-08-19T20:57:06.020220 [COMN   ] [D] [    0] Socket=7 was closed.
+2024-08-19T20:57:16.019827 [COMN   ] [D] [    0] Opened SCTP socket=7
+2024-08-19T20:57:16.019832 [COMN   ] [D] [    0] Setting RTO_INFO options on SCTP socket. Association 0, Initial RTO 3000, Minimum RTO 1000, Maximum RTO 6000
+2024-08-19T20:57:16.019834 [COMN   ] [D] [    0] Setting SCTP_INITMSG options on SCTP socket. Max attempts 3, Max init attempts timeout 5000
+2024-08-19T20:57:16.019842 [COMN   ] [D] [    0] Successfully bound to address 172.22.0.22:0
+2024-08-19T20:57:34.693142 [COMN   ] [I] [    0] Failed to establish socket connection to 172.22.0.9
+2024-08-19T20:57:34.693197 [COMN   ] [W] [    0] RxSockets: The socket fd=7 to be removed does not exist
+2024-08-19T20:57:34.693209 [COMN   ] [D] [    0] Socket=7 was closed.
+2024-08-19T20:57:44.692666 [COMN   ] [D] [    0] Opened SCTP socket=7
+2024-08-19T20:57:44.692682 [COMN   ] [D] [    0] Setting RTO_INFO options on SCTP socket. Association 0, Initial RTO 3000, Minimum RTO 1000, Maximum RTO 6000
+2024-08-19T20:57:44.692683 [COMN   ] [D] [    0] Setting SCTP_INITMSG options on SCTP socket. Max attempts 3, Max init attempts timeout 5000
+2024-08-19T20:57:44.692692 [COMN   ] [D] [    0] Successfully bound to address 172.22.0.22:0
+2024-08-19T20:58:03.364131 [COMN   ] [I] [    0] Failed to establish socket connection to 172.22.0.9
+2024-08-19T20:58:03.364212 [COMN   ] [W] [    0] RxSockets: The socket fd=7 to be removed does not exist
+2024-08-19T20:58:03.364220 [COMN   ] [D] [    0] Socket=7 was closed.
+2024-08-19T20:58:13.363621 [COMN   ] [D] [    0] Opened SCTP socket=7
+2024-08-19T20:58:13.363625 [COMN   ] [D] [    0] Setting RTO_INFO options on SCTP socket. Association 0, Initial RTO 3000, Minimum RTO 1000, Maximum RTO 6000
+2024-08-19T20:58:13.363626 [COMN   ] [D] [    0] Setting SCTP_INITMSG options on SCTP socket. Max attempts 3, Max init attempts timeout 5000
+2024-08-19T20:58:13.363635 [COMN   ] [D] [    0] Successfully bound to address 172.22.0.22:0
+2024-08-19T20:58:32.036146 [COMN   ] [I] [    0] Failed to establish socket connection to 172.22.0.9
+2024-08-19T20:58:32.036261 [COMN   ] [W] [    0] RxSockets: The socket fd=7 to be removed does not exist
+2024-08-19T20:58:32.036271 [COMN   ] [D] [    0] Socket=7 was closed.
+2024-08-19T20:58:42.035530 [COMN   ] [D] [    0] Opened SCTP socket=7
+2024-08-19T20:58:42.035534 [COMN   ] [D] [    0] Setting RTO_INFO options on SCTP socket. Association 0, Initial RTO 3000, Minimum RTO 1000, Maximum RTO 6000
+2024-08-19T20:58:42.035536 [COMN   ] [D] [    0] Setting SCTP_INITMSG options on SCTP socket. Max attempts 3, Max init attempts timeout 5000
+2024-08-19T20:58:42.035545 [COMN   ] [D] [    0] Successfully bound to address 172.22.0.22:0
+2024-08-19T20:59:00.708132 [COMN   ] [I] [    0] Failed to establish socket connection to 172.22.0.9
+2024-08-19T20:59:00.708187 [COMN   ] [W] [    0] RxSockets: The socket fd=7 to be removed does not exist
+2024-08-19T20:59:00.708195 [COMN   ] [D] [    0] Socket=7 was closed.
+2024-08-19T20:59:10.707519 [COMN   ] [D] [    0] Opened SCTP socket=7
+2024-08-19T20:59:10.707523 [COMN   ] [D] [    0] Setting RTO_INFO options on SCTP socket. Association 0, Initial RTO 3000, Minimum RTO 1000, Maximum RTO 6000
+2024-08-19T20:59:10.707525 [COMN   ] [D] [    0] Setting SCTP_INITMSG options on SCTP socket. Max attempts 3, Max init attempts timeout 5000
+2024-08-19T20:59:10.707533 [COMN   ] [D] [    0] Successfully bound to address 172.22.0.22:0
+2024-08-19T20:59:29.381131 [COMN   ] [I] [    0] Failed to establish socket connection to 172.22.0.9
+2024-08-19T20:59:29.381172 [COMN   ] [W] [    0] RxSockets: The socket fd=7 to be removed does not exist
+2024-08-19T20:59:29.381182 [COMN   ] [D] [    0] Socket=7 was closed.
+2024-08-19T20:59:39.380437 [COMN   ] [D] [    0] Opened SCTP socket=7
+2024-08-19T20:59:39.380442 [COMN   ] [D] [    0] Setting RTO_INFO options on SCTP socket. Association 0, Initial RTO 3000, Minimum RTO 1000, Maximum RTO 6000
+2024-08-19T20:59:39.380443 [COMN   ] [D] [    0] Setting SCTP_INITMSG options on SCTP socket. Max attempts 3, Max init attempts timeout 5000
+2024-08-19T20:59:39.380452 [COMN   ] [D] [    0] Successfully bound to address 172.22.0.22:0
+2024-08-19T20:59:58.052133 [COMN   ] [I] [    0] Failed to establish socket connection to 172.22.0.9
+2024-08-19T20:59:58.052170 [COMN   ] [W] [    0] RxSockets: The socket fd=7 to be removed does not exist
+2024-08-19T20:59:58.052183 [COMN   ] [D] [    0] Socket=7 was closed.
+2024-08-19T21:00:08.051346 [COMN   ] [D] [    0] Opened SCTP socket=7
+2024-08-19T21:00:08.051350 [COMN   ] [D] [    0] Setting RTO_INFO options on SCTP socket. Association 0, Initial RTO 3000, Minimum RTO 1000, Maximum RTO 6000
+2024-08-19T21:00:08.051351 [COMN   ] [D] [    0] Setting SCTP_INITMSG options on SCTP socket. Max attempts 3, Max init attempts timeout 5000
+2024-08-19T21:00:08.051360 [COMN   ] [D] [    0] Successfully bound to address 172.22.0.22:0
+2024-08-19T21:00:26.724132 [COMN   ] [I] [    0] Failed to establish socket connection to 172.22.0.9
+2024-08-19T21:00:26.724212 [COMN   ] [W] [    0] RxSockets: The socket fd=7 to be removed does not exist
+2024-08-19T21:00:26.724225 [COMN   ] [D] [    0] Socket=7 was closed.
+2024-08-19T21:00:36.723323 [COMN   ] [D] [    0] Opened SCTP socket=7
+2024-08-19T21:00:36.723327 [COMN   ] [D] [    0] Setting RTO_INFO options on SCTP socket. Association 0, Initial RTO 3000, Minimum RTO 1000, Maximum RTO 6000
+2024-08-19T21:00:36.723328 [COMN   ] [D] [    0] Setting SCTP_INITMSG options on SCTP socket. Max attempts 3, Max init attempts timeout 5000
+2024-08-19T21:00:36.723337 [COMN   ] [D] [    0] Successfully bound to address 172.22.0.22:0
+2024-08-19T21:00:55.396136 [COMN   ] [I] [    0] Failed to establish socket connection to 172.22.0.9
+2024-08-19T21:00:55.396213 [COMN   ] [W] [    0] RxSockets: The socket fd=7 to be removed does not exist
+2024-08-19T21:00:55.396224 [COMN   ] [D] [    0] Socket=7 was closed.
+2024-08-19T21:01:05.395426 [COMN   ] [D] [    0] Opened SCTP socket=7
+2024-08-19T21:01:05.395430 [COMN   ] [D] [    0] Setting RTO_INFO options on SCTP socket. Association 0, Initial RTO 3000, Minimum RTO 1000, Maximum RTO 6000
+2024-08-19T21:01:05.395432 [COMN   ] [D] [    0] Setting SCTP_INITMSG options on SCTP socket. Max attempts 3, Max init attempts timeout 5000
+2024-08-19T21:01:05.395440 [COMN   ] [D] [    0] Successfully bound to address 172.22.0.22:0
+2024-08-19T21:01:24.069131 [COMN   ] [I] [    0] Failed to establish socket connection to 172.22.0.9
+2024-08-19T21:01:24.069179 [COMN   ] [W] [    0] RxSockets: The socket fd=7 to be removed does not exist
+2024-08-19T21:01:24.069193 [COMN   ] [D] [    0] Socket=7 was closed.
+2024-08-19T21:01:34.070645 [COMN   ] [D] [    0] Opened SCTP socket=7
+2024-08-19T21:01:34.070649 [COMN   ] [D] [    0] Setting RTO_INFO options on SCTP socket. Association 0, Initial RTO 3000, Minimum RTO 1000, Maximum RTO 6000
+2024-08-19T21:01:34.070651 [COMN   ] [D] [    0] Setting SCTP_INITMSG options on SCTP socket. Max attempts 3, Max init attempts timeout 5000
+2024-08-19T21:01:34.070668 [COMN   ] [D] [    0] Successfully bound to address 172.22.0.22:0
+2024-08-19T21:01:52.741131 [COMN   ] [I] [    0] Failed to establish socket connection to 172.22.0.9
+2024-08-19T21:01:52.741166 [COMN   ] [W] [    0] RxSockets: The socket fd=7 to be removed does not exist
+2024-08-19T21:01:52.741175 [COMN   ] [D] [    0] Socket=7 was closed.
+2024-08-19T21:02:02.740614 [COMN   ] [D] [    0] Opened SCTP socket=7
+2024-08-19T21:02:02.740618 [COMN   ] [D] [    0] Setting RTO_INFO options on SCTP socket. Association 0, Initial RTO 3000, Minimum RTO 1000, Maximum RTO 6000
+2024-08-19T21:02:02.740619 [COMN   ] [D] [    0] Setting SCTP_INITMSG options on SCTP socket. Max attempts 3, Max init attempts timeout 5000
+2024-08-19T21:02:02.740628 [COMN   ] [D] [    0] Successfully bound to address 172.22.0.22:0
+2024-08-19T21:02:21.412149 [COMN   ] [I] [    0] Failed to establish socket connection to 172.22.0.9
+2024-08-19T21:02:21.412196 [COMN   ] [W] [    0] RxSockets: The socket fd=7 to be removed does not exist
+2024-08-19T21:02:21.412240 [COMN   ] [D] [    0] Socket=7 was closed.
+2024-08-19T21:02:31.411845 [COMN   ] [D] [    0] Opened SCTP socket=7
+2024-08-19T21:02:31.411850 [COMN   ] [D] [    0] Setting RTO_INFO options on SCTP socket. Association 0, Initial RTO 3000, Minimum RTO 1000, Maximum RTO 6000
+2024-08-19T21:02:31.411851 [COMN   ] [D] [    0] Setting SCTP_INITMSG options on SCTP socket. Max attempts 3, Max init attempts timeout 5000
+2024-08-19T21:02:31.411863 [COMN   ] [D] [    0] Successfully bound to address 172.22.0.22:0
+2024-08-19T21:02:50.085131 [COMN   ] [I] [    0] Failed to establish socket connection to 172.22.0.9
+2024-08-19T21:02:50.085198 [COMN   ] [W] [    0] RxSockets: The socket fd=7 to be removed does not exist
+2024-08-19T21:02:50.085220 [COMN   ] [D] [    0] Socket=7 was closed.
+2024-08-19T21:03:00.084790 [COMN   ] [D] [    0] Opened SCTP socket=7
+2024-08-19T21:03:00.084795 [COMN   ] [D] [    0] Setting RTO_INFO options on SCTP socket. Association 0, Initial RTO 3000, Minimum RTO 1000, Maximum RTO 6000
+2024-08-19T21:03:00.084796 [COMN   ] [D] [    0] Setting SCTP_INITMSG options on SCTP socket. Max attempts 3, Max init attempts timeout 5000
+2024-08-19T21:03:00.084810 [COMN   ] [D] [    0] Successfully bound to address 172.22.0.22:0
+2024-08-19T21:03:18.756154 [COMN   ] [I] [    0] Failed to establish socket connection to 172.22.0.9
+2024-08-19T21:03:18.756222 [COMN   ] [W] [    0] RxSockets: The socket fd=7 to be removed does not exist
+2024-08-19T21:03:18.756235 [COMN   ] [D] [    0] Socket=7 was closed.
+2024-08-19T21:03:28.755772 [COMN   ] [D] [    0] Opened SCTP socket=7
+2024-08-19T21:03:28.755776 [COMN   ] [D] [    0] Setting RTO_INFO options on SCTP socket. Association 0, Initial RTO 3000, Minimum RTO 1000, Maximum RTO 6000
+2024-08-19T21:03:28.755778 [COMN   ] [D] [    0] Setting SCTP_INITMSG options on SCTP socket. Max attempts 3, Max init attempts timeout 5000
+2024-08-19T21:03:28.755786 [COMN   ] [D] [    0] Successfully bound to address 172.22.0.22:0
+2024-08-19T21:03:47.429129 [COMN   ] [I] [    0] Failed to establish socket connection to 172.22.0.9
+2024-08-19T21:03:47.429158 [COMN   ] [W] [    0] RxSockets: The socket fd=7 to be removed does not exist
+2024-08-19T21:03:47.429170 [COMN   ] [D] [    0] Socket=7 was closed.
+2024-08-19T21:03:57.428879 [COMN   ] [D] [    0] Opened SCTP socket=7
+2024-08-19T21:03:57.428883 [COMN   ] [D] [    0] Setting RTO_INFO options on SCTP socket. Association 0, Initial RTO 3000, Minimum RTO 1000, Maximum RTO 6000
+2024-08-19T21:03:57.428885 [COMN   ] [D] [    0] Setting SCTP_INITMSG options on SCTP socket. Max attempts 3, Max init attempts timeout 5000
+2024-08-19T21:03:57.428894 [COMN   ] [D] [    0] Successfully bound to address 172.22.0.22:0
+2024-08-19T21:04:16.100135 [COMN   ] [I] [    0] Failed to establish socket connection to 172.22.0.9
+2024-08-19T21:04:16.100170 [COMN   ] [W] [    0] RxSockets: The socket fd=7 to be removed does not exist
+2024-08-19T21:04:16.100183 [COMN   ] [D] [    0] Socket=7 was closed.
+2024-08-19T21:04:26.099792 [COMN   ] [D] [    0] Opened SCTP socket=7
+2024-08-19T21:04:26.099796 [COMN   ] [D] [    0] Setting RTO_INFO options on SCTP socket. Association 0, Initial RTO 3000, Minimum RTO 1000, Maximum RTO 6000
+2024-08-19T21:04:26.099797 [COMN   ] [D] [    0] Setting SCTP_INITMSG options on SCTP socket. Max attempts 3, Max init attempts timeout 5000
+2024-08-19T21:04:26.099808 [COMN   ] [D] [    0] Successfully bound to address 172.22.0.22:0
+2024-08-19T21:04:44.773131 [COMN   ] [I] [    0] Failed to establish socket connection to 172.22.0.9
+2024-08-19T21:04:44.773186 [COMN   ] [W] [    0] RxSockets: The socket fd=7 to be removed does not exist
+2024-08-19T21:04:44.773199 [COMN   ] [D] [    0] Socket=7 was closed.
+2024-08-19T21:04:54.772739 [COMN   ] [D] [    0] Opened SCTP socket=7
+2024-08-19T21:04:54.772743 [COMN   ] [D] [    0] Setting RTO_INFO options on SCTP socket. Association 0, Initial RTO 3000, Minimum RTO 1000, Maximum RTO 6000
+2024-08-19T21:04:54.772745 [COMN   ] [D] [    0] Setting SCTP_INITMSG options on SCTP socket. Max attempts 3, Max init attempts timeout 5000
+2024-08-19T21:04:54.772753 [COMN   ] [D] [    0] Successfully bound to address 172.22.0.22:0
+2024-08-19T21:05:13.445178 [COMN   ] [I] [    0] Failed to establish socket connection to 172.22.0.9
+2024-08-19T21:05:13.445208 [COMN   ] [W] [    0] RxSockets: The socket fd=7 to be removed does not exist
+2024-08-19T21:05:13.445218 [COMN   ] [D] [    0] Socket=7 was closed.
+2024-08-19T21:05:23.444797 [COMN   ] [D] [    0] Opened SCTP socket=7
+2024-08-19T21:05:23.444802 [COMN   ] [D] [    0] Setting RTO_INFO options on SCTP socket. Association 0, Initial RTO 3000, Minimum RTO 1000, Maximum RTO 6000
+2024-08-19T21:05:23.444803 [COMN   ] [D] [    0] Setting SCTP_INITMSG options on SCTP socket. Max attempts 3, Max init attempts timeout 5000
+2024-08-19T21:05:23.444811 [COMN   ] [D] [    0] Successfully bound to address 172.22.0.22:0
+2024-08-19T21:05:42.117139 [COMN   ] [I] [    0] Failed to establish socket connection to 172.22.0.9
+2024-08-19T21:05:42.117194 [COMN   ] [W] [    0] RxSockets: The socket fd=7 to be removed does not exist
+2024-08-19T21:05:42.117208 [COMN   ] [D] [    0] Socket=7 was closed.
+2024-08-19T21:05:52.116783 [COMN   ] [D] [    0] Opened SCTP socket=7
+2024-08-19T21:05:52.116787 [COMN   ] [D] [    0] Setting RTO_INFO options on SCTP socket. Association 0, Initial RTO 3000, Minimum RTO 1000, Maximum RTO 6000
+2024-08-19T21:05:52.116788 [COMN   ] [D] [    0] Setting SCTP_INITMSG options on SCTP socket. Max attempts 3, Max init attempts timeout 5000
+2024-08-19T21:05:52.116797 [COMN   ] [D] [    0] Successfully bound to address 172.22.0.22:0
+2024-08-19T21:06:10.788158 [COMN   ] [I] [    0] Failed to establish socket connection to 172.22.0.9
+2024-08-19T21:06:10.788217 [COMN   ] [W] [    0] RxSockets: The socket fd=7 to be removed does not exist
+2024-08-19T21:06:10.788229 [COMN   ] [D] [    0] Socket=7 was closed.
+2024-08-19T21:06:20.787714 [COMN   ] [D] [    0] Opened SCTP socket=7
+2024-08-19T21:06:20.787718 [COMN   ] [D] [    0] Setting RTO_INFO options on SCTP socket. Association 0, Initial RTO 3000, Minimum RTO 1000, Maximum RTO 6000
+2024-08-19T21:06:20.787719 [COMN   ] [D] [    0] Setting SCTP_INITMSG options on SCTP socket. Max attempts 3, Max init attempts timeout 5000
+2024-08-19T21:06:20.787729 [COMN   ] [D] [    0] Successfully bound to address 172.22.0.22:0
+2024-08-19T21:06:39.461130 [COMN   ] [I] [    0] Failed to establish socket connection to 172.22.0.9
+2024-08-19T21:06:39.461224 [COMN   ] [W] [    0] RxSockets: The socket fd=7 to be removed does not exist
+2024-08-19T21:06:39.461233 [COMN   ] [D] [    0] Socket=7 was closed.
+2024-08-19T21:06:49.460711 [COMN   ] [D] [    0] Opened SCTP socket=7
+2024-08-19T21:06:49.460716 [COMN   ] [D] [    0] Setting RTO_INFO options on SCTP socket. Association 0, Initial RTO 3000, Minimum RTO 1000, Maximum RTO 6000
+2024-08-19T21:06:49.460717 [COMN   ] [D] [    0] Setting SCTP_INITMSG options on SCTP socket. Max attempts 3, Max init attempts timeout 5000
+2024-08-19T21:06:49.460725 [COMN   ] [D] [    0] Successfully bound to address 172.22.0.22:0
+2024-08-19T21:07:08.133162 [COMN   ] [I] [    0] Failed to establish socket connection to 172.22.0.9
+2024-08-19T21:07:08.133293 [COMN   ] [W] [    0] RxSockets: The socket fd=7 to be removed does not exist
+2024-08-19T21:07:08.133308 [COMN   ] [D] [    0] Socket=7 was closed.
+2024-08-19T21:07:18.132759 [COMN   ] [D] [    0] Opened SCTP socket=7
+2024-08-19T21:07:18.132764 [COMN   ] [D] [    0] Setting RTO_INFO options on SCTP socket. Association 0, Initial RTO 3000, Minimum RTO 1000, Maximum RTO 6000
+2024-08-19T21:07:18.132765 [COMN   ] [D] [    0] Setting SCTP_INITMSG options on SCTP socket. Max attempts 3, Max init attempts timeout 5000
+2024-08-19T21:07:18.132775 [COMN   ] [D] [    0] Successfully bound to address 172.22.0.22:0
+2024-08-19T21:07:36.804134 [COMN   ] [I] [    0] Failed to establish socket connection to 172.22.0.9
+2024-08-19T21:07:36.804171 [COMN   ] [W] [    0] RxSockets: The socket fd=7 to be removed does not exist
+2024-08-19T21:07:36.804184 [COMN   ] [D] [    0] Socket=7 was closed.
+2024-08-19T21:07:46.803689 [COMN   ] [D] [    0] Opened SCTP socket=7
+2024-08-19T21:07:46.803693 [COMN   ] [D] [    0] Setting RTO_INFO options on SCTP socket. Association 0, Initial RTO 3000, Minimum RTO 1000, Maximum RTO 6000
+2024-08-19T21:07:46.803695 [COMN   ] [D] [    0] Setting SCTP_INITMSG options on SCTP socket. Max attempts 3, Max init attempts timeout 5000
+2024-08-19T21:07:46.803705 [COMN   ] [D] [    0] Successfully bound to address 172.22.0.22:0
+2024-08-19T21:08:05.476217 [COMN   ] [I] [    0] Failed to establish socket connection to 172.22.0.9
+2024-08-19T21:08:05.476287 [COMN   ] [W] [    0] RxSockets: The socket fd=7 to be removed does not exist
+2024-08-19T21:08:05.476300 [COMN   ] [D] [    0] Socket=7 was closed.
+2024-08-19T21:08:15.475280 [COMN   ] [D] [    0] Opened SCTP socket=7
+2024-08-19T21:08:15.475284 [COMN   ] [D] [    0] Setting RTO_INFO options on SCTP socket. Association 0, Initial RTO 3000, Minimum RTO 1000, Maximum RTO 6000
+2024-08-19T21:08:15.475285 [COMN   ] [D] [    0] Setting SCTP_INITMSG options on SCTP socket. Max attempts 3, Max init attempts timeout 5000
+2024-08-19T21:08:15.475295 [COMN   ] [D] [    0] Successfully bound to address 172.22.0.22:0
+2024-08-19T21:08:34.149134 [COMN   ] [I] [    0] Failed to establish socket connection to 172.22.0.9
+2024-08-19T21:08:34.149186 [COMN   ] [W] [    0] RxSockets: The socket fd=7 to be removed does not exist
+2024-08-19T21:08:34.149213 [COMN   ] [D] [    0] Socket=7 was closed.
+2024-08-19T21:08:44.148444 [COMN   ] [D] [    0] Opened SCTP socket=7
+2024-08-19T21:08:44.148449 [COMN   ] [D] [    0] Setting RTO_INFO options on SCTP socket. Association 0, Initial RTO 3000, Minimum RTO 1000, Maximum RTO 6000
+2024-08-19T21:08:44.148451 [COMN   ] [D] [    0] Setting SCTP_INITMSG options on SCTP socket. Max attempts 3, Max init attempts timeout 5000
+2024-08-19T21:08:44.148461 [COMN   ] [D] [    0] Successfully bound to address 172.22.0.22:0
+2024-08-19T21:09:02.820162 [COMN   ] [I] [    0] Failed to establish socket connection to 172.22.0.9
+2024-08-19T21:09:02.820210 [COMN   ] [W] [    0] RxSockets: The socket fd=7 to be removed does not exist
+2024-08-19T21:09:02.820228 [COMN   ] [D] [    0] Socket=7 was closed.
+2024-08-19T21:09:12.819773 [COMN   ] [D] [    0] Opened SCTP socket=7
+2024-08-19T21:09:12.819777 [COMN   ] [D] [    0] Setting RTO_INFO options on SCTP socket. Association 0, Initial RTO 3000, Minimum RTO 1000, Maximum RTO 6000
+2024-08-19T21:09:12.819778 [COMN   ] [D] [    0] Setting SCTP_INITMSG options on SCTP socket. Max attempts 3, Max init attempts timeout 5000
+2024-08-19T21:09:12.819786 [COMN   ] [D] [    0] Successfully bound to address 172.22.0.22:0
+2024-08-19T21:09:31.493144 [COMN   ] [I] [    0] Failed to establish socket connection to 172.22.0.9
+2024-08-19T21:09:31.493207 [COMN   ] [W] [    0] RxSockets: The socket fd=7 to be removed does not exist
+2024-08-19T21:09:31.493237 [COMN   ] [D] [    0] Socket=7 was closed.
+2024-08-19T21:09:41.493096 [COMN   ] [D] [    0] Opened SCTP socket=7
+2024-08-19T21:09:41.493100 [COMN   ] [D] [    0] Setting RTO_INFO options on SCTP socket. Association 0, Initial RTO 3000, Minimum RTO 1000, Maximum RTO 6000
+2024-08-19T21:09:41.493101 [COMN   ] [D] [    0] Setting SCTP_INITMSG options on SCTP socket. Max attempts 3, Max init attempts timeout 5000
+2024-08-19T21:09:41.493110 [COMN   ] [D] [    0] Successfully bound to address 172.22.0.22:0
+2024-08-19T21:10:00.164219 [COMN   ] [I] [    0] Failed to establish socket connection to 172.22.0.9
+2024-08-19T21:10:00.164329 [COMN   ] [W] [    0] RxSockets: The socket fd=7 to be removed does not exist
+2024-08-19T21:10:00.164345 [COMN   ] [D] [    0] Socket=7 was closed.
+2024-08-19T21:10:10.164106 [COMN   ] [D] [    0] Opened SCTP socket=7
+2024-08-19T21:10:10.164126 [COMN   ] [D] [    0] Setting RTO_INFO options on SCTP socket. Association 0, Initial RTO 3000, Minimum RTO 1000, Maximum RTO 6000
+2024-08-19T21:10:10.164131 [COMN   ] [D] [    0] Setting SCTP_INITMSG options on SCTP socket. Max attempts 3, Max init attempts timeout 5000
+2024-08-19T21:10:10.164151 [COMN   ] [D] [    0] Successfully bound to address 172.22.0.22:0
+2024-08-19T21:10:28.836136 [COMN   ] [I] [    0] Failed to establish socket connection to 172.22.0.9
+2024-08-19T21:10:28.836257 [COMN   ] [W] [    0] RxSockets: The socket fd=7 to be removed does not exist
+2024-08-19T21:10:28.836278 [COMN   ] [D] [    0] Socket=7 was closed.
+2024-08-19T21:10:38.836141 [COMN   ] [D] [    0] Opened SCTP socket=7
+2024-08-19T21:10:38.836145 [COMN   ] [D] [    0] Setting RTO_INFO options on SCTP socket. Association 0, Initial RTO 3000, Minimum RTO 1000, Maximum RTO 6000
+2024-08-19T21:10:38.836146 [COMN   ] [D] [    0] Setting SCTP_INITMSG options on SCTP socket. Max attempts 3, Max init attempts timeout 5000
+2024-08-19T21:10:38.836155 [COMN   ] [D] [    0] Successfully bound to address 172.22.0.22:0
+2024-08-19T21:10:57.509132 [COMN   ] [I] [    0] Failed to establish socket connection to 172.22.0.9
+2024-08-19T21:10:57.509157 [COMN   ] [W] [    0] RxSockets: The socket fd=7 to be removed does not exist
+2024-08-19T21:10:57.509171 [COMN   ] [D] [    0] Socket=7 was closed.
+2024-08-19T21:11:07.509011 [COMN   ] [D] [    0] Opened SCTP socket=7
+2024-08-19T21:11:07.509018 [COMN   ] [D] [    0] Setting RTO_INFO options on SCTP socket. Association 0, Initial RTO 3000, Minimum RTO 1000, Maximum RTO 6000
+2024-08-19T21:11:07.509020 [COMN   ] [D] [    0] Setting SCTP_INITMSG options on SCTP socket. Max attempts 3, Max init attempts timeout 5000
+2024-08-19T21:11:07.509041 [COMN   ] [D] [    0] Successfully bound to address 172.22.0.22:0
+2024-08-19T21:11:26.181129 [COMN   ] [I] [    0] Failed to establish socket connection to 172.22.0.9
+2024-08-19T21:11:26.181257 [COMN   ] [W] [    0] RxSockets: The socket fd=7 to be removed does not exist
+2024-08-19T21:11:26.181268 [COMN   ] [D] [    0] Socket=7 was closed.
+2024-08-19T21:11:36.181016 [COMN   ] [D] [    0] Opened SCTP socket=7
+2024-08-19T21:11:36.181020 [COMN   ] [D] [    0] Setting RTO_INFO options on SCTP socket. Association 0, Initial RTO 3000, Minimum RTO 1000, Maximum RTO 6000
+2024-08-19T21:11:36.181021 [COMN   ] [D] [    0] Setting SCTP_INITMSG options on SCTP socket. Max attempts 3, Max init attempts timeout 5000
+2024-08-19T21:11:36.181029 [COMN   ] [D] [    0] Successfully bound to address 172.22.0.22:0
+2024-08-19T21:11:54.853131 [COMN   ] [I] [    0] Failed to establish socket connection to 172.22.0.9
+2024-08-19T21:11:54.853188 [COMN   ] [W] [    0] RxSockets: The socket fd=7 to be removed does not exist
+2024-08-19T21:11:54.853202 [COMN   ] [D] [    0] Socket=7 was closed.
+2024-08-19T21:12:04.852859 [COMN   ] [D] [    0] Opened SCTP socket=7
+2024-08-19T21:12:04.852863 [COMN   ] [D] [    0] Setting RTO_INFO options on SCTP socket. Association 0, Initial RTO 3000, Minimum RTO 1000, Maximum RTO 6000
+2024-08-19T21:12:04.852864 [COMN   ] [D] [    0] Setting SCTP_INITMSG options on SCTP socket. Max attempts 3, Max init attempts timeout 5000
+2024-08-19T21:12:04.852874 [COMN   ] [D] [    0] Successfully bound to address 172.22.0.22:0
+2024-08-19T21:12:23.524142 [COMN   ] [I] [    0] Failed to establish socket connection to 172.22.0.9
+2024-08-19T21:12:23.524203 [COMN   ] [W] [    0] RxSockets: The socket fd=7 to be removed does not exist
+2024-08-19T21:12:23.524222 [COMN   ] [D] [    0] Socket=7 was closed.
+2024-08-19T21:12:33.523926 [COMN   ] [D] [    0] Opened SCTP socket=7
+2024-08-19T21:12:33.523938 [COMN   ] [D] [    0] Setting RTO_INFO options on SCTP socket. Association 0, Initial RTO 3000, Minimum RTO 1000, Maximum RTO 6000
+2024-08-19T21:12:33.523939 [COMN   ] [D] [    0] Setting SCTP_INITMSG options on SCTP socket. Max attempts 3, Max init attempts timeout 5000
+2024-08-19T21:12:33.523967 [COMN   ] [D] [    0] Successfully bound to address 172.22.0.22:0
+2024-08-19T21:12:52.197153 [COMN   ] [I] [    0] Failed to establish socket connection to 172.22.0.9
+2024-08-19T21:12:52.197238 [COMN   ] [W] [    0] RxSockets: The socket fd=7 to be removed does not exist
+2024-08-19T21:12:52.197256 [COMN   ] [D] [    0] Socket=7 was closed.
+2024-08-19T21:13:02.196966 [COMN   ] [D] [    0] Opened SCTP socket=7
+2024-08-19T21:13:02.196971 [COMN   ] [D] [    0] Setting RTO_INFO options on SCTP socket. Association 0, Initial RTO 3000, Minimum RTO 1000, Maximum RTO 6000
+2024-08-19T21:13:02.196972 [COMN   ] [D] [    0] Setting SCTP_INITMSG options on SCTP socket. Max attempts 3, Max init attempts timeout 5000
+2024-08-19T21:13:02.196982 [COMN   ] [D] [    0] Successfully bound to address 172.22.0.22:0
+2024-08-19T21:13:20.869130 [COMN   ] [I] [    0] Failed to establish socket connection to 172.22.0.9
+2024-08-19T21:13:20.869209 [COMN   ] [W] [    0] RxSockets: The socket fd=7 to be removed does not exist
+2024-08-19T21:13:20.869219 [COMN   ] [D] [    0] Socket=7 was closed.
+2024-08-19T21:13:30.869029 [COMN   ] [D] [    0] Opened SCTP socket=7
+2024-08-19T21:13:30.869033 [COMN   ] [D] [    0] Setting RTO_INFO options on SCTP socket. Association 0, Initial RTO 3000, Minimum RTO 1000, Maximum RTO 6000
+2024-08-19T21:13:30.869035 [COMN   ] [D] [    0] Setting SCTP_INITMSG options on SCTP socket. Max attempts 3, Max init attempts timeout 5000
+2024-08-19T21:13:30.869044 [COMN   ] [D] [    0] Successfully bound to address 172.22.0.22:0
+2024-08-19T21:13:49.540138 [COMN   ] [I] [    0] Failed to establish socket connection to 172.22.0.9
+2024-08-19T21:13:49.540252 [COMN   ] [W] [    0] RxSockets: The socket fd=7 to be removed does not exist
+2024-08-19T21:13:49.540261 [COMN   ] [D] [    0] Socket=7 was closed.
+2024-08-19T21:13:59.539823 [COMN   ] [D] [    0] Opened SCTP socket=7
+2024-08-19T21:13:59.539827 [COMN   ] [D] [    0] Setting RTO_INFO options on SCTP socket. Association 0, Initial RTO 3000, Minimum RTO 1000, Maximum RTO 6000
+2024-08-19T21:13:59.539828 [COMN   ] [D] [    0] Setting SCTP_INITMSG options on SCTP socket. Max attempts 3, Max init attempts timeout 5000
+2024-08-19T21:13:59.539839 [COMN   ] [D] [    0] Successfully bound to address 172.22.0.22:0
+2024-08-19T21:14:18.212164 [COMN   ] [I] [    0] Failed to establish socket connection to 172.22.0.9
+2024-08-19T21:14:18.212300 [COMN   ] [W] [    0] RxSockets: The socket fd=7 to be removed does not exist
+2024-08-19T21:14:18.212331 [COMN   ] [D] [    0] Socket=7 was closed.
+2024-08-19T21:14:28.211871 [COMN   ] [D] [    0] Opened SCTP socket=7
+2024-08-19T21:14:28.211876 [COMN   ] [D] [    0] Setting RTO_INFO options on SCTP socket. Association 0, Initial RTO 3000, Minimum RTO 1000, Maximum RTO 6000
+2024-08-19T21:14:28.211877 [COMN   ] [D] [    0] Setting SCTP_INITMSG options on SCTP socket. Max attempts 3, Max init attempts timeout 5000
+2024-08-19T21:14:28.211888 [COMN   ] [D] [    0] Successfully bound to address 172.22.0.22:0
+2024-08-19T21:14:46.884187 [COMN   ] [I] [    0] Failed to establish socket connection to 172.22.0.9
+2024-08-19T21:14:46.884287 [COMN   ] [W] [    0] RxSockets: The socket fd=7 to be removed does not exist
+2024-08-19T21:14:46.884308 [COMN   ] [D] [    0] Socket=7 was closed.
+2024-08-19T21:14:56.883704 [COMN   ] [D] [    0] Opened SCTP socket=7
+2024-08-19T21:14:56.883708 [COMN   ] [D] [    0] Setting RTO_INFO options on SCTP socket. Association 0, Initial RTO 3000, Minimum RTO 1000, Maximum RTO 6000
+2024-08-19T21:14:56.883710 [COMN   ] [D] [    0] Setting SCTP_INITMSG options on SCTP socket. Max attempts 3, Max init attempts timeout 5000
+2024-08-19T21:14:56.883717 [COMN   ] [D] [    0] Successfully bound to address 172.22.0.22:0
+2024-08-19T21:15:15.556143 [COMN   ] [I] [    0] Failed to establish socket connection to 172.22.0.9
+2024-08-19T21:15:15.556238 [COMN   ] [W] [    0] RxSockets: The socket fd=7 to be removed does not exist
+2024-08-19T21:15:15.556252 [COMN   ] [D] [    0] Socket=7 was closed.
+2024-08-19T21:15:25.557841 [COMN   ] [D] [    0] Opened SCTP socket=7
+2024-08-19T21:15:25.557852 [COMN   ] [D] [    0] Setting RTO_INFO options on SCTP socket. Association 0, Initial RTO 3000, Minimum RTO 1000, Maximum RTO 6000
+2024-08-19T21:15:25.557853 [COMN   ] [D] [    0] Setting SCTP_INITMSG options on SCTP socket. Max attempts 3, Max init attempts timeout 5000
+2024-08-19T21:15:25.557865 [COMN   ] [D] [    0] Successfully bound to address 172.22.0.22:0
+2024-08-19T21:15:44.228156 [COMN   ] [I] [    0] Failed to establish socket connection to 172.22.0.9
+2024-08-19T21:15:44.228214 [COMN   ] [W] [    0] RxSockets: The socket fd=7 to be removed does not exist
+2024-08-19T21:15:44.228227 [COMN   ] [D] [    0] Socket=7 was closed.
+2024-08-19T21:15:54.227870 [COMN   ] [D] [    0] Opened SCTP socket=7
+2024-08-19T21:15:54.227877 [COMN   ] [D] [    0] Setting RTO_INFO options on SCTP socket. Association 0, Initial RTO 3000, Minimum RTO 1000, Maximum RTO 6000
+2024-08-19T21:15:54.227880 [COMN   ] [D] [    0] Setting SCTP_INITMSG options on SCTP socket. Max attempts 3, Max init attempts timeout 5000
+2024-08-19T21:15:54.227903 [COMN   ] [D] [    0] Successfully bound to address 172.22.0.22:0
+2024-08-19T21:16:12.901131 [COMN   ] [I] [    0] Failed to establish socket connection to 172.22.0.9
+2024-08-19T21:16:12.901178 [COMN   ] [W] [    0] RxSockets: The socket fd=7 to be removed does not exist
+2024-08-19T21:16:12.901192 [COMN   ] [D] [    0] Socket=7 was closed.
+2024-08-19T21:16:22.900875 [COMN   ] [D] [    0] Opened SCTP socket=7
+2024-08-19T21:16:22.900883 [COMN   ] [D] [    0] Setting RTO_INFO options on SCTP socket. Association 0, Initial RTO 3000, Minimum RTO 1000, Maximum RTO 6000
+2024-08-19T21:16:22.900885 [COMN   ] [D] [    0] Setting SCTP_INITMSG options on SCTP socket. Max attempts 3, Max init attempts timeout 5000
+2024-08-19T21:16:22.900906 [COMN   ] [D] [    0] Successfully bound to address 172.22.0.22:0
+2024-08-19T21:16:41.572152 [COMN   ] [I] [    0] Failed to establish socket connection to 172.22.0.9
+2024-08-19T21:16:41.572184 [COMN   ] [W] [    0] RxSockets: The socket fd=7 to be removed does not exist
+2024-08-19T21:16:41.572199 [COMN   ] [D] [    0] Socket=7 was closed.
+2024-08-19T21:16:51.571768 [COMN   ] [D] [    0] Opened SCTP socket=7
+2024-08-19T21:16:51.571773 [COMN   ] [D] [    0] Setting RTO_INFO options on SCTP socket. Association 0, Initial RTO 3000, Minimum RTO 1000, Maximum RTO 6000
+2024-08-19T21:16:51.571774 [COMN   ] [D] [    0] Setting SCTP_INITMSG options on SCTP socket. Max attempts 3, Max init attempts timeout 5000
+2024-08-19T21:16:51.571782 [COMN   ] [D] [    0] Successfully bound to address 172.22.0.22:0
+2024-08-19T21:17:10.245133 [COMN   ] [I] [    0] Failed to establish socket connection to 172.22.0.9
+2024-08-19T21:17:10.245164 [COMN   ] [W] [    0] RxSockets: The socket fd=7 to be removed does not exist
+2024-08-19T21:17:10.245175 [COMN   ] [D] [    0] Socket=7 was closed.
+2024-08-19T21:17:20.244861 [COMN   ] [D] [    0] Opened SCTP socket=7
+2024-08-19T21:17:20.244865 [COMN   ] [D] [    0] Setting RTO_INFO options on SCTP socket. Association 0, Initial RTO 3000, Minimum RTO 1000, Maximum RTO 6000
+2024-08-19T21:17:20.244866 [COMN   ] [D] [    0] Setting SCTP_INITMSG options on SCTP socket. Max attempts 3, Max init attempts timeout 5000
+2024-08-19T21:17:20.244876 [COMN   ] [D] [    0] Successfully bound to address 172.22.0.22:0
+2024-08-19T21:17:38.916157 [COMN   ] [I] [    0] Failed to establish socket connection to 172.22.0.9
+2024-08-19T21:17:38.916187 [COMN   ] [W] [    0] RxSockets: The socket fd=7 to be removed does not exist
+2024-08-19T21:17:38.916199 [COMN   ] [D] [    0] Socket=7 was closed.
+2024-08-19T21:17:48.915690 [COMN   ] [D] [    0] Opened SCTP socket=7
+2024-08-19T21:17:48.915694 [COMN   ] [D] [    0] Setting RTO_INFO options on SCTP socket. Association 0, Initial RTO 3000, Minimum RTO 1000, Maximum RTO 6000
+2024-08-19T21:17:48.915696 [COMN   ] [D] [    0] Setting SCTP_INITMSG options on SCTP socket. Max attempts 3, Max init attempts timeout 5000
+2024-08-19T21:17:48.915704 [COMN   ] [D] [    0] Successfully bound to address 172.22.0.22:0
+2024-08-19T21:18:07.589130 [COMN   ] [I] [    0] Failed to establish socket connection to 172.22.0.9
+2024-08-19T21:18:07.589256 [COMN   ] [W] [    0] RxSockets: The socket fd=7 to be removed does not exist
+2024-08-19T21:18:07.589268 [COMN   ] [D] [    0] Socket=7 was closed.
+2024-08-19T21:18:17.588725 [COMN   ] [D] [    0] Opened SCTP socket=7
+2024-08-19T21:18:17.588729 [COMN   ] [D] [    0] Setting RTO_INFO options on SCTP socket. Association 0, Initial RTO 3000, Minimum RTO 1000, Maximum RTO 6000
+2024-08-19T21:18:17.588731 [COMN   ] [D] [    0] Setting SCTP_INITMSG options on SCTP socket. Max attempts 3, Max init attempts timeout 5000
+2024-08-19T21:18:17.588738 [COMN   ] [D] [    0] Successfully bound to address 172.22.0.22:0
+2024-08-19T21:18:36.260149 [COMN   ] [I] [    0] Failed to establish socket connection to 172.22.0.9
+2024-08-19T21:18:36.260255 [COMN   ] [W] [    0] RxSockets: The socket fd=7 to be removed does not exist
+2024-08-19T21:18:36.260267 [COMN   ] [D] [    0] Socket=7 was closed.
+2024-08-19T21:18:46.259520 [COMN   ] [D] [    0] Opened SCTP socket=7
+2024-08-19T21:18:46.259524 [COMN   ] [D] [    0] Setting RTO_INFO options on SCTP socket. Association 0, Initial RTO 3000, Minimum RTO 1000, Maximum RTO 6000
+2024-08-19T21:18:46.259525 [COMN   ] [D] [    0] Setting SCTP_INITMSG options on SCTP socket. Max attempts 3, Max init attempts timeout 5000
+2024-08-19T21:18:46.259540 [COMN   ] [D] [    0] Successfully bound to address 172.22.0.22:0
+2024-08-19T21:19:04.933133 [COMN   ] [I] [    0] Failed to establish socket connection to 172.22.0.9
+2024-08-19T21:19:04.933223 [COMN   ] [W] [    0] RxSockets: The socket fd=7 to be removed does not exist
+2024-08-19T21:19:04.933239 [COMN   ] [D] [    0] Socket=7 was closed.
+2024-08-19T21:19:14.932523 [COMN   ] [D] [    0] Opened SCTP socket=7
+2024-08-19T21:19:14.932529 [COMN   ] [D] [    0] Setting RTO_INFO options on SCTP socket. Association 0, Initial RTO 3000, Minimum RTO 1000, Maximum RTO 6000
+2024-08-19T21:19:14.932531 [COMN   ] [D] [    0] Setting SCTP_INITMSG options on SCTP socket. Max attempts 3, Max init attempts timeout 5000
+2024-08-19T21:19:14.932547 [COMN   ] [D] [    0] Successfully bound to address 172.22.0.22:0
+2024-08-19T21:19:33.604153 [COMN   ] [I] [    0] Failed to establish socket connection to 172.22.0.9
+2024-08-19T21:19:33.604202 [COMN   ] [W] [    0] RxSockets: The socket fd=7 to be removed does not exist
+2024-08-19T21:19:33.604228 [COMN   ] [D] [    0] Socket=7 was closed.
+2024-08-19T21:19:43.606377 [COMN   ] [D] [    0] Opened SCTP socket=7
+2024-08-19T21:19:43.606399 [COMN   ] [D] [    0] Setting RTO_INFO options on SCTP socket. Association 0, Initial RTO 3000, Minimum RTO 1000, Maximum RTO 6000
+2024-08-19T21:19:43.606404 [COMN   ] [D] [    0] Setting SCTP_INITMSG options on SCTP socket. Max attempts 3, Max init attempts timeout 5000
+2024-08-19T21:19:43.606439 [COMN   ] [D] [    0] Successfully bound to address 172.22.0.22:0
+2024-08-19T21:20:02.277129 [COMN   ] [I] [    0] Failed to establish socket connection to 172.22.0.9
+2024-08-19T21:20:02.277226 [COMN   ] [W] [    0] RxSockets: The socket fd=7 to be removed does not exist
+2024-08-19T21:20:02.277239 [COMN   ] [D] [    0] Socket=7 was closed.
+2024-08-19T21:20:12.276364 [COMN   ] [D] [    0] Opened SCTP socket=7
+2024-08-19T21:20:12.276369 [COMN   ] [D] [    0] Setting RTO_INFO options on SCTP socket. Association 0, Initial RTO 3000, Minimum RTO 1000, Maximum RTO 6000
+2024-08-19T21:20:12.276371 [COMN   ] [D] [    0] Setting SCTP_INITMSG options on SCTP socket. Max attempts 3, Max init attempts timeout 5000
+2024-08-19T21:20:12.276381 [COMN   ] [D] [    0] Successfully bound to address 172.22.0.22:0
+2024-08-19T21:20:30.949167 [COMN   ] [I] [    0] Failed to establish socket connection to 172.22.0.9
+2024-08-19T21:20:30.949279 [COMN   ] [W] [    0] RxSockets: The socket fd=7 to be removed does not exist
+2024-08-19T21:20:30.949299 [COMN   ] [D] [    0] Socket=7 was closed.
+2024-08-19T21:20:40.948383 [COMN   ] [D] [    0] Opened SCTP socket=7
+2024-08-19T21:20:40.948388 [COMN   ] [D] [    0] Setting RTO_INFO options on SCTP socket. Association 0, Initial RTO 3000, Minimum RTO 1000, Maximum RTO 6000
+2024-08-19T21:20:40.948390 [COMN   ] [D] [    0] Setting SCTP_INITMSG options on SCTP socket. Max attempts 3, Max init attempts timeout 5000
+2024-08-19T21:20:40.948405 [COMN   ] [D] [    0] Successfully bound to address 172.22.0.22:0
+2024-08-19T21:20:59.621155 [COMN   ] [I] [    0] Failed to establish socket connection to 172.22.0.9
+2024-08-19T21:20:59.621227 [COMN   ] [W] [    0] RxSockets: The socket fd=7 to be removed does not exist
+2024-08-19T21:20:59.621241 [COMN   ] [D] [    0] Socket=7 was closed.
+2024-08-19T21:21:09.620276 [COMN   ] [D] [    0] Opened SCTP socket=7
+2024-08-19T21:21:09.620281 [COMN   ] [D] [    0] Setting RTO_INFO options on SCTP socket. Association 0, Initial RTO 3000, Minimum RTO 1000, Maximum RTO 6000
+2024-08-19T21:21:09.620283 [COMN   ] [D] [    0] Setting SCTP_INITMSG options on SCTP socket. Max attempts 3, Max init attempts timeout 5000
+2024-08-19T21:21:09.620292 [COMN   ] [D] [    0] Successfully bound to address 172.22.0.22:0
+2024-08-19T21:21:28.292186 [COMN   ] [I] [    0] Failed to establish socket connection to 172.22.0.9
+2024-08-19T21:21:28.292269 [COMN   ] [W] [    0] RxSockets: The socket fd=7 to be removed does not exist
+2024-08-19T21:21:28.292292 [COMN   ] [D] [    0] Socket=7 was closed.
+2024-08-19T21:21:38.291305 [COMN   ] [D] [    0] Opened SCTP socket=7
+2024-08-19T21:21:38.291309 [COMN   ] [D] [    0] Setting RTO_INFO options on SCTP socket. Association 0, Initial RTO 3000, Minimum RTO 1000, Maximum RTO 6000
+2024-08-19T21:21:38.291310 [COMN   ] [D] [    0] Setting SCTP_INITMSG options on SCTP socket. Max attempts 3, Max init attempts timeout 5000
+2024-08-19T21:21:38.291319 [COMN   ] [D] [    0] Successfully bound to address 172.22.0.22:0
+2024-08-19T21:21:56.965130 [COMN   ] [I] [    0] Failed to establish socket connection to 172.22.0.9
+2024-08-19T21:21:56.965217 [COMN   ] [W] [    0] RxSockets: The socket fd=7 to be removed does not exist
+2024-08-19T21:21:56.965229 [COMN   ] [D] [    0] Socket=7 was closed.
+2024-08-19T21:22:06.964296 [COMN   ] [D] [    0] Opened SCTP socket=7
+2024-08-19T21:22:06.964301 [COMN   ] [D] [    0] Setting RTO_INFO options on SCTP socket. Association 0, Initial RTO 3000, Minimum RTO 1000, Maximum RTO 6000
+2024-08-19T21:22:06.964302 [COMN   ] [D] [    0] Setting SCTP_INITMSG options on SCTP socket. Max attempts 3, Max init attempts timeout 5000
+2024-08-19T21:22:06.964312 [COMN   ] [D] [    0] Successfully bound to address 172.22.0.22:0
+2024-08-19T21:22:25.636150 [COMN   ] [I] [    0] Failed to establish socket connection to 172.22.0.9
+2024-08-19T21:22:25.636228 [COMN   ] [W] [    0] RxSockets: The socket fd=7 to be removed does not exist
+2024-08-19T21:22:25.636245 [COMN   ] [D] [    0] Socket=7 was closed.
+2024-08-19T21:22:35.637713 [COMN   ] [D] [    0] Opened SCTP socket=7
+2024-08-19T21:22:35.637719 [COMN   ] [D] [    0] Setting RTO_INFO options on SCTP socket. Association 0, Initial RTO 3000, Minimum RTO 1000, Maximum RTO 6000
+2024-08-19T21:22:35.637721 [COMN   ] [D] [    0] Setting SCTP_INITMSG options on SCTP socket. Max attempts 3, Max init attempts timeout 5000
+2024-08-19T21:22:35.637736 [COMN   ] [D] [    0] Successfully bound to address 172.22.0.22:0
+2024-08-19T21:22:54.309166 [COMN   ] [I] [    0] Failed to establish socket connection to 172.22.0.9
+2024-08-19T21:22:54.309335 [COMN   ] [W] [    0] RxSockets: The socket fd=7 to be removed does not exist
+2024-08-19T21:22:54.309366 [COMN   ] [D] [    0] Socket=7 was closed.
+2024-08-19T21:23:04.308948 [COMN   ] [D] [    0] Opened SCTP socket=7
+2024-08-19T21:23:04.308952 [COMN   ] [D] [    0] Setting RTO_INFO options on SCTP socket. Association 0, Initial RTO 3000, Minimum RTO 1000, Maximum RTO 6000
+2024-08-19T21:23:04.308954 [COMN   ] [D] [    0] Setting SCTP_INITMSG options on SCTP socket. Max attempts 3, Max init attempts timeout 5000
+2024-08-19T21:23:04.308966 [COMN   ] [D] [    0] Successfully bound to address 172.22.0.22:0
+2024-08-19T21:23:22.980141 [COMN   ] [I] [    0] Failed to establish socket connection to 172.22.0.9
+2024-08-19T21:23:22.980197 [COMN   ] [W] [    0] RxSockets: The socket fd=7 to be removed does not exist
+2024-08-19T21:23:22.980212 [COMN   ] [D] [    0] Socket=7 was closed.
+2024-08-19T21:23:32.979872 [COMN   ] [D] [    0] Opened SCTP socket=7
+2024-08-19T21:23:32.979876 [COMN   ] [D] [    0] Setting RTO_INFO options on SCTP socket. Association 0, Initial RTO 3000, Minimum RTO 1000, Maximum RTO 6000
+2024-08-19T21:23:32.979877 [COMN   ] [D] [    0] Setting SCTP_INITMSG options on SCTP socket. Max attempts 3, Max init attempts timeout 5000
+2024-08-19T21:23:32.979886 [COMN   ] [D] [    0] Successfully bound to address 172.22.0.22:0
+2024-08-19T21:23:51.653135 [COMN   ] [I] [    0] Failed to establish socket connection to 172.22.0.9
+2024-08-19T21:23:51.653257 [COMN   ] [W] [    0] RxSockets: The socket fd=7 to be removed does not exist
+2024-08-19T21:23:51.653274 [COMN   ] [D] [    0] Socket=7 was closed.
+2024-08-19T21:24:01.653213 [COMN   ] [D] [    0] Opened SCTP socket=7
+2024-08-19T21:24:01.653231 [COMN   ] [D] [    0] Setting RTO_INFO options on SCTP socket. Association 0, Initial RTO 3000, Minimum RTO 1000, Maximum RTO 6000
+2024-08-19T21:24:01.653232 [COMN   ] [D] [    0] Setting SCTP_INITMSG options on SCTP socket. Max attempts 3, Max init attempts timeout 5000
+2024-08-19T21:24:01.653242 [COMN   ] [D] [    0] Successfully bound to address 172.22.0.22:0
+2024-08-19T21:24:20.324136 [COMN   ] [I] [    0] Failed to establish socket connection to 172.22.0.9
+2024-08-19T21:24:20.324179 [COMN   ] [W] [    0] RxSockets: The socket fd=7 to be removed does not exist
+2024-08-19T21:24:20.324189 [COMN   ] [D] [    0] Socket=7 was closed.
+2024-08-19T21:24:30.324166 [COMN   ] [D] [    0] Opened SCTP socket=7
+2024-08-19T21:24:30.324171 [COMN   ] [D] [    0] Setting RTO_INFO options on SCTP socket. Association 0, Initial RTO 3000, Minimum RTO 1000, Maximum RTO 6000
+2024-08-19T21:24:30.324172 [COMN   ] [D] [    0] Setting SCTP_INITMSG options on SCTP socket. Max attempts 3, Max init attempts timeout 5000
+2024-08-19T21:24:30.324182 [COMN   ] [D] [    0] Successfully bound to address 172.22.0.22:0
+2024-08-19T21:24:48.997135 [COMN   ] [I] [    0] Failed to establish socket connection to 172.22.0.9
+2024-08-19T21:24:48.997211 [COMN   ] [W] [    0] RxSockets: The socket fd=7 to be removed does not exist
+2024-08-19T21:24:48.997226 [COMN   ] [D] [    0] Socket=7 was closed.
+2024-08-19T21:24:58.996333 [COMN   ] [D] [    0] Opened SCTP socket=7
+2024-08-19T21:24:58.996337 [COMN   ] [D] [    0] Setting RTO_INFO options on SCTP socket. Association 0, Initial RTO 3000, Minimum RTO 1000, Maximum RTO 6000
+2024-08-19T21:24:58.996339 [COMN   ] [D] [    0] Setting SCTP_INITMSG options on SCTP socket. Max attempts 3, Max init attempts timeout 5000
+2024-08-19T21:24:58.996347 [COMN   ] [D] [    0] Successfully bound to address 172.22.0.22:0
+2024-08-19T21:25:17.668135 [COMN   ] [I] [    0] Failed to establish socket connection to 172.22.0.9
+2024-08-19T21:25:17.668178 [COMN   ] [W] [    0] RxSockets: The socket fd=7 to be removed does not exist
+2024-08-19T21:25:17.668195 [COMN   ] [D] [    0] Socket=7 was closed.
+2024-08-19T21:25:27.667442 [COMN   ] [D] [    0] Opened SCTP socket=7
+2024-08-19T21:25:27.667449 [COMN   ] [D] [    0] Setting RTO_INFO options on SCTP socket. Association 0, Initial RTO 3000, Minimum RTO 1000, Maximum RTO 6000
+2024-08-19T21:25:27.667451 [COMN   ] [D] [    0] Setting SCTP_INITMSG options on SCTP socket. Max attempts 3, Max init attempts timeout 5000
+2024-08-19T21:25:27.667472 [COMN   ] [D] [    0] Successfully bound to address 172.22.0.22:0
+2024-08-19T21:25:46.340154 [COMN   ] [I] [    0] Failed to establish socket connection to 172.22.0.9
+2024-08-19T21:25:46.340251 [COMN   ] [W] [    0] RxSockets: The socket fd=7 to be removed does not exist
+2024-08-19T21:25:46.340265 [COMN   ] [D] [    0] Socket=7 was closed.
+2024-08-19T21:25:56.339511 [COMN   ] [D] [    0] Opened SCTP socket=7
+2024-08-19T21:25:56.339516 [COMN   ] [D] [    0] Setting RTO_INFO options on SCTP socket. Association 0, Initial RTO 3000, Minimum RTO 1000, Maximum RTO 6000
+2024-08-19T21:25:56.339517 [COMN   ] [D] [    0] Setting SCTP_INITMSG options on SCTP socket. Max attempts 3, Max init attempts timeout 5000
+2024-08-19T21:25:56.339526 [COMN   ] [D] [    0] Successfully bound to address 172.22.0.22:0
+2024-08-19T21:26:15.012161 [COMN   ] [I] [    0] Failed to establish socket connection to 172.22.0.9
+2024-08-19T21:26:15.012264 [COMN   ] [W] [    0] RxSockets: The socket fd=7 to be removed does not exist
+2024-08-19T21:26:15.012278 [COMN   ] [D] [    0] Socket=7 was closed.
+2024-08-19T21:26:25.011493 [COMN   ] [D] [    0] Opened SCTP socket=7
+2024-08-19T21:26:25.011497 [COMN   ] [D] [    0] Setting RTO_INFO options on SCTP socket. Association 0, Initial RTO 3000, Minimum RTO 1000, Maximum RTO 6000
+2024-08-19T21:26:25.011498 [COMN   ] [D] [    0] Setting SCTP_INITMSG options on SCTP socket. Max attempts 3, Max init attempts timeout 5000
+2024-08-19T21:26:25.011506 [COMN   ] [D] [    0] Successfully bound to address 172.22.0.22:0
+2024-08-19T21:26:43.684133 [COMN   ] [I] [    0] Failed to establish socket connection to 172.22.0.9
+2024-08-19T21:26:43.684185 [COMN   ] [W] [    0] RxSockets: The socket fd=7 to be removed does not exist
+2024-08-19T21:26:43.684197 [COMN   ] [D] [    0] Socket=7 was closed.
+2024-08-19T21:26:53.683329 [COMN   ] [D] [    0] Opened SCTP socket=7
+2024-08-19T21:26:53.683333 [COMN   ] [D] [    0] Setting RTO_INFO options on SCTP socket. Association 0, Initial RTO 3000, Minimum RTO 1000, Maximum RTO 6000
+2024-08-19T21:26:53.683334 [COMN   ] [D] [    0] Setting SCTP_INITMSG options on SCTP socket. Max attempts 3, Max init attempts timeout 5000
+2024-08-19T21:26:53.683343 [COMN   ] [D] [    0] Successfully bound to address 172.22.0.22:0
+2024-08-19T21:27:12.356145 [COMN   ] [I] [    0] Failed to establish socket connection to 172.22.0.9
+2024-08-19T21:27:12.356227 [COMN   ] [W] [    0] RxSockets: The socket fd=7 to be removed does not exist
+2024-08-19T21:27:12.356241 [COMN   ] [D] [    0] Socket=7 was closed.
+2024-08-19T21:27:22.355246 [COMN   ] [D] [    0] Opened SCTP socket=7
+2024-08-19T21:27:22.355250 [COMN   ] [D] [    0] Setting RTO_INFO options on SCTP socket. Association 0, Initial RTO 3000, Minimum RTO 1000, Maximum RTO 6000
+2024-08-19T21:27:22.355252 [COMN   ] [D] [    0] Setting SCTP_INITMSG options on SCTP socket. Max attempts 3, Max init attempts timeout 5000
+2024-08-19T21:27:22.355260 [COMN   ] [D] [    0] Successfully bound to address 172.22.0.22:0
+2024-08-19T21:27:41.028159 [COMN   ] [I] [    0] Failed to establish socket connection to 172.22.0.9
+2024-08-19T21:27:41.028193 [COMN   ] [W] [    0] RxSockets: The socket fd=7 to be removed does not exist
+2024-08-19T21:27:41.028205 [COMN   ] [D] [    0] Socket=7 was closed.
+2024-08-19T21:27:51.027289 [COMN   ] [D] [    0] Opened SCTP socket=7
+2024-08-19T21:27:51.027293 [COMN   ] [D] [    0] Setting RTO_INFO options on SCTP socket. Association 0, Initial RTO 3000, Minimum RTO 1000, Maximum RTO 6000
+2024-08-19T21:27:51.027295 [COMN   ] [D] [    0] Setting SCTP_INITMSG options on SCTP socket. Max attempts 3, Max init attempts timeout 5000
+2024-08-19T21:27:51.027304 [COMN   ] [D] [    0] Successfully bound to address 172.22.0.22:0
+2024-08-19T21:28:09.700175 [COMN   ] [I] [    0] Failed to establish socket connection to 172.22.0.9
+2024-08-19T21:28:09.700254 [COMN   ] [W] [    0] RxSockets: The socket fd=7 to be removed does not exist
+2024-08-19T21:28:09.700267 [COMN   ] [D] [    0] Socket=7 was closed.
+2024-08-19T21:28:19.700154 [COMN   ] [D] [    0] Opened SCTP socket=7
+2024-08-19T21:28:19.700159 [COMN   ] [D] [    0] Setting RTO_INFO options on SCTP socket. Association 0, Initial RTO 3000, Minimum RTO 1000, Maximum RTO 6000
+2024-08-19T21:28:19.700160 [COMN   ] [D] [    0] Setting SCTP_INITMSG options on SCTP socket. Max attempts 3, Max init attempts timeout 5000
+2024-08-19T21:28:19.700168 [COMN   ] [D] [    0] Successfully bound to address 172.22.0.22:0
+2024-08-19T21:28:38.372161 [COMN   ] [I] [    0] Failed to establish socket connection to 172.22.0.9
+2024-08-19T21:28:38.372242 [COMN   ] [W] [    0] RxSockets: The socket fd=7 to be removed does not exist
+2024-08-19T21:28:38.372259 [COMN   ] [D] [    0] Socket=7 was closed.
+2024-08-19T21:28:48.372199 [COMN   ] [D] [    0] Opened SCTP socket=7
+2024-08-19T21:28:48.372204 [COMN   ] [D] [    0] Setting RTO_INFO options on SCTP socket. Association 0, Initial RTO 3000, Minimum RTO 1000, Maximum RTO 6000
+2024-08-19T21:28:48.372205 [COMN   ] [D] [    0] Setting SCTP_INITMSG options on SCTP socket. Max attempts 3, Max init attempts timeout 5000
+2024-08-19T21:28:48.372214 [COMN   ] [D] [    0] Successfully bound to address 172.22.0.22:0
+2024-08-19T21:29:07.044139 [COMN   ] [I] [    0] Failed to establish socket connection to 172.22.0.9
+2024-08-19T21:29:07.044180 [COMN   ] [W] [    0] RxSockets: The socket fd=7 to be removed does not exist
+2024-08-19T21:29:07.044190 [COMN   ] [D] [    0] Socket=7 was closed.
+2024-08-19T21:29:17.044046 [COMN   ] [D] [    0] Opened SCTP socket=7
+2024-08-19T21:29:17.044051 [COMN   ] [D] [    0] Setting RTO_INFO options on SCTP socket. Association 0, Initial RTO 3000, Minimum RTO 1000, Maximum RTO 6000
+2024-08-19T21:29:17.044052 [COMN   ] [D] [    0] Setting SCTP_INITMSG options on SCTP socket. Max attempts 3, Max init attempts timeout 5000
+2024-08-19T21:29:17.044061 [COMN   ] [D] [    0] Successfully bound to address 172.22.0.22:0
+2024-08-19T21:29:35.716171 [COMN   ] [I] [    0] Failed to establish socket connection to 172.22.0.9
+2024-08-19T21:29:35.716264 [COMN   ] [W] [    0] RxSockets: The socket fd=7 to be removed does not exist
+2024-08-19T21:29:35.716273 [COMN   ] [D] [    0] Socket=7 was closed.
+2024-08-19T21:29:45.715903 [COMN   ] [D] [    0] Opened SCTP socket=7
+2024-08-19T21:29:45.715907 [COMN   ] [D] [    0] Setting RTO_INFO options on SCTP socket. Association 0, Initial RTO 3000, Minimum RTO 1000, Maximum RTO 6000
+2024-08-19T21:29:45.715909 [COMN   ] [D] [    0] Setting SCTP_INITMSG options on SCTP socket. Max attempts 3, Max init attempts timeout 5000
+2024-08-19T21:29:45.715917 [COMN   ] [D] [    0] Successfully bound to address 172.22.0.22:0
+2024-08-19T21:30:04.388138 [COMN   ] [I] [    0] Failed to establish socket connection to 172.22.0.9
+2024-08-19T21:30:04.388256 [COMN   ] [W] [    0] RxSockets: The socket fd=7 to be removed does not exist
+2024-08-19T21:30:04.388268 [COMN   ] [D] [    0] Socket=7 was closed.
+2024-08-19T21:30:14.387877 [COMN   ] [D] [    0] Opened SCTP socket=7
+2024-08-19T21:30:14.387881 [COMN   ] [D] [    0] Setting RTO_INFO options on SCTP socket. Association 0, Initial RTO 3000, Minimum RTO 1000, Maximum RTO 6000
+2024-08-19T21:30:14.387882 [COMN   ] [D] [    0] Setting SCTP_INITMSG options on SCTP socket. Max attempts 3, Max init attempts timeout 5000
+2024-08-19T21:30:14.387891 [COMN   ] [D] [    0] Successfully bound to address 172.22.0.22:0
+2024-08-19T21:30:33.060208 [COMN   ] [I] [    0] Failed to establish socket connection to 172.22.0.9
+2024-08-19T21:30:33.060279 [COMN   ] [W] [    0] RxSockets: The socket fd=7 to be removed does not exist
+2024-08-19T21:30:33.060292 [COMN   ] [D] [    0] Socket=7 was closed.
+2024-08-19T21:30:43.059736 [COMN   ] [D] [    0] Opened SCTP socket=7
+2024-08-19T21:30:43.059740 [COMN   ] [D] [    0] Setting RTO_INFO options on SCTP socket. Association 0, Initial RTO 3000, Minimum RTO 1000, Maximum RTO 6000
+2024-08-19T21:30:43.059742 [COMN   ] [D] [    0] Setting SCTP_INITMSG options on SCTP socket. Max attempts 3, Max init attempts timeout 5000
+2024-08-19T21:30:43.059751 [COMN   ] [D] [    0] Successfully bound to address 172.22.0.22:0
+2024-08-19T21:31:01.732160 [COMN   ] [I] [    0] Failed to establish socket connection to 172.22.0.9
+2024-08-19T21:31:01.732203 [COMN   ] [W] [    0] RxSockets: The socket fd=7 to be removed does not exist
+2024-08-19T21:31:01.732217 [COMN   ] [D] [    0] Socket=7 was closed.
+2024-08-19T21:31:11.731744 [COMN   ] [D] [    0] Opened SCTP socket=7
+2024-08-19T21:31:11.731748 [COMN   ] [D] [    0] Setting RTO_INFO options on SCTP socket. Association 0, Initial RTO 3000, Minimum RTO 1000, Maximum RTO 6000
+2024-08-19T21:31:11.731749 [COMN   ] [D] [    0] Setting SCTP_INITMSG options on SCTP socket. Max attempts 3, Max init attempts 
