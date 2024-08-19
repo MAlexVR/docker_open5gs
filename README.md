@@ -509,6 +509,8 @@ OsmoHLR#
 ```
 
 This setting is required to function as **SMS over SGs**.
+![image](https://github.com/user-attachments/assets/9cd6a1d7-241a-4970-aef9-9573c8327de1)
+
 
 <h3 id="try">Try VoLTE and SMS</h3>
 
