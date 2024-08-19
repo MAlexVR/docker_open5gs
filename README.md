@@ -566,7 +566,10 @@ OsmoMSC# subscriber msisdn 10002 sms sender msisdn 10000 send TEST MESSAGE
 ### Provisioning of SIM information in pyHSS is as follows:
 
 1. Goto http://<DOCKER_HOST_IP>:8080/docs/
-2. Select **apn** -> **Create new APN** -> Press on **Try it out**. Then, in payload section use the below JSON and then press **Execute**
+![image](https://github.com/user-attachments/assets/170ef7f6-cfbc-4da8-afce-fea04418829e)
+   
+3. Select **apn** -> **Create new APN** -> Press on **Try it out**. Then, in payload section use the below JSON and then press **Execute**
+![image](https://github.com/user-attachments/assets/86bbd317-52db-452b-9b4e-35eb223607d7)
 
 ```
 {
@@ -627,6 +630,7 @@ Take note of **apn_id** specified in **Response body** under **Server response**
 **Execute this step of APN creation only once**
 
 3. Next, select **auc** -> **Create new AUC** -> Press on **Try it out**. Then, in payload section use the below example JSON to fill in ki, opc and amf for your SIM and then press **Execute**
+![image](https://github.com/user-attachments/assets/dc8f059d-8fcd-4b49-8a8e-01d28848b8e0)
 
 ```
 {
@@ -688,6 +692,7 @@ Take note of **auc_id** specified in **Response body** under **Server response**
 **Replace imsi, ki, opc and amf as per your programmed SIM**
 
 4. Next, select **subscriber** -> **Create new SUBSCRIBER** -> Press on **Try it out**. Then, in payload section use the below example JSON to fill in imsi, auc_id and apn_list for your SIM and then press **Execute**
+![image](https://github.com/user-attachments/assets/c47af15d-8a49-430e-a819-0cfa2607792c)
 
 ```
 {
@@ -739,6 +744,7 @@ Take note of **auc_id** specified in **Response body** under **Server response**
 **Replace imsi and msisdn as per your programmed SIM**
 
 5. Finally, select **ims_subscriber** -> **Create new IMS SUBSCRIBER** -> Press on **Try it out**. Then, in payload section use the below example JSON to fill in imsi, msisdn, msisdn_list, scscf_peer, scscf_realm and scscf for your SIM/deployment and then press **Execute**
+![image](https://github.com/user-attachments/assets/bc035d28-3b5a-4047-a0d6-ff3fe2e1d8c2)
 
 ```
 {
