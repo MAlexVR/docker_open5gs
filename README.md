@@ -445,7 +445,8 @@ Username : admin
 Password : 1423
 ```
 
-![image](https://user-images.githubusercontent.com/6804880/162985419-06ccee86-5a6a-4151-beeb-7d538fad9c5c.png)
+![image](https://github.com/user-attachments/assets/e4054b6e-3374-486c-9392-8e546438339c)
+
 
 Please also register MSISDN. At that time, set the APN setting information as follows.
 | APN | Type | QCI | ARP | Capability | Vulnerablility | MBR DL/UL(Kbps) | GBR DL/UL(Kbps) |
