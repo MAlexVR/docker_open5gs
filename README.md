@@ -222,6 +222,7 @@ set -a
 source .env
 sudo ufw disable
 sudo sysctl -w net.ipv4.ip_forward=1
+sudo cpupower frequency-set -g performance
 
 # 4G Core Network + IMS + SMS over SGs
 docker compose -f 4g-volte-deploy.yaml up -d
@@ -799,6 +800,46 @@ Take note of **auc_id** specified in **Response body** under **Server response**
 
 **Replace scscf_peer, scscf and scscf_realm as per your deployment**
 
+# Integración de eNB Baicells Nova 227
+## Configure time synchronization
+- Go to **BTS Configuration** -> **Sync Configuration**, disable the “Forced Sync Switch” and “GPS Sync switch” option. Save the changes.
+![Captura desde 2024-08-23 13-51-49](https://github.com/user-attachments/assets/7f69e2cb-38da-494b-aa20-700a23459d68)
+
+## Time synchronization with NTP server
+- Go to **System** -> **NTP** and configure the NTP servers according to the image. Save the changes. 
+![Captura desde 2024-08-23 11-21-32](https://github.com/user-attachments/assets/66ce34fd-2b54-44c2-9fc2-886a1cede374)
+
+## Network Setting
+- Go to **Network** -> **WAN/LAN/VLAN**, configure the Internet/WAN and Local Network/LAN interfaces. Save the changes.
+![Captura desde 2024-08-23 13-51-38](https://github.com/user-attachments/assets/dda5cb9e-440d-40b7-8ad3-2737808fcbd7)
+
+## IPSec Setting
+- Go to **Network** -> **MME&IPSec Binding**, disable “IPSec Status”. Save the changes.
+![Captura desde 2024-08-23 13-52-17](https://github.com/user-attachments/assets/2488834e-f9e8-4376-b6eb-6a1810003a16)
+
+## LGW Setting
+- Go to **Network** -> **LGW**, disable LGW. Save the changes.
+![Captura desde 2024-08-23 13-52-01](https://github.com/user-attachments/assets/b29bc15f-323b-4b7b-8ab9-1ba7830c7133)
+
+## LTE Setting
+- Go to **LTE** -> **Advanced**, eNodeB Settings: Configure eNodeB Name. Save the changes.
+![Captura desde 2024-08-23 13-53-01](https://github.com/user-attachments/assets/bd24cf35-87fc-47df-81d9-ae6c3b44f643)
+
+- Check "MME PORT": 36412:
+![Captura desde 2024-08-23 13-52-50](https://github.com/user-attachments/assets/1571ccb7-b6d1-41c4-81dd-41f8d9952986)
+
+## BTS Info
+- Go to **BTS Info** -> **Quick Setting**, configure eNB RF settings acordding to the image. Save the changes.
+![Captura desde 2024-08-23 12-31-25](https://github.com/user-attachments/assets/53ece17a-7686-49d9-87d7-174ad13d0740)
+
+## Reboot
+- Go to **Reboot**, perform a warm reboot.
+
+## Status Info
+- Go to **BTS Info** -> **Basic Info** and check the status info:
+![Captura desde 2024-08-23 13-53-56](https://github.com/user-attachments/assets/2a1248dd-66ad-4d54-bdc0-d1daab64524c)
+
+   
 ## Not supported
 
 - IPv6 usage in Docker
