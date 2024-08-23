@@ -1,4 +1,4 @@
-# Internet, VoLTE, SMS and IPTV environment with docker Open5GS
+# Internet, VoLTE, SMS and IPTV environment with docker Open5GS and integration with srsLTE eNB with Ettus USRP B210 / eNB Baicells Nova 227
 
 Docker files to build and run open5gs in a docker, this is a fork version of https://github.com/herlesupreeth/docker_open5gs and https://github.com/s5uishida/docker_open5gs_volte_sms_config
 
