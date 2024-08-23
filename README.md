@@ -800,7 +800,8 @@ Take note of **auc_id** specified in **Response body** under **Server response**
 
 **Replace scscf_peer, scscf and scscf_realm as per your deployment**
 
-# Integración de eNB Baicells Nova 227
+
+# Integration of eNB Baicells Nova 227
 ## Configure time synchronization
 - Go to **BTS Configuration** -> **Sync Configuration**, disable the “Forced Sync Switch” and “GPS Sync switch” option. Save the changes.
 ![Captura desde 2024-08-23 13-51-49](https://github.com/user-attachments/assets/7f69e2cb-38da-494b-aa20-700a23459d68)
