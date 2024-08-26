@@ -856,6 +856,12 @@ $ http://<ip_address>:8088
 
 ![image](https://user-images.githubusercontent.com/6804880/162839701-e59437e1-b888-42a0-9edc-629c9e8b7a3b.png)
 
+![Captura desde 2024-08-26 09-53-57](https://github.com/user-attachments/assets/637b3790-0280-4fbb-93e9-4f83cf6d7731)
+
+![Captura desde 2024-08-26 09-54-15](https://github.com/user-attachments/assets/d9531608-e1e5-461f-8491-5d1c2ea904b9)
+
+![Captura desde 2024-08-26 09-54-28](https://github.com/user-attachments/assets/662a2cb6-ef3b-47e6-a560-e411cb1adeab)
+
 ## Grafana
 
 Go to your favorite browser and open http://<ip_address>:3010, User: admin - Password: admin
